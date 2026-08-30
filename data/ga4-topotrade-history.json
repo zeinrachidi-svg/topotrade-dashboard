@@ -26,5 +26,33 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-08-29",
+    "updatedAt": "2026-08-30T02:34:48.816Z",
+    "activeUsers": 18,
+    "newUsers": 12,
+    "sessions": 35,
+    "pageViews": 64,
+    "conversions": 1,
+    "avgSessionDurationSeconds": 163,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 18
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 12
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 7
+      },
+      {
+        "channel": "Display",
+        "sessions": 1
+      }
+    ]
   }
 ]
