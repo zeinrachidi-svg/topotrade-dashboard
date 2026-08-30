@@ -1,11 +1,73 @@
 {
   "date": "2026-08-30",
-  "updatedAt": "2026-08-30T05:36:34.779211Z",
+  "updatedAt": "2026-08-30T07:21:57.103629Z",
   "page": {
     "name": "Topotrade.com",
     "fan_count": 5894,
     "followers_count": 5894,
+    "instagram_business_account": {
+      "id": "17841416108569441"
+    },
     "id": "534109496935441"
+  },
+  "pageInsights": {
+    "page_post_engagements": [
+      {
+        "name": "page_post_engagements",
+        "period": "day",
+        "values": [
+          {
+            "value": 1,
+            "end_time": "2026-08-28T07:00:00+0000"
+          },
+          {
+            "value": 0,
+            "end_time": "2026-08-29T07:00:00+0000"
+          }
+        ],
+        "title": "Daily Post Engagements",
+        "description": "Daily: The number of times people have engaged with your posts through like, comments and shares and more.",
+        "id": "534109496935441/insights/page_post_engagements/day"
+      }
+    ],
+    "page_video_views": [
+      {
+        "name": "page_video_views",
+        "period": "day",
+        "values": [
+          {
+            "value": 0,
+            "end_time": "2026-08-28T07:00:00+0000"
+          },
+          {
+            "value": 0,
+            "end_time": "2026-08-29T07:00:00+0000"
+          }
+        ],
+        "title": "Daily Total Video Views",
+        "description": "Daily: Total number of times videos have been viewed for more than 3 seconds. (Total Count)",
+        "id": "534109496935441/insights/page_video_views/day"
+      }
+    ],
+    "page_views_total": [
+      {
+        "name": "page_views_total",
+        "period": "day",
+        "values": [
+          {
+            "value": 6,
+            "end_time": "2026-08-28T07:00:00+0000"
+          },
+          {
+            "value": 0,
+            "end_time": "2026-08-29T07:00:00+0000"
+          }
+        ],
+        "title": "Daily Total views count per Page",
+        "description": "Daily: Total views count per Page",
+        "id": "534109496935441/insights/page_views_total/day"
+      }
+    ]
   },
   "recentPosts": [
     {
@@ -24,12 +86,42 @@
       "message": "Trimble SPS 986 rover + controller\nYear of manufacture: 2019\n\nClick here for more info: https://bit.ly/4pxtllL\n\n#tirmble #sps #rover #controller",
       "created_time": "2026-07-22T07:23:38+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1654141913382082",
+      "comments": {
+        "data": [
+          {
+            "message": "Hello, how much does it cost?",
+            "created_time": "2026-07-22T14:15:13+0000",
+            "id": "1654141913382082_1340558531543056"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "MQZDZD",
+            "after": "MQZDZD"
+          }
+        }
+      },
       "id": "534109496935441_1654141913382082"
     },
     {
       "message": "Leica TS13 Total Station 5 sec\nYear of manufacture: 2021\n\nClick here for more info https://www.topotrade.com/en/kit/TotalStations/Leica/2446\n\n#trade #leica #ts13 #total #surveying #Surveyor",
       "created_time": "2026-07-20T08:53:55+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1652366286892978",
+      "comments": {
+        "data": [
+          {
+            "message": "",
+            "created_time": "2026-07-21T14:09:44+0000",
+            "id": "1652366286892978_1052758551034334"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "MQZDZD",
+            "after": "MQZDZD"
+          }
+        }
+      },
       "id": "534109496935441_1652366286892978"
     },
     {
@@ -60,12 +152,42 @@
       "message": "Topotrade is actively looking to purchase Leica Geosystems TM series monitoring total stations worldwide.\n\nCurrently sourcing:\n\u2022 Leica TM30\n\u2022 Leica TM50\n\u2022 Leica TM60\n\nUsed, surplus, or available stock, we\u2019d like to hear from you.\n\n\ud83d\udce9 Contact@topotrade.com\n\n#Leica #LeicaGeosystems #TM30 #TM50 #TM60 #Surveying #Geomatics #Monitoring #TotalStation",
       "created_time": "2026-05-22T08:10:36+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1595565605906380",
+      "comments": {
+        "data": [
+          {
+            "message": "",
+            "created_time": "2026-05-27T08:22:26+0000",
+            "id": "1595565605906380_27521713227435867"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "MQZDZD",
+            "after": "MQZDZD"
+          }
+        }
+      },
       "id": "534109496935441_1595565605906380"
     },
     {
       "message": "Wanted! Leica GNSS Antenna & Receiver Sets\n\nTopotrade is actively seeking Leica Geosystems geodetic-grade GNSS equipment for immediate purchase.\n\nWe are looking for:\n\u2022 Complete rover or base setups\n\u2022 Quantity required: 6 sets\n\nGet in touch with us today!\n\ud83d\udce9 Contact@topotrade.com\nWhatsapp: +33 6 24 17 40 87",
       "created_time": "2026-05-20T10:25:33+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1593743616088579",
+      "comments": {
+        "data": [
+          {
+            "message": "",
+            "created_time": "2026-05-27T08:23:01+0000",
+            "id": "1593743616088579_2011362199471819"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "MQZDZD",
+            "after": "MQZDZD"
+          }
+        }
+      },
       "id": "534109496935441_1593743616088579"
     }
   ],
@@ -345,8 +467,8 @@
         "data": [
           {
             "name": "Facebook user",
-            "email": "61554328443853@facebook.com",
-            "id": "61554328443853"
+            "email": "29232412459692853@facebook.com",
+            "id": "29232412459692853"
           },
           {
             "name": "Topotrade.com",
@@ -399,8 +521,8 @@
         "data": [
           {
             "name": "Facebook user",
-            "email": "100009063160403@facebook.com",
-            "id": "100009063160403"
+            "email": "28676996001939259@facebook.com",
+            "id": "28676996001939259"
           },
           {
             "name": "Topotrade.com",
@@ -417,8 +539,8 @@
         "data": [
           {
             "name": "Facebook user",
-            "email": "100093497185955@facebook.com",
-            "id": "100093497185955"
+            "email": "29318153451118086@facebook.com",
+            "id": "29318153451118086"
           },
           {
             "name": "Topotrade.com",
@@ -494,9 +616,13 @@
     }
   ],
   "recentLeads": [],
-  "instagram": null,
+  "instagram": {
+    "username": "topotrade_",
+    "followers_count": 750,
+    "media_count": 617,
+    "id": "17841416108569441"
+  },
   "_knownGaps": [
-    "Instagram Insights (reach/impressions) not available -- see script docstring.",
-    "Post comments not available -- see script docstring."
+    "Instagram Insights (reach/impressions) not available -- confirmed blocked by missing instagram_manage_insights scope (different from read_insights), needs a separate Meta App Review submission for the Instagram use case."
   ]
 }
