@@ -106,5 +106,59 @@
         "conversions": 0
       }
     ]
+  },
+  {
+    "date": "2026-08-30",
+    "updatedAt": "2026-08-31T02:50:55.166Z",
+    "impressions": 66,
+    "clicks": 3,
+    "costMicros": 3602479,
+    "cost": 3.602479,
+    "conversions": 0,
+    "ctr": 0.045454545454545456,
+    "avgCpcMicros": 1200826.3333333333,
+    "avgCpc": 1.2008263333333333,
+    "topCampaigns": [
+      {
+        "campaign": "Topotrade | Emlid | Sales | Search",
+        "costMicros": 3602479,
+        "cost": 3.602479,
+        "clicks": 3,
+        "impressions": 66,
+        "conversions": 0
+      },
+      {
+        "campaign": "Campaign #1",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "Stock Clearance",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "Stock Clearance",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "GS12 campaign",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      }
+    ]
   }
 ]
