@@ -268,5 +268,59 @@
         "conversions": 0
       }
     ]
+  },
+  {
+    "date": "2026-09-02",
+    "updatedAt": "2026-09-03T02:51:02.045Z",
+    "impressions": 0,
+    "clicks": 0,
+    "costMicros": 0,
+    "cost": 0,
+    "conversions": 0,
+    "ctr": 0,
+    "avgCpcMicros": 0,
+    "avgCpc": 0,
+    "topCampaigns": [
+      {
+        "campaign": "Campaign #1",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "Stock Clearance",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "Stock Clearance",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "GS12 campaign",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      },
+      {
+        "campaign": "Sell your instrument",
+        "costMicros": 0,
+        "cost": 0,
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0
+      }
+    ]
   }
 ]
