@@ -2,85 +2,379 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Topotrade Dashboards (protected)</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topotrade Dashboards</title>
 <style>
 :root { color-scheme: light; }
 * { box-sizing: border-box; }
-body {
-margin: 0;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-background: #f4f6f8;
-}
-.card {
-background: #fff;
-border-radius: 14px;
-border: 1px solid #e5e9ee;
-box-shadow: 0 4px 20px rgba(16,24,40,0.08);
-padding: 36px 40px;
-width: 340px;
-text-align: center;
-}
-.card h1 { font-size: 18px; margin: 0 0 6px; color: #1f3b57; }
-.card p { font-size: 13px; color: #6b7280; margin: 0 0 20px; }
-.card input {
-width: 100%;
-padding: 10px 12px;
-border-radius: 8px;
-border: 1px solid #d5dbe3;
-font-size: 14px;
-margin-bottom: 12px;
-box-sizing: border-box;
-}
-.card button {
-width: 100%;
-padding: 10px 12px;
-border-radius: 8px;
-border: none;
-background: #1f3b57;
-color: #fff;
-font-size: 14px;
-font-weight: 600;
-cursor: pointer;
-}
-.card button:hover { background: #16293e; }
-.error { color: #c0392b; font-size: 12.5px; margin-top: 10px; display: none; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:#f4f6f8; color:#1f2937; padding:0 0 60px; }
+.header { background:#1f3b57; color:#fff; padding:20px 32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.header h1 { margin:0; font-size:22px; }
+.header h1 span { color:#f0a95c; }
+.badge { background:#c97a2b; padding:5px 12px; border-radius:999px; font-size:12px; font-weight:600; }
+.tabs { display:flex; gap:8px; padding:14px 32px 0; background:#fff; border-bottom:1px solid #e5e9ee; }
+.tab-btn { padding:10px 18px; border:none; background:none; font-size:14px; font-weight:600; color:#6b7280; cursor:pointer; border-bottom:3px solid transparent; }
+.tab-btn.active { color:#1f3b57; border-bottom-color:#c97a2b; }
+.content { padding:24px 32px; max-width:1400px; margin:0 auto; }
+.tabpanel { display:none; }
+.tabpanel.active { display:block; }
+.banner { padding:12px 16px; border-radius:8px; font-size:13px; margin-bottom:14px; line-height:1.5; }
+.banner.blue { background:#eaf2fb; border:1px solid #b8d3f0; color:#1f3b57; }
+.banner.flag { background:#fff3e6; border:1px solid #f0c896; color:#8a4b0f; }
+h2.section { color:#1f3b57; border-bottom:2px solid #1f3b57; padding-bottom:6px; margin-top:30px; font-size:18px; }
+h3.rep { color:#c97a2b; margin-top:22px; margin-bottom:6px; }
+.kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:14px 0; }
+.kpi-card { background:#fff; border-radius:10px; padding:14px 16px; border:1px solid #e5e9ee; box-shadow:0 1px 2px rgba(16,24,40,.04); }
+.kpi-card .value { font-size:22px; font-weight:700; color:#1f3b57; }
+.kpi-card .label { font-size:12px; color:#6b7280; margin-top:3px; }
+table { border-collapse:collapse; width:100%; font-size:13px; margin:10px 0 20px; background:#fff; }
+th { background:#1f3b57; color:#fff; padding:7px 8px; text-align:left; }
+td { padding:7px 8px; border-bottom:1px solid #eef1f4; }
+tr:nth-child(even) td { background:#fafbfc; }
+.badge-stale { background:#fdecea; color:#c0392b; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:600; }
+.badge-fresh { background:#e8f6ee; color:#1a7f4b; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:600; }
+.badge-aging { background:#fff3e0; color:#b3630f; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:600; }
+ol,ul { padding-left:20px; }
+li { margin-bottom:8px; }
+.hotcards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin:14px 0; }
+.hotcard { background:#fff; border-radius:8px; padding:12px 14px; border:1px solid #e5e9ee; border-left:4px solid #999; font-size:13px; }
+.hotcard.red { border-left-color:#c0392b; }
+.hotcard.green { border-left-color:#1a7f4b; }
+.hotcard.blue { border-left-color:#1f6fb2; }
+.hotcard.purple { border-left-color:#7d4cae; }
+footer { color:#888; font-size:12px; margin-top:36px; border-top:1px solid #ddd; padding-top:10px; }
+.note { color:#6b7280; font-style:italic; font-size:13px; }
 </style>
 </head>
 <body>
-<div class="card">
-<h1>TOPOTRADE <span style="color:#c97a2b;">Dashboards</span></h1>
-<p>Enter the password to view</p>
-<input type="password" id="pw" placeholder="Password" autofocus>
-<button onclick="unlock()">Unlock</button>
-<div class="error" id="err">Incorrect password. Please try again.</div>
+<div class="header">
+<h1>TOPOTRADE <span>Dashboards</span></h1>
+<div class="badge">As of 2026-09-03</div>
+</div>
+<div class="tabs">
+<button class="tab-btn active" onclick="showTab('sales')">Sales &amp; Ops</button>
+<button class="tab-btn" onclick="showTab('marketing')">Marketing</button>
+</div>
+<div class="content">
+
+<div id="sales" class="tabpanel active">
+
+<h2 class="section">Data Sources Refreshed Today</h2>
+<div class="banner blue">
+Cockpit Google Sheet (Drive) &middot; admin.topotrade.com (browser) &middot; GA4 both properties (GitHub JSON) &middot;
+Zein's Gmail inbox+sent+drafts &middot; Meta Facebook/Instagram (live API sync, both businesses) &middot; LinkedIn (browser) &middot;
+WhatsApp Web Business (browser) &middot; eBay Seller Hub (browser) &middot; Odoo CRM &amp; Sales (API) &mdash; all pulled 2026-09-03.
+</div>
+
+<h2 class="section">Data-Quality Flags</h2>
+<div class="banner flag">
+&bull; <b>Google Ads: unavailable.</b> The one connected browser session is signed into Google as zein.rachidi@topotrade.com's personal account &mdash; no Ads account was reachable for contact@topotrade.com or contact@digitalrealities.fr. Spend/campaign figures below are placeholders until this session is reconnected.<br>
+&bull; <b>Cockpit sheet tab structure unconfirmed.</b> The Drive natural-language render returned one continuous block with no visible tab-name headers &mdash; "Dist France"/"rental"/"services" tabs could not be confirmed to exist under those names, and the Sales-tab France/CA/AE region prefixes could not be found either. Numbers below are reported as literally found (mostly by-rep, not by-region). Needs a manual check of the actual sheet tabs.<br>
+&bull; <b>Two disagreeing rep-attribution pivots in Cockpit</b> (EUR Billings/GP by Account Manager vs. USD RevRec/GPRec by rep) &mdash; both reported below, not reconciled to each other.<br>
+&bull; <b>P&amp;L tab lags the Sales tab</b>: September's already-logged &euro;160 transaction hasn't flowed into the P&amp;L tab's Sept row yet (only forecast fixed costs are populated there).<br>
+&bull; GA4 Digital Realities showed 0 active users/sessions on 2026-09-02 &mdash; confirmed genuinely low traffic, not a tracking failure.<br>
+&bull; eBay is a temporary browser-based pull pending the eBay Developer account suspension clearing.<br>
+&bull; Sales/Sales-order data contains ~150 legacy test/junk rows (placeholder customers, near-zero amounts) filtered out of the tables below.
+</div>
+
+<h2 class="section">Top KPIs</h2>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">&euro;1,449,397</div><div class="label">Revenue YTD (2026, Billings)</div></div>
+<div class="kpi-card"><div class="value">&euro;436,873</div><div class="label">Gross Profit YTD (2026)</div></div>
+<div class="kpi-card"><div class="value">125</div><div class="label">Transactions YTD (2026)</div></div>
+<div class="kpi-card"><div class="value">363</div><div class="label">Odoo Pipeline Count (active)</div></div>
+<div class="kpi-card"><div class="value">44 / 363</div><div class="label">Won Deals (no distinct "Lost" stage exists to compute a clean win rate)</div></div>
+<div class="kpi-card"><div class="value">$3,674,335</div><div class="label">Open Pipeline Value (excl. Won)</div></div>
+<div class="kpi-card"><div class="value">111 / $1,876,057</div><div class="label">Open Offers/Quotations (real, filtered)</div></div>
+</div>
+
+<h2 class="section">Platform Activity (admin.topotrade.com)</h2>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">28</div><div class="label">Pending Items (listings awaiting approval)</div></div>
+<div class="kpi-card"><div class="value">201</div><div class="label">Pending Orders (dashboard count)</div></div>
+<div class="kpi-card"><div class="value">186 / 347</div><div class="label">Opened / Total Negotiations</div></div>
+<div class="kpi-card"><div class="value">1</div><div class="label">Pending RFP Requests</div></div>
+<div class="kpi-card"><div class="value">3 / 4</div><div class="label">Pending Questions / Answers</div></div>
+<div class="kpi-card"><div class="value">284</div><div class="label">Chatbot Conversations (all "active")</div></div>
+</div>
+<p class="note">Flag: sampling the "Pending Orders" queue found entries dated back to 2022 still marked Pending &mdash; this looks like stale/broken status data rather than 201 genuinely live open orders; worth a data-hygiene pass. RFP #408 (Trimble X7 scanner, rrcoupet@gmail.com) has been Pending since Feb 23 and expired (valid-through May 30) with 0 views &mdash; needs seller matching or closing out. Chatbot conversation #284 (2026-09-02) had a customer wanting 2x Emlid RS2+ with 5 bot-matched listings, but stalled at a login prompt &mdash; a real lead that never converted.</p>
+
+<h2 class="section">Site Traffic (GA4)</h2>
+<table>
+<tr><th>Property</th><th>Active Users</th><th>New Users</th><th>Sessions</th><th>Page Views</th><th>Top Channels</th></tr>
+<tr><td>topotrade.com</td><td>28</td><td>17</td><td>47</td><td>135</td><td>Direct 24, Unassigned 14, Organic Search 9, Organic Social 4, AI Assistant 3</td></tr>
+<tr><td>digitalrealities.fr</td><td>0</td><td>0</td><td>0</td><td>0</td><td>&mdash; (genuinely quiet day)</td></tr>
+</table>
+<p class="note">No country/geo breakdown available in the current GA4 export &mdash; channel-level only.</p>
+
+<h2 class="section">Billings by Entity / Sales Team YTD (Cockpit)</h2>
+<table>
+<tr><th>Rep</th><th>2026 Billings (EUR)</th><th>2026 GP (EUR)</th><th>2026 RevRec (USD, alt. pivot)</th><th>2026 GPRec (USD, alt. pivot)</th></tr>
+<tr><td>Zein Rachidi</td><td>&euro;659,111.76</td><td>&euro;221,969.31</td><td>$791,644.18</td><td>$253,058.43</td></tr>
+<tr><td>Daniel Llorente</td><td>&euro;309,056.25</td><td>&euro;79,835.35</td><td>$240,027.47</td><td>$66,817.72</td></tr>
+<tr><td>Georges Labaky</td><td>&euro;182,000.82</td><td>&euro;51,117.45</td><td>$280,901.45</td><td>$85,188.98</td></tr>
+<tr><td>Claude Nakhle</td><td>&euro;145,030.94</td><td>&euro;42,164.95</td><td>$148,665.10</td><td>$44,545.28</td></tr>
+<tr><td>Mireille Baho</td><td>&euro;81,500.39</td><td>&euro;18,244.56</td><td>$103,188.48</td><td>$21,451.02</td></tr>
+<tr><td>eBay channel</td><td>&euro;43,786.00</td><td>&euro;21,066.00</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td>topo.com channel</td><td>&euro;28,911.04</td><td>&euro;2,475.64</td><td>&mdash;</td><td>&mdash;</td></tr>
+<tr><td><b>Team Total</b></td><td><b>&euro;1,449,397.20</b></td><td><b>&euro;436,873.27</b></td><td>&mdash;</td><td>&mdash;</td></tr>
+</table>
+<p class="note">The two pivots (EUR Billings/GP by Account Manager vs. USD RevRec/GPRec) use different attribution methods and don't reconcile &mdash; both shown as found. All-time lifetime totals (807 transactions since 2018): &euro;11,190,923.25 billings / &euro;3,213,248.34 GP. 2025 full-year comparison: &euro;1,656,551.62 GMV / &euro;32,837.88 net profit &mdash; 2026 YTD net profit (&euro;149,744.60) already exceeds all of 2025.</p>
+
+<h2 class="section">CRM Pipeline by Rep (Odoo, active opportunities)</h2>
+<table>
+<tr><th>Rep</th><th>Open Deals</th><th>Pipeline Value</th><th>Top Deal</th></tr>
+<tr><td>Zein Rachidi</td><td>17</td><td>$1,599,700.00</td><td>Behzad Company &ndash; PTE Bottling facility, $1,312,500</td></tr>
+<tr><td>Georges Labaky</td><td>215</td><td>$1,499,944.08</td><td>Drone Des Champs Inc &ndash; 10 kits GS18 T, $557,000</td></tr>
+<tr><td>Daniel Llorente</td><td>66</td><td>$414,176.00</td><td>Bazerque Nicolas / TOPO CONTROL, $50,000</td></tr>
+<tr><td>Mireille Baho</td><td>35</td><td>$370,995.14</td><td>G2 Survey Ltd &ndash; Faro scanner accessories, $95,600</td></tr>
+<tr><td>Claude Nakhle</td><td>26</td><td>$365,181.00</td><td>Ugo-Kris Survey Equipment &ndash; 10 Hiper Vr plus OAF, $53,300</td></tr>
+</table>
+<p class="note">Team-wide active-opportunity stage breakdown: 273 New, 44 Won, 28 Qualified, 18 Proposition.</p>
+
+<h2 class="section">Open Offers / Quotations (5+ business days, unconfirmed, real customers only)</h2>
+<table>
+<tr><th>Order</th><th>Customer</th><th>Amount</th><th>Rep</th><th>Sent</th><th>Business Days</th><th>Status</th></tr>
+<tr><td>S00281</td><td>Delta Star Power Projects Services</td><td>$85,039.00</td><td>Unassigned</td><td>2026-08-05</td><td>21</td><td><span class="badge-aging">aging</span></td></tr>
+<tr><td>S00268</td><td>Denev Trading, LLC</td><td>$79,564.80</td><td>Georges Labaky</td><td>2026-07-21</td><td>32</td><td><span class="badge-stale">stale</span></td></tr>
+<tr><td>S00242</td><td>Wise Group</td><td>$143,539.39</td><td>Georges Labaky</td><td>2026-06-24</td><td>51</td><td><span class="badge-stale">stale</span></td></tr>
+<tr><td>S00185</td><td>Rouse Surveyors Inc</td><td>$90,132.80</td><td>Georges Labaky</td><td>2026-05-13</td><td>81</td><td><span class="badge-stale">stale</span></td></tr>
+<tr><td>S00252</td><td>Emirates Telecommunications Group</td><td>$53,330.00</td><td>Mireille Baho</td><td>2026-07-06</td><td>43</td><td><span class="badge-stale">stale</span></td></tr>
+<tr><td>S00335</td><td>Beijing Yuxiang Zhikong Technology</td><td>$38,364.00</td><td>Georges Labaky</td><td>2026-08-24</td><td>8</td><td><span class="badge-aging">aging &ndash; duplicate w/ S00325</span></td></tr>
+<tr><td>S00325</td><td>Beijing Yuxiang Zhikong Technology</td><td>$37,500.00</td><td>Zein Rachidi</td><td>2026-08-24</td><td>8</td><td><span class="badge-aging">aging &ndash; duplicate w/ S00335</span></td></tr>
+<tr><td>S00292</td><td>Ugo-Kris Survey Equipment Ltd</td><td>$27,000.00</td><td>Claude Nakhle</td><td>2026-08-12</td><td>16</td><td><span class="badge-aging">aging</span></td></tr>
+<tr><td colspan="7" class="note">+ 103 more real open quotations (full detail in Odoo Sales app) totaling roughly $1.6M &mdash; the table above surfaces the highest-value/most-recent for daily action; see per-rep breakdown below for each rep's own list.</td></tr>
+</table>
+
+<h2 class="section">Lead Source Health (partial &mdash; today's visible activity)</h2>
+<table>
+<tr><th>Source</th><th>Notes Today</th></tr>
+<tr><td>Machinio</td><td>Auto-logged via Gmail-to-Odoo automation; Behzad Company ($1.3M, Aug 4) and CSI2140/Mario Roothooft (needs region triage, id 792) both visible in Odoo.</td></tr>
+<tr><td>Zein's Sent Mail</td><td>3 genuine opportunities found (G2 Survey/Jim Warner, Geomotion/James Debney, Dubai Municipality tender) &mdash; all already reconciled into Odoo by a prior run; Sensortech/Desmond deal updated to Won this run.</td></tr>
+<tr><td>WhatsApp Web Business</td><td>Ugo-Kris (FC6400 controller shipment blocking order close-out), Global Geosystems group (tracker sourcing, no stock), Jose Gimeno (contract signed today) &mdash; logistics/reminders, not new CRM leads this run.</td></tr>
+<tr><td>eBay</td><td>25 active listings ($684,143 total value), 2 orders in 90 days ($30,578.23) &mdash; 1 shipment currently overdue (Matthew Niles, Radio Handle RH16).</td></tr>
+<tr><td>Inbox Log (4 mailboxes via Gmail-to-Odoo automation)</td><td>26 items tagged "Needs Action" (10 from the last 2 days), all currently unassigned &mdash; routed to Zein's digest.</td></tr>
+</table>
+
+<h2 class="section">Self-Serve Nudge Status</h2>
+<table>
+<tr><th>Lead</th><th>Intent</th><th>Item</th><th>Rep</th><th>Days Pending</th><th>Nudge Drafts</th><th>Escalated?</th></tr>
+<tr><td>Moussa Idriss</td><td>Sell</td><td>Leica TS03 5 Sec R500</td><td>Daniel Llorente</td><td>5 calendar / 4 biz days</td><td>1 (day 0, unsent)</td><td>No</td></tr>
+<tr><td>Saul Mamani</td><td>Sell</td><td>Trimble R8s Rover</td><td>Georges Labaky</td><td>5 calendar / 4 biz days</td><td>1 (day 0, unsent)</td><td>No</td></tr>
+<tr><td>CSI2140 lead (Mario Roothooft)</td><td>Sell</td><td>CSI2140 Machinery Health Analyzer</td><td>Unassigned</td><td>6 days</td><td>0 &mdash; blocked, no region signal</td><td>No</td></tr>
+<tr><td>Lead #722</td><td>Buy</td><td>Leica TS16 I 3" R500 with CS20</td><td>Claude Nakhle</td><td>9+ days</td><td>0</td><td><b>Yes &mdash; past day-7, escalated to rep</b></td></tr>
+</table>
+
+<h2 class="section">Recommended Actions per Rep</h2>
+
+<h3 class="rep">Georges Labaky</h3>
+<b>Deal-Closing Actions</b>
+<ol>
+<li>Drone Des Champs Inc (Nicolas Deschamps) &ndash; "10 kits GS18 T", $557,000, Qualified, 83 days no activity &ndash; confirm still live, your highest-value deal.</li>
+<li>Wise Group (Cheikh Dieye) &ndash; $124,844 Qualified + $143,539.39 quote sent 51 biz days ago, unconfirmed &ndash; call, not email.</li>
+<li>Rouse Surveyors Inc &ndash; RTC360, $79,280, Qualified, 106 days stale + $90,132.80 quote sent 81 biz days ago &ndash; effectively dormant.</li>
+<li>Duplicate-quote flag: Beijing Yuxiang Zhikong Technology &ndash; you (S00335, $38,364) and Zein (S00325, $37,500) both quoted same day, Aug 24 &ndash; reconcile.</li>
+<li>Denev Trading LLC &ndash; $79,564.80 quote sent 32 biz days ago, unconfirmed.</li>
+<li>RWH Engineering Inc &ndash; 4x MS01AXII $66,000 Qualified (44 days) + $62,913.88 quote sent 64 biz days ago.</li>
+</ol>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>Self-serve nudge draft (Saul Mamani / Trimble R8s) unsent since Aug 29 &ndash; 5 business days.</li>
+<li>~25 open quotations older than 60 days, ~$673,000 total &ndash; batch review.</li>
+</ol>
+
+<h3 class="rep">Claude Nakhle</h3>
+<b>Deal-Closing Actions</b>
+<ol>
+<li><b>Ugo-Kris Survey Equipment &ndash; ship the remaining FC6400 controller by Friday</b> (WhatsApp, Sep 2) &ndash; blocking order close-out, tied to Won deal "2&times;FC6400 plus Magnet Field" ($6,000/S00338).</li>
+<li>Dubai Municipality &ndash; Equipment Tender (Technical Proposal) &ndash; new, unsized, routed to you &ndash; size and own the follow-up.</li>
+<li>Socotec &ndash; Topcon MS1AXII, $52,000, fresh (1 day), awaiting counter-offer &ndash; watch only.</li>
+<li>Ugo-Kris &ndash; Hiper Vr 2 set, $27,000, Proposition (21 days) + matching quote sent 16 biz days ago &ndash; status check.</li>
+<li>Al Sudoof for General Trading &ndash; $13,800 quote sent 16 biz days ago.</li>
+<li>Zenel Azemi &ndash; $12,600 quote sent 41 biz days ago, gone quiet.</li>
+</ol>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>Lead #722 (Leica TS16 buyer) crossed day-7 nudge cutoff &ndash; now yours to follow up personally.</li>
+<li>Internal draft to you unsent since Aug 19 (15 days): "Consolidated Machinio lead forward" (4 names).</li>
+<li>~10 open quotations older than 60 days, ~$88,000 total.</li>
+</ol>
+
+<h3 class="rep">Mireille Baho</h3>
+<b>Deal-Closing Actions</b>
+<ol>
+<li>G2 Survey Ltd (Jim Warner) &ndash; Faro scanners, $95,600 list price, fresh (1 day) &ndash; get his reseller target price, best fresh momentum today.</li>
+<li>Geomotion Australia (James Debney) &ndash; $28,125 representative value, quote sent yesterday, awaiting reply.</li>
+<li>Etisalat &ndash; 4 sets Emlid RS4, $53,300, 29 days stale + $53,330 quote sent 43 biz days ago &ndash; gone quiet.</li>
+<li>Habib University Foundation &ndash; 3 sets RS2+, $50,000, 29 days stale + $13,777 quote sent 37 biz days ago (amounts don't match &ndash; reconcile).</li>
+<li>Kulan General Trading &ndash; $29,975 quote sent 56 biz days ago.</li>
+</ol>
+<b>Draft Validation Queue (system-wide)</b>
+<table>
+<tr><th>Lead</th><th>Item</th><th>Rep</th><th>Created</th><th>Days Pending</th></tr>
+<tr><td>Moussa Idriss</td><td>Leica TS03 (selling)</td><td>Daniel Llorente</td><td>2026-08-29</td><td>4 biz days</td></tr>
+<tr><td>Saul Mamani</td><td>Trimble R8s Rover (selling)</td><td>Georges Labaky</td><td>2026-08-29</td><td>4 biz days</td></tr>
+</table>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>Both nudge drafts above approaching day-7 escalation &ndash; QA now.</li>
+<li>~16 open quotations older than 60 days, ~$211,000 total.</li>
+</ol>
+<p class="note">Buyer/Seller Match Requests: none newly identified today.</p>
+
+<h3 class="rep">Daniel Llorente</h3>
+<b>Deal-Closing Actions</b>
+<ol>
+<li>The "Bassem" cluster &ndash; 4 deals, $116,000 combined, all 136 days with zero activity (Bazerque Nicolas $50k, Jérémy Vienne $31k, Lycée Norman Foster $25k, Lacaze Stéphanie $10k) &ndash; status-check round or write-off.</li>
+<li>Service Technique Topographie Laser &ndash; 3 separate unconfirmed quotes ($24,840/56d, $15,780/45d, $8,640/39d) &ndash; bundle into one follow-up.</li>
+<li>New lead: Leica TS03 (Moussa Idriss, France) &ndash; nudge draft sent Aug 29, still unsent, review/send.</li>
+</ol>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>Nudge draft (Moussa Idriss) pending review.</li>
+<li>Intergeo 2026 booth logistics confirmed Sep 2 &ndash; FYI only.</li>
+<li>~12 open quotations older than 60 days, ~$141,000 total.</li>
+</ol>
+
+<h2 class="section">Hot Leads</h2>
+<div class="hotcards">
+<div class="hotcard red"><b>Ugo-Kris Survey Equipment</b><br>FC6400 controller must ship by Friday or order stays open &mdash; Claude Nakhle</div>
+<div class="hotcard green"><b>Behzad Company</b><br>$1,312,500 PTE Bottling line, Machinio-sourced, availability already confirmed &mdash; Zein Rachidi</div>
+<div class="hotcard blue"><b>G2 Survey Ltd (Jim Warner)</b><br>$95,600 Faro scanners, fresh, awaiting reseller target price &mdash; Mireille Baho</div>
+<div class="hotcard purple"><b>Dubai Municipality Tender</b><br>New technical-proposal tender, unsized, needs an owner &mdash; Claude Nakhle</div>
+</div>
+
+<h2 class="section">Pending Drafts Review</h2>
+<table>
+<tr><th>Draft Type</th><th>Recipient</th><th>Created</th><th>Days Pending</th><th>Status</th></tr>
+<tr><td>Self-Serve Nudge</td><td>Moussa Idriss (ismofils8@gmail.com)</td><td>2026-08-29</td><td>5</td><td><span class="badge-aging">aging</span></td></tr>
+<tr><td>Self-Serve Nudge</td><td>Saul Mamani (saul.sm.terrasurvey@gmail.com)</td><td>2026-08-29</td><td>5</td><td><span class="badge-aging">aging</span></td></tr>
+<tr><td>Internal forward</td><td>Claude Nakhle (Machinio consolidated leads)</td><td>2026-08-19</td><td>15</td><td><span class="badge-stale">stale</span></td></tr>
+<tr><td>Odoo email campaign</td><td>"This Week at Topotrade" (unsent)</td><td>2026-09-02</td><td>1</td><td><span class="badge-fresh">fresh</span></td></tr>
+</table>
+
+<h2 class="section">Digital Realities SASU Business</h2>
+<div class="banner flag">Could not confirm the Cockpit sheet has separate "Dist France" / "rental" / "services" tabs under those names this run &mdash; the Drive render returned one continuous data block with no tab-name headers visible. Figures below are limited to what GA4/Ads provide; Distribution/Rental/Services revenue figures need a manual check of the actual Google Sheet tabs before they can be reported here.</div>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">0</div><div class="label">GA4 Active Users (digitalrealities.fr, Sep 2)</div></div>
+<div class="kpi-card"><div class="value">30</div><div class="label">Facebook Followers</div></div>
+<div class="kpi-card"><div class="value">71</div><div class="label">Instagram Followers (@digitalrealities.fr)</div></div>
+<div class="kpi-card"><div class="value">N/A</div><div class="label">Google Ads Spend (unavailable this run)</div></div>
+</div>
+
+<footer>Sources: admin.topotrade.com, Cockpit Google Sheet, GA4, Meta, LinkedIn, WhatsApp Web Business, eBay Seller Hub, Odoo CRM &amp; Sales. Google Ads unavailable. As of 2026-09-03.</footer>
+
+</div>
+
+<div id="marketing" class="tabpanel">
+
+<h2 class="section">Key Metrics</h2>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">5,890</div><div class="label">Facebook Followers (Topotrade.com)</div></div>
+<div class="kpi-card"><div class="value">751</div><div class="label">Instagram Followers (@topotrade_)</div></div>
+<div class="kpi-card"><div class="value">2,321</div><div class="label">LinkedIn Followers (Topotrade)</div></div>
+<div class="kpi-card"><div class="value">28</div><div class="label">GA4 Active Users (topotrade.com, Sep 2)</div></div>
+<div class="kpi-card"><div class="value">N/A</div><div class="label">Google Ads Spend (unavailable)</div></div>
+<div class="kpi-card"><div class="value">~1,150</div><div class="label">Email Contacts (all mailing lists)</div></div>
+</div>
+
+<h2 class="section">Facebook Page Insights (Topotrade)</h2>
+<p>5,890 followers. Page insights (Aug 29&rarr;30): post engagements 0&rarr;1, video views 0&rarr;3, total page views 0&rarr;5.
+10 recent posts fetched (May 20 &ndash; Aug 24, 2026), 4 total comments across them. Messenger: 20 conversations. Lead-gen: 10 active forms (oldest since 2018), 0 new leads captured this sync.</p>
+
+<h2 class="section">LinkedIn Analytics (browser-sourced)</h2>
+<p>Last company post: Aug 24, 2026 (Intergeo 2026 announcement) &mdash; 10 reactions, 1 comment, 10 days old, no newer draft queued.
+Zein's outbound sourcing messages (surplus Leica monitoring stations) to Daniel Lyons (Sixense), Vanesa Parrondo (Global Geosystems), and C&#259;t&#259;lin C&#259;praru (COWI) &mdash; no replies yet.
+Most concrete inbound: James Debney (Geomotion, Australia) asked about used Leica TM50/TM60 &mdash; quote sent (also reflected in CRM as opportunity #966).
+"Digital Realities appeared in 212 searches this week" (page analytics note).</p>
+
+<h2 class="section">Google Ads</h2>
+<div class="banner flag">Unavailable this run &mdash; the connected browser session is signed into Google as zein.rachidi@topotrade.com's personal account, with no Ads accounts reachable under it. Needs contact@topotrade.com / contact@digitalrealities.fr reconnected to a browser session.</div>
+
+<h2 class="section">Email Marketing (Odoo)</h2>
+<table>
+<tr><th>Campaign</th><th>Sent</th><th>Opened</th><th>Clicked</th><th>Open %</th><th>Click %</th></tr>
+<tr><td>Meet Topotrade at INTERGEO 2026</td><td>200</td><td>199</td><td>32</td><td>99.5%</td><td>16.0%</td></tr>
+<tr><td>Last Chance: Emlid GNSS Kit (EN)</td><td>436</td><td>434</td><td>245</td><td>100%</td><td>56.45%</td></tr>
+<tr><td>Derni&egrave;re chance: Kit GNSS Emlid (FR)</td><td>255</td><td>255</td><td>86</td><td>100%</td><td>33.73%</td></tr>
+<tr><td>Emlid x Topotrade Canada</td><td>255</td><td>255</td><td>19</td><td>100%</td><td>7.45%</td></tr>
+<tr><td>"This Week at Topotrade" (draft, unsent since Sep 2)</td><td>0</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+</table>
+<table>
+<tr><th>Mailing List</th><th>Contacts</th></tr>
+<tr><td>Canada-Alberta</td><td>341</td></tr>
+<tr><td>Quebec</td><td>255</td></tr>
+<tr><td>Europe end users</td><td>90</td></tr>
+<tr><td>Ontario</td><td>85</td></tr>
+<tr><td>Leica Dealers</td><td>50</td></tr>
+<tr><td>Manitoba</td><td>17</td></tr>
+<tr><td>Sun Peak Contacts</td><td>16</td></tr>
+<tr><td>Canada</td><td>15</td></tr>
+<tr><td>Asia</td><td>14</td></tr>
+<tr><td>Machinio</td><td>25</td></tr>
+<tr><td>UAE end users / UK</td><td>11 / 11</td></tr>
+<tr><td>Newsletter</td><td>1</td></tr>
+</table>
+
+<h2 class="section">Website Traffic (GA4, Topotrade)</h2>
+<table>
+<tr><th>Metric</th><th>2026-09-02</th></tr>
+<tr><td>Active Users</td><td>28</td></tr>
+<tr><td>New Users</td><td>17</td></tr>
+<tr><td>Sessions</td><td>47</td></tr>
+<tr><td>Page Views</td><td>135</td></tr>
+</table>
+
+<h2 class="section">Instagram</h2>
+<table>
+<tr><th>Account</th><th>Followers</th><th>Media Count</th></tr>
+<tr><td>@topotrade_</td><td>751</td><td>617</td></tr>
+<tr><td>@digitalrealities.fr</td><td>71</td><td>126</td></tr>
+</table>
+<p class="note">Insights (reach/impressions) blocked &mdash; needs a separate Meta App Review submission for instagram_manage_insights scope, not a sync failure.</p>
+
+<h2 class="section">eBay Store (temporary browser pull)</h2>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">25</div><div class="label">Active Listings ($684,143 total value)</div></div>
+<div class="kpi-card"><div class="value">2</div><div class="label">Orders, last 90 days ($30,578.23)</div></div>
+<div class="kpi-card"><div class="value">43,440</div><div class="label">Listing Impressions (Aug 3-Sep 2)</div></div>
+<div class="kpi-card"><div class="value">100%</div><div class="label">Feedback (7 ratings, 12mo)</div></div>
+</div>
+<p class="note">1 order overdue for shipping (Matthew Niles, Leica Radio Handle RH16, due Aug 31). Temporary pull, pending eBay Developer account suspension clearing so the Sell API can be wired in.</p>
+
+<h2 class="section">Recommended Actions for Celine</h2>
+<ol>
+<li>Decide whether to send the drafted "This Week at Topotrade" weekly campaign, sitting unsent since Sep 2.</li>
+<li>Consider a LinkedIn follow-up post on Intergeo 2026 &mdash; last post is 10 days old and performed well.</li>
+<li>Review 3 Emlid reseller/dealership inbound inquiries (Sep 1-2) as a group.</li>
+<li>Google Ads spend/performance is a current blind spot &mdash; get contact@topotrade.com's browser session reconnected.</li>
+</ol>
+
+<h2 class="section">Digital Realities Marketing</h2>
+<div class="kpi-grid">
+<div class="kpi-card"><div class="value">0</div><div class="label">GA4 Active Users (digitalrealities.fr, Sep 2)</div></div>
+<div class="kpi-card"><div class="value">N/A</div><div class="label">Google Ads Spend (unavailable)</div></div>
+</div>
+<table>
+<tr><th>Metric</th><th>2026-09-02</th></tr>
+<tr><td>Active Users</td><td>0</td></tr>
+<tr><td>Sessions</td><td>0</td></tr>
+<tr><td>Page Views</td><td>0</td></tr>
+</table>
+<p class="note">Confirmed genuinely low traffic, not a tracking gap.</p>
+
+<footer>Sources: GA4, Meta (Facebook/Instagram), LinkedIn, Odoo Email Marketing &amp; CRM Inbox Log, eBay Seller Hub. As of 2026-09-03.</footer>
+
+</div>
+
 </div>
 <script>
-var payload = "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";
-function unlock() {
-var pw = document.getElementById("pw").value;
-var errEl = document.getElementById("err");
-try {
-var decrypted = CryptoJS.AES.decrypt(payload, pw);
-var text = decrypted.toString(CryptoJS.enc.Utf8);
-if (!text) { throw new Error("bad password"); }
-var blob = new Blob([text], {type: "text/html"});
-var url = URL.createObjectURL(blob);
-var iframe = document.createElement("iframe");
-iframe.src = url;
-iframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:0;z-index:9999;background:#fff;";
-document.body.appendChild(iframe);
-} catch (e) {
-errEl.style.display = "block";
+function showTab(id){
+  document.querySelectorAll('.tabpanel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
 }
-}
-document.getElementById("pw").addEventListener("keydown", function(e) {
-if (e.key === "Enter") unlock();
-});
 </script>
 </body>
 </html>
