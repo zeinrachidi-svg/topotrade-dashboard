@@ -89,5 +89,21 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-04",
+    "updatedAt": "2026-09-05T02:24:02.123Z",
+    "activeUsers": 0,
+    "newUsers": 0,
+    "sessions": 1,
+    "pageViews": 2,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 78,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 1
+      }
+    ]
   }
 ]
