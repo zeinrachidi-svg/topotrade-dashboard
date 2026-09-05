@@ -214,5 +214,37 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-04",
+    "updatedAt": "2026-09-05T02:34:49.272Z",
+    "activeUsers": 22,
+    "newUsers": 13,
+    "sessions": 45,
+    "pageViews": 105,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 300,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 29
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 11
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 7
+      },
+      {
+        "channel": "Referral",
+        "sessions": 6
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 2
+      }
+    ]
   }
 ]
