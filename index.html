@@ -46,8 +46,8 @@ ol li { margin-bottom:6px; }
 
 <div id="sales" class="tabcontent active">
 
-<div class="banner blue"><b>Sources pulled today:</b> Cockpit sheet (Google Drive), GA4 x2 (GitHub), Meta/Facebook/Instagram x2 (Graph API via sync script), Zein's Gmail (inbox + sent + drafts), Odoo (CRM, Sales, Inbox Log, item-level sales) — all pulled successfully as of 2026-09-06.</div>
-<div class="banner flag"><b>Data-quality flags:</b> admin.topotrade.com, Google Ads (contact@topotrade.com &amp; contact@digitalrealities.fr), eBay Seller Hub (topotrade), LinkedIn, and WhatsApp Web Business were all <b>unavailable this run</b> — no logged-in browser session could be confirmed for any of them (Claude in Chrome's interactive multi-browser picker cannot be answered in this unattended scheduled run; the fallback built-in browser pane has no existing session for these sites). Sections below that depend on these sources say so explicitly rather than guessing. Also: 55 Odoo "Inbox Log: Needs Action" records are currently unassigned ("Contact") rather than routed to a rep — flagged for manual triage.</div>
+<div class="banner blue"><b>Sources pulled today:</b> Cockpit sheet (Google Drive), GA4 x2 (GitHub), Meta/Facebook/Instagram x2 (Graph API), Zein's Gmail (inbox + sent + drafts), Odoo (CRM, Sales, Inbox Log, item-level sales), and — as of a later re-run once Chrome was reconnected — admin.topotrade.com, eBay Seller Hub (topotrade), LinkedIn, and WhatsApp Business.</div>
+<div class="banner flag"><b>Data-quality flags:</b> Google Ads (contact@topotrade.com &amp; contact@digitalrealities.fr) remains unavailable — the only reachable Google login (Zein's personal one) has no Ads accounts under it. Admin panel shows a large backlog: 201 Pending Orders and 187 Opened Negotiations (counts only, not individually enumerated this pass). An eBay order is 6 days overdue with the buyer threatening a refund — escalated directly to Mireille. A live EUR6,000 WhatsApp offer (Beka Abuladze, Leica TS09) is blocked on a technical issue and logged as Odoo lead #1181. 55 Odoo "Inbox Log: Needs Action" records remain unassigned ("Contact") — flagged for manual triage.</div>
 
 <h2>Key Metrics</h2>
 <div class="card-grid">
@@ -61,7 +61,16 @@ ol li { margin-bottom:6px; }
 </div>
 
 <h2>Platform Activity</h2>
-<div class="banner flag">Unavailable this run — admin.topotrade.com (pending orders, abandoned carts, open negotiations, listings awaiting approval, RFPs, Q&amp;A, chatbot conversations) could not be reached.</div>
+<div class="card-grid">
+<div class="card"><div class="label">Pending Items</div><div class="value">29</div></div>
+<div class="card"><div class="label">Rejected Items</div><div class="value">19</div></div>
+<div class="card"><div class="label">Pending Orders</div><div class="value">201</div></div>
+<div class="card"><div class="label">Opened Negotiations</div><div class="value">187</div></div>
+<div class="card"><div class="label">Pending Questions</div><div class="value">3</div></div>
+<div class="card"><div class="label">Pending Answers</div><div class="value">4</div></div>
+</table>
+</div>
+<p class="note">1 Pending Request (RFP #408, Trimble X7 scanner, rrcoupet@gmail.com) has a deadline of 2026-05-30 — already passed — but is still marked "Pending"; worth expiring. 201 Pending Orders / 187 Negotiations are counts only, not individually enumerated this pass (too voluminous) — recommend a direct admin-panel review given the size of this backlog.</p>
 
 <h2>Site Traffic — GA4</h2>
 <div class="card-grid">
@@ -193,6 +202,22 @@ ol li { margin-bottom:6px; }
 <h2>Digital Realities Business</h2>
 <div class="banner flag">Cockpit tabs "Dist France" (Matterport France distribution), "rental", and "services" could not be confirmed to exist under those names in this render (re-checked this run, same finding as 2026-09-03) — no figures are fabricated for Distribution/Rental/Services revenue.</div>
 <p><b>Digital Realities Marketing snapshot:</b> GA4 active users 1 (2026-09-05), Facebook 30 followers, Instagram (@digitalrealities.fr) 71 followers / 126 posts. Google Ads (contact@digitalrealities.fr) unavailable this run.</p>
+
+<h2>eBay Store (topotrade)</h2>
+<div class="banner flag"><b>Overdue order, buyer threatening refund:</b> Order 14-15081-74435, Leica Radio Handle RH16, buyer Matthew Niles — sold/paid 2026-08-27, ship-by 2026-08-31, now 6 days overdue. Buyer messaged "That will not work. I'll just do a refund." 1 hour before this pull. Escalated directly to Mireille Baho per the standing eBay routing rule.</div>
+<div class="card-grid">
+<div class="card"><div class="label">Active Listings</div><div class="value">25</div></div>
+<div class="card"><div class="label">Sales (90d)</div><div class="value">EUR 897.04</div></div>
+<div class="card"><div class="label">Orders (90d)</div><div class="value">2</div></div>
+<div class="card"><div class="label">Eligible to Send Offers</div><div class="value">10</div></div>
+</div>
+<p class="note">Other open buyer questions (not urgent): Leica RH17 availability, Leica TS16 P 1" R1000 details, ZF 5016 calibration status — all already have a reply in progress.</p>
+
+<h2>WhatsApp Business — Live Lead</h2>
+<p><b>Beka Abuladze</b> — offered EUR6,000 for listing #2458 (Leica TS09 3" R1000, listed EUR8,234) but couldn't complete the marketplace offer (SMS verification not supported in his country). Told it would be done manually, still waiting as of yesterday. Logged as <b>Odoo lead #1181</b>, assigned to Zein Rachidi (no rep was visibly engaged in the thread) — needs the offer completed manually and a follow-up.</p>
+
+<h2>LinkedIn</h2>
+<p>Nothing urgent. The previously-flagged Katja Riefler message was a conference invite (RecommerceBuzz, Oct 6-7 Berlin), informational only. Topotrade's company page inbox has no new messages since Aug 27. Zein's outbound message to Dimensional Engineering (Leica AT401 buyer-prospecting) is still awaiting a reply.</p>
 
 <h2>Footer</h2>
 <p class="note">Sources: Google Drive (Cockpit sheet), GitHub (GA4 + Meta snapshots), Gmail (Zein's inbox/sent/drafts), Odoo (CRM/Sales/Inbox Log via XML-RPC), sales@ mailer Web App (drafts list). Unavailable this run: admin.topotrade.com, Google Ads x2, eBay Seller Hub, LinkedIn, WhatsApp Web Business. As of 2026-09-06.</p>
