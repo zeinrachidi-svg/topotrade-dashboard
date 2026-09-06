@@ -246,5 +246,37 @@
         "sessions": 2
       }
     ]
+  },
+  {
+    "date": "2026-09-05",
+    "updatedAt": "2026-09-06T02:34:48.671Z",
+    "activeUsers": 22,
+    "newUsers": 14,
+    "sessions": 33,
+    "pageViews": 66,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 372,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 13
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 12
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 7
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 5
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 3
+      }
+    ]
   }
 ]
