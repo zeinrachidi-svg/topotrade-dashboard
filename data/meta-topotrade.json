@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-06",
-  "updatedAt": "2026-09-06T04:43:12.925108Z",
+  "date": "2026-09-08",
+  "updatedAt": "2026-09-08T03:28:42.798873Z",
   "page": {
     "name": "Topotrade.com",
-    "fan_count": 5889,
-    "followers_count": 5889,
+    "fan_count": 5885,
+    "followers_count": 5885,
     "instagram_business_account": {
       "id": "17841416108569441"
     },
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-03T07:00:00+0000"
+            "end_time": "2026-09-05T07:00:00+0000"
           },
           {
-            "value": 0,
-            "end_time": "2026-09-04T07:00:00+0000"
+            "value": 1,
+            "end_time": "2026-09-06T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 2,
-            "end_time": "2026-09-03T07:00:00+0000"
+            "value": 3,
+            "end_time": "2026-09-05T07:00:00+0000"
           },
           {
-            "value": 2,
-            "end_time": "2026-09-04T07:00:00+0000"
+            "value": 4,
+            "end_time": "2026-09-06T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 17,
-            "end_time": "2026-09-03T07:00:00+0000"
+            "value": 5,
+            "end_time": "2026-09-05T07:00:00+0000"
           },
           {
-            "value": 4,
-            "end_time": "2026-09-04T07:00:00+0000"
+            "value": 6,
+            "end_time": "2026-09-06T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -207,7 +207,7 @@
           }
         ]
       },
-      "updated_time": "2026-09-05T12:23:07+0000",
+      "updated_time": "2026-09-07T05:29:10+0000",
       "id": "t_1351386060315899"
     },
     {
@@ -618,7 +618,7 @@
   "recentLeads": [],
   "instagram": {
     "username": "topotrade_",
-    "followers_count": 750,
+    "followers_count": 752,
     "media_count": 617,
     "id": "17841416108569441"
   },
