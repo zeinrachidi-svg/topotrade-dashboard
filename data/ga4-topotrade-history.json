@@ -330,5 +330,33 @@
         "sessions": 15
       }
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "updatedAt": "2026-09-09T02:34:48.919Z",
+    "activeUsers": 35,
+    "newUsers": 22,
+    "sessions": 61,
+    "pageViews": 108,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 78,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 37
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 20
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 15
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 1
+      }
+    ]
   }
 ]
