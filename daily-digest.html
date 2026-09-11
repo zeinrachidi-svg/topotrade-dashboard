@@ -1,108 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Daily Digest — Thursday, September 10 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest — Friday, September 11 2026</title>
 <style>
-  :root{
-    --bg:#FCFCFB; --wash:#F9F9F7; --ink:#2E2C27; --ink-soft:#6B6A63;
-    --ink-grey:#B4B3A8; --hairline:#E4E3DC; --clay:#C6613F; --clay-hover:#AE5133;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink-soft);
-    font-family:-apple-system,"Segoe UI",sans-serif;line-height:1.5;}
-  .band{width:100%;}
-  .band-top{background:var(--wash);border-bottom:1px solid var(--hairline);}
-  .band-bottom{background:var(--bg);}
-  .wrap{max-width:860px;margin:0 auto;padding:48px 24px;}
-  .band-bottom .wrap{padding-top:40px;}
-  .daydate{font-size:14px;color:var(--ink-soft);margin:0 0 10px;}
-  h1.headline{font-family:Georgia,"Times New Roman",serif;font-weight:600;
-    font-size:40px;line-height:1.25;color:var(--ink);margin:0 0 28px;}
-  .drawing{display:block;width:100%;height:auto;margin-bottom:10px;}
-  .acts{display:flex;width:100%;}
-  .act{flex:1;padding:14px 20px 0 0;border-left:1px solid var(--hairline);}
-  .act:first-child{border-left:none;padding-left:0;}
-  .act-time{font-weight:700;color:var(--ink);font-size:13px;letter-spacing:.02em;margin-bottom:6px;}
-  .act-sentence{font-size:14px;color:var(--ink-soft);margin:0;}
-  h2.section-heading{font-family:-apple-system,"Segoe UI",sans-serif;font-weight:600;
-    font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);
-    margin:44px 0 14px;}
-  h2.section-heading:first-of-type{margin-top:0;}
-  .numbers{font-size:14px;color:var(--ink-soft);margin:0 0 16px;}
-  .numbers table{border-collapse:collapse;width:100%;margin-top:8px;font-size:12.5px;}
-  .numbers th,.numbers td{text-align:left;padding:5px 10px 5px 0;border-bottom:1px solid var(--hairline);white-space:nowrap;}
-  .numbers th{color:var(--ink);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.02em;}
-  .numbers td{color:var(--ink-soft);}
-  .numbers-scroll{overflow-x:auto;}
-  .mini-list{font-size:13px;color:var(--ink-soft);margin:8px 0 0;padding-left:18px;}
-  .mini-list li{margin-bottom:3px;}
-  .mini-cols{display:flex;gap:28px;flex-wrap:wrap;margin-top:10px;}
-  .mini-col{flex:1;min-width:240px;}
-  .mini-col-title{font-size:11.5px;text-transform:uppercase;letter-spacing:.02em;color:var(--ink);font-weight:600;margin-bottom:6px;}
-  ol.todo{list-style:none;margin:0 0 8px;padding:0;counter-reset:none;}
-  ol.todo li.item{display:flex;align-items:flex-start;gap:12px;padding:8px 0;border-bottom:1px solid var(--hairline);}
-  ol.todo li.item:last-of-type{border-bottom:none;}
-  ol.todo li.divider{list-style:none;height:1px;background:var(--hairline);margin:6px 0;padding:0;border:none;}
-  .item-check{appearance:none;-webkit-appearance:none;flex:none;width:17px;height:17px;
-    margin-top:2px;border:1.5px solid var(--ink-grey);border-radius:4px;background:var(--bg);
-    position:relative;cursor:pointer;}
-  .item-check:checked{background:var(--clay);border-color:var(--clay);}
-  .item-check:checked::after{content:"";position:absolute;left:5px;top:1px;width:4px;height:9px;
-    border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg);}
-  .item-body{font-size:14px;}
-  .item-title{font-weight:700;color:var(--ink);}
-  .item-sentence{color:var(--ink-soft);}
-  li.item.done .item-title,li.item.done .item-sentence{color:var(--ink-grey);text-decoration:line-through;}
-  .portfolio p{font-size:14px;color:var(--ink-soft);margin:0 0 14px;}
-  .portfolio .ticker{font-weight:700;color:var(--ink);}
-  .portfolio .note{font-size:12.5px;color:var(--ink-grey);margin-top:18px;}
-  @media (max-width:640px){
-    h1.headline{font-size:30px;}
-    .acts{flex-direction:column;}
-    .act{border-left:none;border-top:1px solid var(--hairline);padding:14px 0 0;}
-    .act:first-child{border-top:none;}
-    .mini-cols{flex-direction:column;gap:16px;}
-    .numbers table{font-size:11.5px;}
-  }
+:root{
+  --bg:#FCFCFB; --wash:#F9F9F7; --ink:#2E2C27; --ink-soft:#6B6A63; --ink-grey:#B4B3A8;
+  --hairline:#E4E3DC; --band-line:#E1E1DF; --clay:#C6613F; --clay-hover:#AE5133;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",sans-serif;}
+.band{width:100%;}
+.band-top{background:var(--wash);border-bottom:1px solid var(--band-line);}
+.band-bottom{background:var(--bg);}
+.wrap{max-width:860px;margin:0 auto;padding:48px 24px 56px;}
+.daydate{font-size:14px;color:var(--ink-soft);margin:0 0 10px;}
+.headline{font-family:Georgia,serif;font-size:40px;line-height:1.25;margin:0 0 28px;color:var(--ink);font-weight:600;}
+.terrain{display:block;width:100%;height:auto;margin-bottom:6px;}
+.acts{display:flex;width:100%;margin-top:8px;}
+.act{flex:1;padding:0 20px;border-left:1px solid var(--hairline);}
+.act:first-child{border-left:none;padding-left:0;}
+.act:last-child{padding-right:0;}
+.act-time{font-weight:700;font-size:13px;letter-spacing:.02em;color:var(--ink);margin-bottom:6px;}
+.act-sentence{font-size:14px;color:var(--ink-soft);line-height:1.5;}
+h2.section-heading{font-size:15px;letter-spacing:.02em;text-transform:none;color:var(--ink);margin:44px 0 14px;font-weight:700;}
+h2.section-heading:first-of-type{margin-top:0;}
+.numbers{font-size:14px;color:var(--ink-soft);margin:0 0 16px;line-height:1.6;}
+.numbers b{color:var(--ink);font-weight:600;}
+.numbers-table{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 18px;}
+.numbers-table th{text-align:left;font-weight:600;color:var(--ink-soft);font-size:12px;padding:6px 10px 6px 0;border-bottom:1px solid var(--hairline);white-space:nowrap;}
+.numbers-table td{padding:7px 10px 7px 0;border-bottom:1px solid var(--hairline);color:var(--ink);white-space:nowrap;}
+.numbers-table td.name,.numbers-table th.name{white-space:normal;}
+.numbers-table tr:last-child td{border-bottom:none;}
+.subhead{font-size:12px;color:var(--ink-grey);margin:14px 0 6px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
+ol.todo{list-style:none;margin:0 0 8px;padding:0;counter-reset:item;}
+ol.todo li{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-size:14px;line-height:1.55;counter-increment:item;}
+ol.todo li .num{flex:0 0 auto;width:18px;color:var(--ink-grey);font-size:13px;padding-top:1px;}
+ol.todo li .box{flex:0 0 auto;width:16px;height:16px;margin-top:2px;border:1.5px solid var(--ink-grey);border-radius:3px;position:relative;cursor:pointer;background:var(--bg);}
+ol.todo li .box.checked{background:var(--clay);border-color:var(--clay);}
+ol.todo li .box.checked::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg);}
+ol.todo li .txt{flex:1;}
+ol.todo li .txt b{color:var(--ink);font-weight:600;}
+ol.todo li.done .txt{color:var(--ink-grey);text-decoration:line-through;}
+ol.todo li.done .txt b{color:var(--ink-grey);}
+.divider{border:none;border-top:1px solid var(--hairline);margin:4px 0;}
+.divider.hide{display:none;}
+.portfolio p{font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0 0 14px;}
+.portfolio p b{color:var(--ink);}
+.reminder{font-size:12px;color:var(--ink-grey);margin-top:18px;font-style:italic;}
+@media (max-width:640px){
+  .headline{font-size:30px;}
+  .acts{flex-direction:column;}
+  .act{border-left:none;border-top:1px solid var(--hairline);padding:14px 0 0;margin-top:14px;}
+  .act:first-child{border-top:none;padding-top:0;margin-top:0;}
+  .numbers-table{display:block;overflow-x:auto;white-space:nowrap;}
+}
 </style>
 </head>
 <body>
 
 <div class="band band-top">
   <div class="wrap">
-    <p class="daydate">Thursday · September 10 2026</p>
-    <h1 class="headline">The whole day is yours, Zein — one call at 12:30, then it's open for whatever's been waiting.</h1>
-    <svg class="drawing" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,122 C100,120 180,118 260,119 C320,120 360,110 420,96 C480,110 520,118 580,119 C660,120 740,121 840,120"
-            fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="420" cy="96" r="8" fill="#2E2C27"/>
-      <g>
-        <circle cx="108" cy="42" r="11" fill="none" stroke="#C6613F" stroke-width="2"/>
-        <g stroke="#C6613F" stroke-width="2" stroke-linecap="round">
-          <line x1="108" y1="20" x2="108" y2="12"/>
-          <line x1="108" y1="72" x2="108" y2="64"/>
-          <line x1="86" y1="42" x2="78" y2="42"/>
-          <line x1="138" y1="42" x2="130" y2="42"/>
-          <line x1="92" y1="26" x2="86" y2="20"/>
-          <line x1="124" y1="26" x2="130" y2="20"/>
-          <line x1="92" y1="58" x2="86" y2="64"/>
-          <line x1="124" y1="58" x2="130" y2="64"/>
-        </g>
-      </g>
+    <p class="daydate">Friday &middot; September 11 2026</p>
+    <h1 class="headline">Dubai keeps it quiet today, Zein &mdash; the day is open for whatever's been waiting.</h1>
+    <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="90" cy="46" r="17" fill="none" stroke="#C6613F" stroke-width="2.5"/>
+      <line x1="90" y1="18" x2="90" y2="10" stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="112" y1="24" x2="118" y2="18" stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="68" y1="24" x2="62" y2="18" stroke="#C6613F" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M0,120 C 140,116 260,122 420,119 C 580,116 700,121 840,118" fill="none" stroke="#2E2C27" stroke-width="2"/>
     </svg>
     <div class="acts">
       <div class="act">
-        <div class="act-time">9 AM – 12:30 PM</div>
-        <p class="act-sentence">Open straight through — Zein checked into Rove Downtown Dubai today, and the morning has nothing on it.</p>
+        <div class="act-time">12&ndash;9 AM</div>
+        <div class="act-sentence">Nothing on the calendar yet.</div>
       </div>
       <div class="act">
-        <div class="act-time">12:30 – 1:30 PM</div>
-        <p class="act-sentence">The weekly Topotrade check-in with Levit Solutions (Fatima Hbeish, Ali Saayed) — the day's one fixed point.</p>
+        <div class="act-time">9 AM&ndash;6 PM</div>
+        <div class="act-sentence">Wide open through the day &mdash; still in Dubai for the Rove Downtown stay.</div>
       </div>
       <div class="act">
-        <div class="act-time">1:30 PM onward</div>
-        <p class="act-sentence">Nothing else on the calendar — the rest of the afternoon and evening are open.</p>
+        <div class="act-time">6 PM onward</div>
+        <div class="act-sentence">Evening stays clear too.</div>
       </div>
     </div>
   </div>
@@ -111,151 +91,140 @@
 <div class="band band-bottom">
   <div class="wrap">
 
+    <!-- 1. TOPOTRADE -->
     <h2 class="section-heading">Topotrade</h2>
-    <p class="numbers"><em>Today's P&amp;L digest from sales@topotrade.com hadn't arrived by the time this page was built (the source dashboard task appears not to have sent one this run), so no YTD/MTD figures below — everything here comes from a light scan of the inbox plus the standing list.</em></p>
-    <ol class="todo" id="list-topotrade">
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-1"><div class="item-body"><span class="item-title">Meet Mohammed Makki</span> <span class="item-sentence">in Abu Dhabi.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-2"><div class="item-body"><span class="item-title">Contact Nader Awada.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-3"><div class="item-body"><span class="item-title">Contact Salah Sahyoun.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-4"><div class="item-body"><span class="item-title">Contact Jad Kobeissi.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-5"><div class="item-body"><span class="item-title">Classify addresses and companies</span> <span class="item-sentence">— make sure everything is properly set up on Google.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-6"><div class="item-body"><span class="item-title">Connect eBay</span> <span class="item-sentence">to the daily dashboard task.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-7"><div class="item-body"><span class="item-title">Release the DM guarantee.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-8"><div class="item-body"><span class="item-title">Update the trade license</span> <span class="item-sentence">to include import of GNSS products, and contact TDRA on 80012 about company registration and the certificate for Emlid products.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-9"><div class="item-body"><span class="item-title">Follow up with Dubai Trade</span> <span class="item-sentence">to obtain the import code.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-10"><div class="item-body"><span class="item-title">Contact French Tech</span> <span class="item-sentence">in Abu Dhabi and Dubai.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-11"><div class="item-body"><span class="item-title">Scout distressed Gulf contractors</span> <span class="item-sentence">— ask Claude to find contractors in the Gulf that are distressed or bankrupt, to see about buying their used equipment.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-12"><div class="item-body"><span class="item-title">Follow up with Rebecca</span> <span class="item-sentence">on Marlene's issue.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-13"><div class="item-body"><span class="item-title">Offer Nader Jbeili</span> <span class="item-sentence">the Olivier equipment.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-14"><div class="item-body"><span class="item-title">Follow up with Nexity</span> <span class="item-sentence">on the works in the 20th arrondissement, Paris.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-15"><div class="item-body"><span class="item-title">Follow up with Nexity</span> <span class="item-sentence">on the works in Poitiers.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-16"><div class="item-body"><span class="item-title">Work admin.topotrade.com's backlog</span> <span class="item-sentence">— go through the pending orders, listings, and dropped carts, and re-engage those customers.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-17"><div class="item-body"><span class="item-title">Contact Rita</span> <span class="item-sentence">at BNP Paribas Paris.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-18"><div class="item-body"><span class="item-title">Modify the address</span> <span class="item-sentence">on the EDF DR account.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-19"><div class="item-body"><span class="item-title">List the Almarwan items</span> <span class="item-sentence">for sale.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-20"><div class="item-body"><span class="item-title">Email JP</span> <span class="item-sentence">on the remaining MVP scope.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-21"><div class="item-body"><span class="item-title">Look for office space</span> <span class="item-sentence">— a small space in Abu Dhabi.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="topotrade-22"><div class="item-body"><span class="item-title">Top up Anthropic usage credits</span> <span class="item-sentence">— the workspace behind these automations flagged as out of credits this morning, in the inbox.</span></div></li>
+    <p class="numbers">Today's digest email from sales@topotrade.com hadn't arrived after waiting on it, so these numbers are sitting out this run &mdash; the to-do list below still combines a light scan of your own inbox with the standing items.</p>
+    <ol class="todo" data-section="topotrade">
+      <li data-id="topotrade-1"><span class="num">1</span><span class="box"></span><span class="txt"><b>Send Mireille the transfer copy for the 2 TS15 invoices</b> &mdash; she's asked twice now for proof of payment before she can close out the order, in your Gmail.</span></li>
+      <li data-id="topotrade-2"><span class="num">2</span><span class="box"></span><span class="txt"><b>Tell Daniel Llorente how the Matterport changes hit Digital Realities' VARs</b> &mdash; he's followed up twice on the October 8 subscription plan changes without a clear answer from you, in your Gmail.</span></li>
+      <li data-id="topotrade-3"><span class="num">3</span><span class="box"></span><span class="txt"><b>Meet with Mohammed Makki in Abu Dhabi.</b></span></li>
+      <li data-id="topotrade-4"><span class="num">4</span><span class="box"></span><span class="txt"><b>Contact Nader Awada.</b></span></li>
+      <li data-id="topotrade-5"><span class="num">5</span><span class="box"></span><span class="txt"><b>Contact Salah Sahyoun.</b></span></li>
+      <li data-id="topotrade-6"><span class="num">6</span><span class="box"></span><span class="txt"><b>Contact Jad Kobeissi.</b></span></li>
+      <li data-id="topotrade-7"><span class="num">7</span><span class="box"></span><span class="txt"><b>Classify all addresses and companies properly on Google.</b></span></li>
+      <li data-id="topotrade-8"><span class="num">8</span><span class="box"></span><span class="txt"><b>Connect eBay to the daily dashboard task.</b></span></li>
+      <li data-id="topotrade-9"><span class="num">9</span><span class="box"></span><span class="txt"><b>Release the DM guarantee.</b></span></li>
+      <li data-id="topotrade-10"><span class="num">10</span><span class="box"></span><span class="txt"><b>Update the trade license for GNSS import and contact TDRA on 80012</b> &mdash; re: company registration and a certificate for Emlid products.</span></li>
+      <li data-id="topotrade-11"><span class="num">11</span><span class="box"></span><span class="txt"><b>Follow up with Dubai Trade to obtain the import code.</b></span></li>
+      <li data-id="topotrade-12"><span class="num">12</span><span class="box"></span><span class="txt"><b>Contact French Tech Abu Dhabi and Dubai.</b></span></li>
+      <li data-id="topotrade-13"><span class="num">13</span><span class="box"></span><span class="txt"><b>Ask Claude to find distressed or bankrupt Gulf contractors</b> &mdash; to see about buying used equipment from them.</span></li>
+      <li data-id="topotrade-14"><span class="num">14</span><span class="box"></span><span class="txt"><b>Follow up with Rebecca on Marlene's issue.</b></span></li>
+      <li data-id="topotrade-15"><span class="num">15</span><span class="box"></span><span class="txt"><b>Offer Nader Jbeili the Olivier equipment.</b></span></li>
+      <li data-id="topotrade-16"><span class="num">16</span><span class="box"></span><span class="txt"><b>Follow up with Nexity on the travaux</b> &mdash; 20th arrondissement, Paris.</span></li>
+      <li data-id="topotrade-17"><span class="num">17</span><span class="box"></span><span class="txt"><b>Follow up with Nexity on the travaux in Poitiers.</b></span></li>
+      <li data-id="topotrade-18"><span class="num">18</span><span class="box"></span><span class="txt"><b>Go through the pending items in admin.topotrade.com</b> &mdash; pending orders, listings, dropped carts, etc. &mdash; and re-engage those customers; check with Claude on how to approach this.</span></li>
+      <li data-id="topotrade-19"><span class="num">19</span><span class="box"></span><span class="txt"><b>Contact Rita at BNP Paribas Paris.</b></span></li>
+      <li data-id="topotrade-20"><span class="num">20</span><span class="box"></span><span class="txt"><b>Modify the address on the EDF DR account.</b></span></li>
+      <li data-id="topotrade-21"><span class="num">21</span><span class="box"></span><span class="txt"><b>List the Almarwan items for sale.</b></span></li>
+      <li data-id="topotrade-22"><span class="num">22</span><span class="box"></span><span class="txt"><b>Send JP an email on the remaining MVP scope.</b></span></li>
+      <li data-id="topotrade-23"><span class="num">23</span><span class="box"></span><span class="txt"><b>Look for a small office space in Abu Dhabi.</b></span></li>
     </ol>
 
+    <!-- 2. DIGITAL REALITIES -->
     <h2 class="section-heading">Digital Realities</h2>
-    <p class="numbers"><em>No YTD/MTD figures again today — the Cockpit sheet's natural-language render still returns one continuous block with no visible tab headers, so "Dist France," "rental," and "services" can't be confirmed under those names.</em></p>
-    <ol class="todo" id="list-digitalrealities">
-      <li class="item"><input type="checkbox" class="item-check" data-id="digitalrealities-1"><div class="item-body"><span class="item-title">Confirm the Cockpit sheet's tab names</span> <span class="item-sentence">directly in Google Sheets — the automated render can't detect distinct "Dist France," "rental," or "services" tabs, so this section's numbers keep coming up empty.</span></div></li>
+    <ol class="todo" data-section="digitalrealities">
+      <li data-id="digitalrealities-1"><span class="num">1</span><span class="box"></span><span class="txt"><b>Confirm the Cockpit sheet's actual tab names for Digital Realities</b> &mdash; the sheet only shows Sales, P&amp;L, Summary RevRec, Sales in USD, buyers summary, Seller summary, Mireille Target scheme, Pivot Sales &amp; Direct costs per month, Cost, Salaries and ZR, so "Dist France" / "rental" / "services" can't be confirmed from here; worth checking directly in Google Sheets.</span></li>
     </ol>
 
+    <!-- 3. LOTG -->
     <h2 class="section-heading">Legends Own The Game</h2>
-    <div class="numbers">
-      <div class="numbers-scroll">
-      <table>
-        <tr><th>Period</th><th>Sales</th><th>Gross profit</th><th>Margin</th></tr>
-        <tr><td>YTD (Jan 1–Sep 10)</td><td>AED 21,406,009.54</td><td>AED 6,142,735.78</td><td>29%</td></tr>
-        <tr><td>MTD (Sep 1–10)</td><td>AED 552,180.56</td><td>AED 186,922.80</td><td>34%</td></tr>
-      </table>
-      </div>
-      <div class="mini-cols">
-        <div class="mini-col">
-          <div class="mini-col-title">Top 10 customers, YTD sales</div>
-          <div class="numbers-scroll">
-          <table>
-            <tr><th>Customer</th><th>YTD sales</th><th>YTD GP</th><th>MTD sales</th><th>MTD GP</th></tr>
-            <tr><td>Roj Agha</td><td>6,134,757</td><td>1,573,343</td><td colspan="2">no MTD activity</td></tr>
-            <tr><td>Manuel Ogaza</td><td>1,981,518</td><td>624,122</td><td>75,216</td><td>23,245</td></tr>
-            <tr><td>Jack Tai</td><td>925,187</td><td>229,542</td><td colspan="2">no MTD activity</td></tr>
-            <tr><td>Karim Abouseda</td><td>914,040</td><td>270,087</td><td>21,307</td><td>10,458</td></tr>
-            <tr><td>Said Deniev</td><td>853,319</td><td>312,567</td><td>168,071</td><td>70,505</td></tr>
-            <tr><td>LOTG Walk In</td><td>755,883</td><td>230,251</td><td>33,031</td><td>10,284</td></tr>
-            <tr><td>Mahdiar Ahmadi</td><td>663,617</td><td>168,395</td><td>5,929</td><td>1,777</td></tr>
-            <tr><td>Aaron Dray</td><td>564,598</td><td>204,147</td><td>23,844</td><td>8,537</td></tr>
-            <tr><td>Mishaal Alireza</td><td>535,279</td><td>159,851</td><td>12,036</td><td>3,530</td></tr>
-            <tr><td>Mohamad Osman</td><td>386,654</td><td>99,329</td><td>3,452</td><td>945</td></tr>
-          </table>
-          </div>
-          <p style="font-size:11px;color:var(--ink-grey);margin-top:4px;">AED, unrounded to nearest dirham above rounded here for space.</p>
-        </div>
-      </div>
-      <div class="mini-cols">
-        <div class="mini-col">
-          <div class="mini-col-title">Top 10 products, YTD revenue</div>
-          <ol class="mini-list">
-            <li>Topps UCC Chrome 2025-26 Sapphire Hobby Box — AED 438,001 (GP AED 130,217, 30%)</li>
-            <li>Topps Real Madrid Los Blancos 25/26 Deck Box — AED 375,790 (GP AED 195,398, 52%)</li>
-            <li>2026 Panini Prizm FIFA World Cup Hobby Box — AED 304,605 (GP AED 77,723, 26%)</li>
-            <li>Topps NBA Cosmic Basketball 2025-26 Hobby Box — AED 283,220 (GP AED 80,426, 28%)</li>
-            <li>2025-26 Bowman Basketball Sapphire Box — AED 271,072 (GP AED 45,885, 17%)</li>
-            <li>2025-26 Topps Chrome Sapphire Basketball Box — AED 267,185 (GP AED 61,325, 23%)</li>
-            <li>2026 Premier League Finest Hobby Box — AED 248,171 (GP AED 58,005, 23%)</li>
-            <li>2024-25 Panini One &amp; One Basketball Hobby Box — AED 220,459 (GP AED 52,517, 24%)</li>
-            <li>Topps Basketball Finest 2025-26 Hobby Box — AED 209,159 (GP AED 56,177, 27%)</li>
-            <li>2024-25 Topps Dynasty UEFA Club Competitions — AED 193,476 (GP AED 39,919, 21%)</li>
-          </ol>
-        </div>
-        <div class="mini-col">
-          <div class="mini-col-title">Top 10 products, YTD gross profit</div>
-          <ol class="mini-list">
-            <li>Topps Real Madrid Los Blancos 25/26 Deck Box — GP AED 195,398 (rev AED 375,790, 52%)</li>
-            <li>Topps UCC Chrome 2025-26 Sapphire Hobby Box — GP AED 130,217 (rev AED 438,001, 30%)</li>
-            <li>Topps NBA Cosmic Basketball 2025-26 Hobby Box — GP AED 80,426 (rev AED 283,220, 28%)</li>
-            <li>PSA Category: Express Dual Service — GP AED 79,927 (rev AED 148,943, 54%)</li>
-            <li>2026 Panini Prizm FIFA World Cup Hobby Box — GP AED 77,723 (rev AED 304,605, 26%)</li>
-            <li>PSA Category: Express — GP AED 72,535 (rev AED 153,429, 47%)</li>
-            <li>PSA Category: Regular — GP AED 66,353 (rev AED 149,048, 45%)</li>
-            <li>2025-26 Topps Chrome Sapphire Basketball Box — GP AED 61,325 (rev AED 267,185, 23%)</li>
-            <li>Topps UCC Chrome 2025-26 Jumbo Box — GP AED 60,826 (rev AED 163,210, 37%)</li>
-            <li>2026 Premier League Finest Hobby Box — GP AED 58,005 (rev AED 248,171, 23%)</li>
-          </ol>
-        </div>
-      </div>
-      <div class="mini-cols">
-        <div class="mini-col">
-          <div class="mini-col-title">Top categories, YTD revenue (Jan 1–Sep 10)</div>
-          <ol class="mini-list">
-            <li>Card Boxes — AED 18,495,471 (GP 28%)</li>
-            <li>PSA Services — AED 1,154,207 (GP 39%)</li>
-            <li>Sports Memorabilia — AED 795,318 (GP 24%)</li>
-            <li>Cards — AED 629,222 (GP 16%)</li>
-            <li>Accessories — AED 158,449 (GP 35%)</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <ol class="todo" id="list-lotg">
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-1"><div class="item-body"><span class="item-title">Prepare for Elias Kanaan</span> <span class="item-sentence">— the meeting set for Monday, September 7th.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-2"><div class="item-body"><span class="item-title">Write up the minutes</span> <span class="item-sentence">from the meeting on the 5th with Ramzi, Majd, and Nathalie.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-3"><div class="item-body"><span class="item-title">Prepare for Mishaal</span> <span class="item-sentence">— review the email exchange with him before the meeting.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-4"><div class="item-body"><span class="item-title">Work the card show financials</span> <span class="item-sentence">— ask Majd and Ramzi for the documents.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-5"><div class="item-body"><span class="item-title">Draft the Europe acquisition plan.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-6"><div class="item-body"><span class="item-title">Sort out Ramzi's roles and the SHA.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-7"><div class="item-body"><span class="item-title">Send Ramzi the bank account details.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="lotg-8"><div class="item-body"><span class="item-title">Chase the 18 open purchase orders</span> <span class="item-sentence">sitting sent-but-not-received, on the Lightspeed dashboard.</span></div></li>
+    <p class="numbers"><b>YTD</b> (Jan 1&ndash;Sep 11, 2026): Sales AED 21,514,943.81 &middot; Gross profit AED 6,174,702.62 (29% margin).<br>
+    <b>MTD</b> (Sep 1&ndash;11): Sales AED 661,853.88 &middot; Gross profit AED 219,229.10 (33% margin).</p>
+
+    <div class="subhead">Top 10 customers by YTD sales</div>
+    <table class="numbers-table">
+      <tr><th class="name">Customer</th><th>YTD sales</th><th>YTD GP</th><th>MTD sales</th><th>MTD GP</th></tr>
+      <tr><td class="name">Roj Agha</td><td>AED 6,134,757.47</td><td>AED 1,573,343.27</td><td colspan="2">no MTD activity</td></tr>
+      <tr><td class="name">Manuel Ogaza</td><td>AED 1,981,518.29</td><td>AED 624,122.21</td><td>AED 75,216.19</td><td>AED 23,245.22</td></tr>
+      <tr><td class="name">Said Deniev</td><td>AED 948,250.71</td><td>AED 338,642.43</td><td>AED 263,002.86</td><td>AED 96,581.15</td></tr>
+      <tr><td class="name">Jack Tai</td><td>AED 925,187.41</td><td>AED 229,542.13</td><td colspan="2">no MTD activity</td></tr>
+      <tr><td class="name">karim Abouseda</td><td>AED 914,040.11</td><td>AED 270,086.58</td><td>AED 21,307.14</td><td>AED 10,458.09</td></tr>
+      <tr><td class="name">LOTG Walk In <span style="color:var(--ink-grey)">(walk-in aggregate)</span></td><td>AED 759,845.19</td><td>AED 231,443.94</td><td>AED 36,993.33</td><td>AED 11,476.57</td></tr>
+      <tr><td class="name">Mahdiar Ahmadi</td><td>AED 663,617.25</td><td>AED 168,394.52</td><td>AED 5,928.57</td><td>AED 1,777.11</td></tr>
+      <tr><td class="name">Aaron Dray</td><td>AED 572,074.23</td><td>AED 208,006.48</td><td>AED 31,320.00</td><td>AED 12,396.60</td></tr>
+      <tr><td class="name">Mishaal Alireza</td><td>AED 535,279.38</td><td>AED 159,850.63</td><td>AED 12,036.43</td><td>AED 3,529.65</td></tr>
+      <tr><td class="name">mohamad Osman</td><td>AED 386,653.58</td><td>AED 99,329.34</td><td>AED 3,452.38</td><td>AED 944.89</td></tr>
+    </table>
+
+    <div class="subhead">Top 10 products by YTD revenue</div>
+    <table class="numbers-table">
+      <tr><th class="name">Product</th><th>Revenue</th><th>Units</th></tr>
+      <tr><td class="name">Topps UCC Chrome 2025-26 Sapphire Hobby Box</td><td>AED 438,000.81</td><td>79</td></tr>
+      <tr><td class="name">Topps Real Madrid Los Blancos 25/26 Deck Box</td><td>AED 375,790.48</td><td>141</td></tr>
+      <tr><td class="name">2026 Panini Prizm Fifa World Cup Soccer Hobby Box</td><td>AED 364,536.19</td><td>84</td></tr>
+      <tr><td class="name">Topps NBA Cosmic Basketball 2025-26 Hobby Box</td><td>AED 283,220.38</td><td>80</td></tr>
+      <tr><td class="name">2025-26 Bowman Basketball Sapphire Edition Box</td><td>AED 271,071.77</td><td>20</td></tr>
+      <tr><td class="name">2025-2026 Topps Chrome Sapphire Edition Basketball Box</td><td>AED 267,184.76</td><td>10</td></tr>
+      <tr><td class="name">2026 Premier League Finest Hobby Box</td><td>AED 248,171.43</td><td>96</td></tr>
+      <tr><td class="name">2024-25 Panini One &amp; One Basketball Hobby Box</td><td>AED 220,459.24</td><td>42</td></tr>
+      <tr><td class="name">Topps Basketball Finest 2025-26 Hobby Box</td><td>AED 209,159.05</td><td>64</td></tr>
+      <tr><td class="name">2024-25 Topps Dynasty UEFA Club Competitions</td><td>AED 193,476.19</td><td>14</td></tr>
+    </table>
+
+    <div class="subhead">Top 10 products by YTD gross profit</div>
+    <table class="numbers-table">
+      <tr><th class="name">Product</th><th>Gross profit</th></tr>
+      <tr><td class="name">Topps Real Madrid Los Blancos 25/26 Deck Box</td><td>AED 195,397.54</td></tr>
+      <tr><td class="name">Topps UCC Chrome 2025-26 Sapphire Hobby Box</td><td>AED 130,216.81</td></tr>
+      <tr><td class="name">2026 Panini Prizm Fifa World Cup Soccer Hobby Box</td><td>AED 93,537.79</td></tr>
+      <tr><td class="name">Topps NBA Cosmic Basketball 2025-26 Hobby Box</td><td>AED 80,425.66</td></tr>
+      <tr><td class="name">PSA Category: Express Dual Service</td><td>AED 79,926.52</td></tr>
+      <tr><td class="name">PSA Category: Express</td><td>AED 76,941.96</td></tr>
+      <tr><td class="name">PSA Category: Regular</td><td>AED 66,353.02</td></tr>
+      <tr><td class="name">2025-2026 Topps Chrome Sapphire Edition Basketball Box</td><td>AED 61,325.46</td></tr>
+      <tr><td class="name">Topps UCC Chrome 2025-26 Jumbo Box</td><td>AED 60,826.20</td></tr>
+      <tr><td class="name">2026 Premier League Finest Hobby Box</td><td>AED 58,005.03</td></tr>
+    </table>
+
+    <div class="subhead">Top categories by YTD sales (Jan 1&ndash;Sep 11, 2026)</div>
+    <table class="numbers-table">
+      <tr><th class="name">Category</th><th>Revenue</th></tr>
+      <tr><td class="name">Card Boxes</td><td>AED 18,590,092.89</td></tr>
+      <tr><td class="name">PSA Services</td><td>AED 1,166,911.74</td></tr>
+      <tr><td class="name">Sports Memorabilia</td><td>AED 795,198.15</td></tr>
+      <tr><td class="name">Cards</td><td>AED 629,222.15</td></tr>
+      <tr><td class="name">Accessories</td><td>AED 158,890.85</td></tr>
+    </table>
+
+    <div class="subhead">To-do</div>
+    <ol class="todo" data-section="lotg">
+      <li data-id="lotg-1"><span class="num">1</span><span class="box"></span><span class="txt"><b>Prepare for the meeting with Elias Kanaan on Monday, September 7th.</b></span></li>
+      <li data-id="lotg-2"><span class="num">2</span><span class="box"></span><span class="txt"><b>Prepare the minutes of the meeting on the 5th</b> &mdash; Zein, Ramzi, Majd, and Nathalie.</span></li>
+      <li data-id="lotg-3"><span class="num">3</span><span class="box"></span><span class="txt"><b>Review the emails with Mishaal and prepare for his meeting.</b></span></li>
+      <li data-id="lotg-4"><span class="num">4</span><span class="box"></span><span class="txt"><b>Work on the card show financials</b> &mdash; ask Majd and Ramzi for the documents.</span></li>
+      <li data-id="lotg-5"><span class="num">5</span><span class="box"></span><span class="txt"><b>Work on the acquisition plan for the Europe businesses.</b></span></li>
+      <li data-id="lotg-6"><span class="num">6</span><span class="box"></span><span class="txt"><b>Sort out Ramzi's roles and the SHA</b> &mdash; shareholders' agreement.</span></li>
+      <li data-id="lotg-7"><span class="num">7</span><span class="box"></span><span class="txt"><b>Send Ramzi the bank account details.</b></span></li>
     </ol>
 
+    <!-- 4. PERSONAL -->
     <h2 class="section-heading">Personal</h2>
-    <ol class="todo" id="list-personal">
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-1"><div class="item-body"><span class="item-title">Buy a small electric grill</span> <span class="item-sentence">for the balcony, for Ly.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-2"><div class="item-body"><span class="item-title">Buy jackaroo and backgammon</span> <span class="item-sentence">for the kids.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-3"><div class="item-body"><span class="item-title">Transfer the du number</span> <span class="item-sentence">to another phone.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-4"><div class="item-body"><span class="item-title">Pay Ly's HY1 school fees.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-5"><div class="item-body"><span class="item-title">Pay Touch, suspend two lines</span> <span class="item-sentence">— Doudou's and Rayano's.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-6"><div class="item-body"><span class="item-title">Buy tickets</span> <span class="item-sentence">for October and December.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-7"><div class="item-body"><span class="item-title">Pay Abdulrazak $130.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-8"><div class="item-body"><span class="item-title">Buy Ly a birthday gift.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-9"><div class="item-body"><span class="item-title">Set up Teen Accounts</span> <span class="item-sentence">for Doudou and Rayano.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-10"><div class="item-body"><span class="item-title">Check April vacation options</span> <span class="item-sentence">in Japan.</span></div></li>
-      <li class="item"><input type="checkbox" class="item-check" data-id="personal-11"><div class="item-body"><span class="item-title">Tell Rhea</span> <span class="item-sentence">you want to stop the rent in Sodeco.</span></div></li>
+    <ol class="todo" data-section="personal">
+      <li data-id="personal-1"><span class="num">1</span><span class="box"></span><span class="txt"><b>Buy a small electric grill for the balcony, for Ly.</b></span></li>
+      <li data-id="personal-2"><span class="num">2</span><span class="box"></span><span class="txt"><b>Buy jackaroo and backgammon for the kids.</b></span></li>
+      <li data-id="personal-3"><span class="num">3</span><span class="box"></span><span class="txt"><b>Transfer the du number to another phone.</b></span></li>
+      <li data-id="personal-4"><span class="num">4</span><span class="box"></span><span class="txt"><b>Pay Ly's HY1 school fees.</b></span></li>
+      <li data-id="personal-5"><span class="num">5</span><span class="box"></span><span class="txt"><b>Pay Touch and suspend the lines for Doudou and Rayano.</b></span></li>
+      <li data-id="personal-6"><span class="num">6</span><span class="box"></span><span class="txt"><b>Buy tickets for October and December.</b></span></li>
+      <li data-id="personal-7"><span class="num">7</span><span class="box"></span><span class="txt"><b>Pay Abdulrazak $130.</b></span></li>
+      <li data-id="personal-8"><span class="num">8</span><span class="box"></span><span class="txt"><b>Buy Ly a birthday gift.</b></span></li>
+      <li data-id="personal-9"><span class="num">9</span><span class="box"></span><span class="txt"><b>Create Teen Accounts for Doudou and Rayano.</b></span></li>
+      <li data-id="personal-10"><span class="num">10</span><span class="box"></span><span class="txt"><b>Check for an April vacation in Japan.</b></span></li>
+      <li data-id="personal-11"><span class="num">11</span><span class="box"></span><span class="txt"><b>Inform Rhea you want to stop the rent in Sodeco.</b></span></li>
     </ol>
 
+    <!-- 5. PORTFOLIO -->
     <h2 class="section-heading">Portfolio</h2>
     <div class="portfolio">
-      <p><span class="ticker">SpaceX (SPCX)</span> — drifted down with the broader risk-off tone, closing in the $147–149 range versus a $153.47 prior close (roughly -3%), still comfortably inside its post-IPO 52-week band of $104.83–$225.64. No SpaceX-specific news drove the move.</p>
-      <p><span class="ticker">Intel (INTC)</span> — held its rebound, closing near $104–105 within a $101.95–$106.53 range, up off a recent $96 low. Support came from Northland Capital's Sep 8 upgrade to Outperform, continued confidence tied to Nvidia's roughly $30B equity stake, a fresh $20B share offering priced at $95 to fund capex, and reports that SK Hynix is weighing Intel Foundry for HBM4E base dies.</p>
-      <p><span class="ticker">IBM</span> — traded in the $234–238 range, underpinned by ongoing quantum-computing momentum (IBM and Microsoft backing the American Quantum Competitiveness Act, and a reported 25x quantum throughput gain) plus lingering support from Q2 earnings.</p>
-      <p><span class="ticker">Vanguard S&amp;P 500 UCITS ETF (VUAA)</span> — tracks the S&amp;P 500 (NAV $149.21 as of Sep 7, YTD total return 12.43%); likely eased with the index's -0.48% session. No holding-specific news.</p>
-      <p><span class="ticker">NVIDIA (NVDA)</span> — closed at $223.86, down 0.83% ($1.87) within a $223.51–$226.18 range, still up 24% year to date. The company declared a $0.25 dividend with an ex-date of September 10.</p>
-      <p><span class="ticker">Moderna (MRNA)</span> — a quiet session by its recent standards, closing near $137.60 off a $143.94 intraday high, within an ongoing rally (roughly +143% over the past month) on strong Phase 3 results for its personalized cancer therapy intismeran combined with Keytruda.</p>
-      <p><span class="ticker">ASML Holding (ASML)</span> — traded around $1,728–1,754, up roughly 2.3% in the session on continued High-NA EUV momentum, including a joint initiative announced with TSMC on High-NA EUV and larger-format photomasks, with TSMC and Samsung both committing to the new tools.</p>
-      <p><span class="ticker">Broader market</span> — the S&amp;P 500 fell 0.48% to 7,636, the Nasdaq Composite lost 0.64% to 26,253, and the Dow dropped 0.77% to 52,381, as a sharp oil-price rally, rising long-term Treasury yields, escalating Iran tensions, and a widening U.S.–Canada trade dispute pressured risk assets.</p>
-      <p class="note">Informational only — not financial advice.</p>
+      <p>Covering the most recently completed US session, Thursday, September 10, 2026 &mdash; the fourth straight day of declines as US oil prices pushed above $100 a barrel on fears that a prolonged Middle East conflict could stoke inflation. The <b>S&amp;P 500</b> fell 0.58% to 7,591.70 and the <b>Nasdaq Composite</b> dropped 0.65% to 26,081.72.</p>
+      <p><b>SpaceX (SPCX)</b> traded in a $144.89&ndash;$154.70 range and closed around $148.76, little changed from the prior close of $147.55. No major company-specific news that session; the stock has traded as a listed name since its June 12, 2026 IPO.</p>
+      <p><b>Intel (INTC)</b> pulled back sharply, down roughly 5&ndash;6% intraday on profit-taking after a parabolic run &mdash; still up about 188% year to date and 18% in the past week alone on reports it may raise PC processor prices. Piper Sandler initiated coverage at Neutral, suggesting investors wait for a better entry point.</p>
+      <p><b>IBM</b> traded narrowly around $239, following a roughly 1.2% drop in the prior session as oil prices weighed on the broader market. IBM announced an open-source AI model with NASA for lunar observation data, and a new quantum computing hub with Lockheed Martin at ETH Zurich.</p>
+      <p><b>Vanguard S&amp;P 500 UCITS ETF (VUAA)</b> moved in line with the S&amp;P 500's decline &mdash; no company-specific news, as expected for an index tracker.</p>
+      <p><b>NVIDIA (NVDA)</b> fell about 2% to around $219. The company formally announced a $12.9 billion acquisition of Hugging Face, and CEO Jensen Huang spoke at the Goldman Sachs Communacopia + Technology Conference. Nvidia is also facing a DOJ probe over its licensing deal with AI startup Groq. The stock remains up about 21% year to date.</p>
+      <p><b>Moderna (MRNA)</b> was little changed near $135. The company lowered 2026 operating expense guidance by $200M and cut its cash-cost outlook by $200M while reaffirming up to 10% revenue growth for the year; sentiment has also been helped by promising early results from its personalized mRNA cancer vaccine.</p>
+      <p><b>ASML</b> traded little changed around &euro;1,498. The company continues to deepen its High-NA EUV lithography partnership with Samsung, and broke ground on a second major campus in the Netherlands' Brainport region amid rising AI-driven demand for chipmaking equipment.</p>
+      <p class="reminder">This is informational only, not financial advice.</p>
     </div>
 
   </div>
@@ -263,44 +232,64 @@
 
 <script>
 (function(){
-  try {
-    var key = "digest-done-2026-09-10";
+  try{
+    var dateKey = "digest-done-2026-09-11";
     var state = {};
-    try { state = JSON.parse(localStorage.getItem(key) || "{}"); } catch(e) { state = {}; }
-    function save(){
-      try { localStorage.setItem(key, JSON.stringify(state)); } catch(e) {}
-    }
-    function sortList(listEl){
-      var items = Array.prototype.slice.call(listEl.querySelectorAll("li.item"));
+    try{ state = JSON.parse(localStorage.getItem(dateKey) || "{}"); }catch(e){ state = {}; }
+
+    function sortList(ol){
+      var items = Array.prototype.slice.call(ol.querySelectorAll("li"));
+      var divider = ol.querySelector("hr.divider");
+      if(!divider){
+        divider = document.createElement("hr");
+        divider.className = "divider";
+        ol.appendChild(divider);
+      }
+      items.forEach(function(li){ ol.removeChild(li); });
+      ol.insertBefore(divider, null);
       var pending = items.filter(function(li){ return !li.classList.contains("done"); });
       var done = items.filter(function(li){ return li.classList.contains("done"); });
-      var oldDivider = listEl.querySelector("li.divider");
-      if (oldDivider) oldDivider.parentNode.removeChild(oldDivider);
-      pending.forEach(function(li){ listEl.appendChild(li); });
-      if (pending.length && done.length){
-        var div = document.createElement("li");
-        div.className = "divider";
-        listEl.appendChild(div);
-      }
-      done.forEach(function(li){ listEl.appendChild(li); });
+      pending.forEach(function(li){ ol.insertBefore(li, divider); });
+      done.forEach(function(li){ ol.appendChild(li); });
+      divider.className = "divider" + (done.length === 0 ? " hide" : "");
     }
-    var lists = document.querySelectorAll("ol.todo");
-    lists.forEach(function(listEl){
-      var boxes = listEl.querySelectorAll("input.item-check");
-      boxes.forEach(function(cb){
-        var id = cb.getAttribute("data-id");
-        var li = cb.closest("li.item");
-        if (state[id]) { cb.checked = true; li.classList.add("done"); }
-        cb.addEventListener("change", function(){
-          if (cb.checked) { li.classList.add("done"); } else { li.classList.remove("done"); }
-          state[id] = cb.checked;
-          save();
-          sortList(listEl);
-        });
+
+    function applyState(ol){
+      var items = ol.querySelectorAll("li");
+      items.forEach(function(li){
+        var id = li.getAttribute("data-id");
+        var box = li.querySelector(".box");
+        if(state[id]){
+          li.classList.add("done");
+          box.classList.add("checked");
+        }
       });
-      sortList(listEl);
+      sortList(ol);
+    }
+
+    function toggle(li, ol){
+      var id = li.getAttribute("data-id");
+      var box = li.querySelector(".box");
+      var nowDone = !li.classList.contains("done");
+      li.classList.toggle("done", nowDone);
+      box.classList.toggle("checked", nowDone);
+      state[id] = nowDone;
+      try{ localStorage.setItem(dateKey, JSON.stringify(state)); }catch(e){}
+      sortList(ol);
+    }
+
+    var lists = document.querySelectorAll("ol.todo");
+    lists.forEach(function(ol){
+      applyState(ol);
+      ol.addEventListener("click", function(e){
+        var box = e.target.closest(".box");
+        if(!box) return;
+        var li = box.closest("li");
+        if(!li) return;
+        toggle(li, ol);
+      });
     });
-  } catch(e) {}
+  }catch(e){}
 })();
 </script>
 </body>
