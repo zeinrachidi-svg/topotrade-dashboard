@@ -170,5 +170,16 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "updatedAt": "2026-09-11T02:24:01.755Z",
+    "activeUsers": 0,
+    "newUsers": 0,
+    "sessions": 0,
+    "pageViews": 0,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 0,
+    "topChannels": []
   }
 ]
