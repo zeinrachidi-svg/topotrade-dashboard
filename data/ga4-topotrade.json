@@ -1,31 +1,31 @@
 {
-  "date": "2026-09-11",
-  "updatedAt": "2026-09-12T02:34:54.456Z",
-  "activeUsers": 32,
-  "newUsers": 24,
-  "sessions": 43,
-  "pageViews": 95,
+  "date": "2026-09-12",
+  "updatedAt": "2026-09-13T02:34:48.945Z",
+  "activeUsers": 18,
+  "newUsers": 14,
+  "sessions": 34,
+  "pageViews": 54,
   "conversions": 0,
-  "avgSessionDurationSeconds": 137,
+  "avgSessionDurationSeconds": 108,
   "topChannels": [
     {
       "channel": "Direct",
-      "sessions": 29
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": 15
+      "sessions": 23
     },
     {
       "channel": "Organic Search",
-      "sessions": 10
+      "sessions": 8
     },
     {
-      "channel": "Cross-network",
-      "sessions": 2
+      "channel": "Unassigned",
+      "sessions": 7
     },
     {
       "channel": "AI Assistant",
+      "sessions": 1
+    },
+    {
+      "channel": "Referral",
       "sessions": 1
     }
   ]
