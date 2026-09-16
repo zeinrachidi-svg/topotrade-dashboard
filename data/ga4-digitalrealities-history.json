@@ -230,5 +230,25 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "updatedAt": "2026-09-16T02:24:02.087Z",
+    "activeUsers": 2,
+    "newUsers": 2,
+    "sessions": 2,
+    "pageViews": 4,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 10,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 1
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 1
+      }
+    ]
   }
 ]
