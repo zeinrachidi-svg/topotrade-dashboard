@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Topotrade Daily Dashboard — 2026-09-17</title>
+<title>Topotrade Daily Dashboard — 2026-09-18</title>
 <style>
   :root { --navy:#1f3b57; --orange:#c97a2b; }
   * { box-sizing: border-box; }
@@ -40,28 +40,28 @@
 <body>
 <header>
   <h1>Topotrade Daily Dashboard</h1>
-  <span class="badge">As of 2026-09-17</span>
+  <span class="badge">As of 2026-09-18</span>
 </header>
 <nav>
-  <button class="active" onclick="showTab('sales')" id="btn-sales">Sales & Ops</button>
+  <button class="active" onclick="showTab('sales')" id="btn-sales">Sales &amp; Ops</button>
   <button onclick="showTab('marketing')" id="btn-marketing">Marketing</button>
 </nav>
 
 <div id="sales" class="tab active">
 
-<div class="banner blue"><b>Data sources refreshed today:</b> Cockpit Google Sheet (Sales tab CSV + P&amp;L tab) — OK · Odoo CRM/Sales/Inbox Log/API — OK · Gmail (zein inbox + sent + sales@ drafts) — OK · GA4 (both properties, via GitHub) — OK, dated 2026-09-16 · Meta/Facebook/Instagram (both pages, live sync run this session) — OK · admin.topotrade.com — unavailable · Google Ads (both accounts) — unavailable · LinkedIn — unavailable · WhatsApp Web Business — unavailable · eBay Seller Hub — unavailable.</div>
+<div class="banner blue"><b>Data sources refreshed today:</b> Cockpit Google Sheet (Sales tab, raw CSV export) — OK, 863 real transaction rows (18 blank + 103 formula-artifact rows excluded) · Odoo CRM/Sales/Inventory/Inbox Log via XML-RPC API — OK · Gmail (zein inbox + sent, 2-day window; sales@ Drafts via mailer webapp) — OK · GA4 (both properties, via GitHub) — OK, dated 2026-09-17 · Meta/Facebook/Instagram (both pages, live sync run this session) — OK · WhatsApp Web Business — logged in, but only the chat list/unread badges were captured before the browser connection dropped · LinkedIn — logged in as Zein Rachidi, feed confirmed, messages/drafts not scanned · admin.topotrade.com — unavailable (login page shown, no valid session) · Google Ads (both accounts) — unavailable (browser opened the public signup page, not signed in) · eBay Seller Hub — unavailable (browser was signed in as marketing@digitalrealities.fr, not the "topotrade" seller account).</div>
 
-<div class="banner flag"><b>Data-quality flags:</b> The single connected browser session for this run was not logged into admin.topotrade.com, Google Ads (either account), LinkedIn, WhatsApp Web Business, or eBay Seller Hub — Step 0 could not confirm any of the 4 browser-dependent account groups. As a result: Platform Activity (Users/Listings/RFPs/Carts/Negotiations/Chatbot) and its regional split, the Wanted-Items page scan, Google Ads spend, LinkedIn analytics, WhatsApp-sourced leads, and the entire eBay section are not reflected below. Everything from Odoo, the Cockpit sheet, Gmail, GA4 and Meta is real, freshly pulled data for 2026-09-17.</div>
+<div class="banner flag"><b>Data-quality flags:</b> Platform Activity (Users/Listings/RFPs/Carts/Negotiations/Chatbot + regional splits), the Wanted-Items page scan, Google Ads spend, and the eBay section are unavailable today — same underlying cause (no authenticated session for admin.topotrade.com / Google Ads / eBay on the one connected browser). WhatsApp and LinkedIn are logged in but weren't fully scanned message-by-message this run (partial coverage only — see Marketing tab and Zein's digest). The Cockpit workbook has no distinctly-labeled "P&amp;L" tab separate from the Sales tab's own pivot tables — YTD/MTD P&amp;L below uses the Sales-tab-derived totals as the best available figure, flagged rather than presented as a confirmed separate P&amp;L source. A personal/household budget table found mixed into the same workbook was identified and excluded from every figure below.</div>
 
 <h2>Top KPIs</h2>
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="label">Revenue YTD (Billings excl. Tax)</div><div class="value">€1,571,842</div></div>
-  <div class="kpi-card"><div class="label">Gross Profit YTD</div><div class="value">€466,574</div></div>
-  <div class="kpi-card"><div class="label">Transactions YTD</div><div class="value">137</div></div>
-  <div class="kpi-card"><div class="label">Odoo Pipeline (open)</div><div class="value">320 deals</div></div>
-  <div class="kpi-card"><div class="label">Team Win Rate</div><div class="value">13.0% (48/368)</div></div>
+  <div class="kpi-card"><div class="label">Revenue YTD (Billings excl. Tax)</div><div class="value">€1,576,223</div></div>
+  <div class="kpi-card"><div class="label">Gross Profit YTD</div><div class="value">€467,395</div></div>
+  <div class="kpi-card"><div class="label">Transactions YTD</div><div class="value">138</div></div>
+  <div class="kpi-card"><div class="label">Odoo Pipeline (open)</div><div class="value">321 deals</div></div>
+  <div class="kpi-card"><div class="label">Team Win Rate</div><div class="value">13.0% (48/370 all-time)</div></div>
   <div class="kpi-card"><div class="label">Open Pipeline Value</div><div class="value">€1,925,435</div></div>
-  <div class="kpi-card"><div class="label">Open Offers/Quotations</div><div class="value">269 / €1,915,030 (stale subset)</div></div>
+  <div class="kpi-card"><div class="label">Open Offers/Quotations</div><div class="value">128 / €2,127,430</div></div>
 </div>
 
 <h2>Platform Activity</h2>
@@ -69,224 +69,284 @@
 
 <h2>Site Traffic (GA4)</h2>
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="label">Topotrade.com — Active Users</div><div class="value">46</div></div>
-  <div class="kpi-card"><div class="label">Topotrade.com — Sessions</div><div class="value">71</div></div>
-  <div class="kpi-card"><div class="label">Digital Realities — Active Users</div><div class="value">2</div></div>
+  <div class="kpi-card"><div class="label">Topotrade.com — Active Users</div><div class="value">39</div></div>
+  <div class="kpi-card"><div class="label">Topotrade.com — Sessions</div><div class="value">63</div></div>
+  <div class="kpi-card"><div class="label">Digital Realities — Active Users</div><div class="value">1</div></div>
   <div class="kpi-card"><div class="label">Digital Realities — Sessions</div><div class="value">3</div></div>
 </div>
 <table><tr><th>Channel (Topotrade.com)</th><th>Sessions</th></tr>
-<tr><td>Direct</td><td>46</td></tr><tr><td>Unassigned</td><td>21</td></tr><tr><td>Organic Search</td><td>19</td></tr><tr><td>AI Assistant</td><td>1</td></tr><tr><td>Referral</td><td>1</td></tr>
+<tr><td>Direct</td><td>37</td></tr><tr><td>Organic Search</td><td>23</td></tr><tr><td>Unassigned</td><td>17</td></tr><tr><td>AI Assistant</td><td>2</td></tr>
 </table>
+<p style="font-size:12px;color:#667;">Data date: 2026-09-17 (yesterday, per GA4's own snapshot cadence).</p>
 
 <h2>Billings by Entity</h2>
-<table><tr><th>Entity</th><th>Region proxy</th><th>Grand-total Billings</th><th>YTD Billings</th></tr>
-<tr><td>Topotrade main book (France invoicing)</td><td>France</td><td>€644 invoices (plain-numeric)</td><td>—</td></tr>
-<tr><td>Digital Realities (France)</td><td>France</td><td>see Digital Realities section below</td><td>—</td></tr>
-<tr><td>9494-1440 Québec Inc. (Canada)</td><td>Canada</td><td>84 invoices (CA-prefixed)</td><td>—</td></tr>
-<tr><td>Topotrade LLC FZ (UAE)</td><td>UAE</td><td>103 invoices (AE-prefixed)</td><td>—</td></tr>
+<table><tr><th>Entity</th><th>Region signal</th><th>Rows (real transactions)</th></tr>
+<tr><td>Topotrade main book (France/other, no CA/AE invoice prefix)</td><td>France/Other</td><td>676</td></tr>
+<tr><td>Topotrade Canada</td><td>CA invoice prefix</td><td>84</td></tr>
+<tr><td>Topotrade UAE</td><td>AE invoice prefix</td><td>103</td></tr>
 </table>
-<p style="font-size:12px;color:#667;">Region split is by invoice-number prefix on the Cockpit Sales tab (CA/AE/plain-numeric = France), not a full entity-level billing rollup — treat as directional.</p>
+<p style="font-size:12px;color:#667;">30 of the 676 "France/Other" rows have a blank invoice number and are lumped in by default — see data-quality note.</p>
 
-<h2>Sales Team Comparison (RevRec / GPRec by rep)</h2>
+<h2>Sales Team Comparison</h2>
 <table>
-<tr><th>Rep</th><th>YTD RevRec</th><th>YTD GPRec</th><th>MTD RevRec</th><th>MTD GPRec</th><th>Txn Count (YTD)</th><th>Grand-total RevRec</th></tr>
-<tr><td>Georges Labaky</td><td>€316,772</td><td>€91,495</td><td>€35,641</td><td>€8,131</td><td>24</td><td>€1,523,688</td></tr>
-<tr><td>Claude Nakhle</td><td>€133,842</td><td>€40,947</td><td>€0</td><td>€0</td><td>9</td><td>€156,211</td></tr>
-<tr><td>Mireille Baho</td><td>€118,257</td><td>€25,411</td><td>€17,986</td><td>€5,129</td><td>11</td><td>€539,598</td></tr>
-<tr><td>Daniel Llorente</td><td>€235,825</td><td>€66,179</td><td>€9,808</td><td>€1,869</td><td>45</td><td>€610,751</td></tr>
-<tr><td>Zein Rachidi</td><td>€811,619</td><td>€267,440</td><td>€63,615</td><td>€15,916</td><td>40</td><td>€4,902,383</td></tr>
+<tr><th>Rep</th><th>RevRec YTD 2026</th><th>GPRec YTD 2026</th><th>RevRec YTD 2025</th><th>YoY %</th><th>RevRec MTD (Sep)</th><th>GPRec MTD</th><th>Txns (all-time tagged)</th></tr>
+<tr><td>Georges Labaky</td><td>$331,232.14</td><td>$97,127.46</td><td>$213,402.76</td><td>+55.2%</td><td>$35,641.34</td><td>$8,130.90</td><td>197</td></tr>
+<tr><td>Claude Nakhle</td><td>$151,224.97</td><td>$45,024.97</td><td>$8,268.47</td><td>+1,729%</td><td>$0.00</td><td>$0.00</td><td>13</td></tr>
+<tr><td>Daniel Llorente</td><td>$254,539.66</td><td>$69,356.94</td><td>$92,711.77</td><td>+174.5%</td><td>$9,808.32</td><td>$1,869.08</td><td>172</td></tr>
+<tr><td>Mireille Baho</td><td>$121,173.73</td><td>$26,580.35</td><td>$290,943.85</td><td>-58.4%</td><td>$17,985.53</td><td>$5,129.39</td><td>48</td></tr>
+<tr><td>Zein Rachidi</td><td>$909,083.55</td><td>$287,055.97</td><td>$658,612.59</td><td>+38.0%</td><td>$63,615.46</td><td>$15,916.22</td><td>377</td></tr>
+<tr><td><b>Team Total</b></td><td><b>$1,767,254.05</b></td><td><b>$525,145.69</b></td><td><b>$1,263,939.44</b></td><td><b>+39.8%</b></td><td><b>$127,050.65</b></td><td><b>$31,045.59</b></td><td><b>807</b></td></tr>
 </table>
-<p style="font-size:12px;color:#667;">YTD-prior-year comparison not available (Cockpit sheet only contains 2026 data this run).</p>
+<p style="font-size:12px;color:#667;">Transaction counts are all-time (2018–2026) tagged-row counts from the Cockpit sheet, not YTD-filtered — a same-period count wasn't computed this run.</p>
 
-<h2>CRM Pipeline by Rep (open)</h2>
-<table><tr><th>Rep</th><th>Open Deals</th><th>Open Value</th><th>Notable Deal</th></tr>
-<tr><td>Georges Labaky</td><td>183</td><td>€719,935</td><td>10 kits GS18 T — Drone Des Champs Inc, €557,000 (Qualified, 96d stale)</td></tr>
-<tr><td>Daniel Llorente</td><td>60</td><td>€383,880</td><td>TOPO CONTROL — Bazerque Nicolas, €50,000</td></tr>
-<tr><td>Mireille Baho</td><td>36</td><td>€346,995</td><td>G2 Survey Ltd — Faro accessories/warranty, €95,600</td></tr>
-<tr><td>Claude Nakhle</td><td>21</td><td>€261,425</td><td>10 Hiper VR+ OAF — UGO-KRIS Survey Equipment, €53,300</td></tr>
-<tr><td>Zein Rachidi</td><td>17</td><td>€213,200</td><td>TS60 — Leading Surveys Pty Ltd, €45,000</td></tr>
+<h2>Revenue by Region</h2>
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="label">France/Other</div><div class="value">676 txns</div></div>
+  <div class="kpi-card"><div class="label">Canada</div><div class="value">84 txns</div></div>
+  <div class="kpi-card"><div class="label">UAE</div><div class="value">103 txns</div></div>
+</div>
+
+<h2>Top 10 Best-Selling Items (YTD, by revenue)</h2>
+<table><tr><th>#</th><th>Item</th><th>Qty Sold</th><th>Revenue (Billings excl. Tax, all-time)</th></tr>
+<tr><td>1</td><td>TM50</td><td>108</td><td>€1,740,143.52</td></tr>
+<tr><td>2</td><td>RTC360</td><td>12</td><td>€422,369.52</td></tr>
+<tr><td>3</td><td>RS2</td><td>254</td><td>€403,435.73</td></tr>
+<tr><td>4</td><td>TM50 &amp; TM30 (combo line)</td><td>28</td><td>€313,175.00</td></tr>
+<tr><td>5</td><td>TS06</td><td>70</td><td>€293,097.97</td></tr>
+<tr><td>6</td><td>TS07</td><td>47</td><td>€267,895.95</td></tr>
+<tr><td>7</td><td>MS50</td><td>17</td><td>€256,906.52</td></tr>
+<tr><td>8</td><td>TM30</td><td>28</td><td>€254,325.86</td></tr>
+<tr><td>9</td><td>Pro3</td><td>42</td><td>€241,279.76</td></tr>
+<tr><td>10</td><td>TS60 0,5" I</td><td>7</td><td>€216,950.00</td></tr>
 </table>
-<p style="font-size:12px;color:#667;">Team-wide stage breakdown (open): 277 New · 22 Qualified · 21 Proposition. 48 of 368 total opportunities are Won.</p>
+<p style="font-size:12px;color:#667;">Ranking is all-time (not YTD-filtered) and grouped on exact product-string matches — case/spelling variants (e.g. "Tm30" vs "TM30") were not merged, so rankings could shift slightly on a normalized pass.</p>
+
+<h2>Top 10 Most-Wanted Items</h2>
+<h3>List A — Cross-Source Demand Signals</h3>
+<div class="banner flag">Best-effort only this run: two of the normal input sources (admin.topotrade.com RFPs/chatbot, WhatsApp deep-scan) were unavailable/incomplete. What's available — open (non-Won) Odoo opportunities and Zein's Gmail sent-mail — shows a strong signal around: self-loading concrete mixers (UAE, 6+ supplier outreach emails), Leica TM-series monitoring stations, Topcon MS1/MS05 total stations, GS18 T kits, Emlid RS4/RS2+ kits, and Faro laser scanner accessories. A full ranked table with mention counts and source mix was not built this run — treat this as directional, not a count.</div>
+<h3>List B — topotrade.com Wanted Items Page Scan</h3>
+<div class="banner flag">Not attempted this run — admin.topotrade.com login gap applies to the public /en/rfp page pull as well as the internal panel; flagged rather than guessed.</div>
+
+<h2>CRM Pipeline by Rep</h2>
+<table><tr><th>Rep</th><th>Open Deals</th><th>Open Value</th><th>Notable Deal</th></tr>
+<tr><td>Georges Labaky</td><td>183</td><td>€719,935.00</td><td>10 kits GS18 T — €557,000 (Qualified, stale ~98d)</td></tr>
+<tr><td>Daniel Llorente</td><td>60</td><td>€383,880.00</td><td>Bassem/TOPO CONTROL — €50,000 (New, stale ~151d)</td></tr>
+<tr><td>Mireille Baho</td><td>36</td><td>€346,995.14</td><td>G2 Survey Ltd (Faro accessories) — €95,600 (New)</td></tr>
+<tr><td>Claude Nakhle</td><td>22</td><td>€261,425.00</td><td>10 Hiper Vr plus OAF — €53,300 (New)</td></tr>
+<tr><td>Zein Rachidi</td><td>17</td><td>€213,200.00</td><td>LEADING SURVEYS PTY LTD — TS60 — €45,000 (Qualified)</td></tr>
+<tr><td><b>Team Total</b></td><td><b>321</b></td><td><b>€1,925,435.14</b></td><td>278 New / 23 Qualified / 21 Proposition</td></tr>
+</table>
 
 <h2>Open Offers / Quotations by Rep</h2>
-<table><tr><th>Customer</th><th>Rep</th><th>Amount</th><th>Sent Date</th><th>Days Since Sent</th><th>Status</th></tr>
-<tr><td>Wise Group</td><td>Georges Labaky</td><td>€143,539</td><td>2026-06-24</td><td>84</td><td>draft</td></tr>
-<tr><td>NOURISSON (PRESTATIONS-TOPO)</td><td>Zein Rachidi</td><td>€90,720</td><td>2026-03-11</td><td>189</td><td>sent</td></tr>
-<tr><td>Rouse Surveyors Inc</td><td>Georges Labaky</td><td>€90,133</td><td>2026-05-13</td><td>126</td><td>sent</td></tr>
-<tr><td>DELTA STAR POWER PROJECTS SERVICES LLC</td><td>Contact (unrouted)</td><td>€85,039</td><td>2026-08-05</td><td>42</td><td>sent</td></tr>
-<tr><td>Denev Trading, LLC</td><td>Georges Labaky</td><td>€79,565</td><td>2026-07-21</td><td>57</td><td>draft</td></tr>
-<tr><td>Beijing Yuxiang Zhikong Technology (Jimmy Zhou)</td><td>Georges Labaky</td><td>€66,500</td><td>2026-06-30</td><td>78</td><td>sent</td></tr>
-<tr><td>RWH Engineering Inc</td><td>Georges Labaky</td><td>€62,914</td><td>2026-06-05</td><td>103</td><td>sent</td></tr>
-<tr><td>Topline Middle East Pipelines Contracting LLC</td><td>Zein Rachidi</td><td>€61,226</td><td>2026-04-13</td><td>156</td><td>sent</td></tr>
-<tr><td>Emirates Telecommunications (Etisalat)</td><td>Mireille Baho</td><td>€53,330</td><td>2026-07-06</td><td>72</td><td>sent</td></tr>
-<tr><td>AppliedeX Inc</td><td>Georges Labaky</td><td>€40,453</td><td>2026-09-01</td><td>15</td><td>draft</td></tr>
-<tr><td>Beijing Yuxiang Zhikong Technology (Jimmy Zou)</td><td>Georges Labaky</td><td>€38,364</td><td>2026-08-24</td><td>23</td><td>draft</td></tr>
-<tr><td>Beijing Yuxiang Zhikong Technology (Jimmy Zhou)</td><td>Zein Rachidi</td><td>€37,500</td><td>2026-08-24</td><td>23</td><td>draft</td></tr>
-<tr><td>Beijing Yuxiang Zhikong Technology (Jimmy Zhou)</td><td>Georges Labaky</td><td>€36,180</td><td>2026-09-05</td><td>11</td><td>draft</td></tr>
-<tr><td>Emad Alainia</td><td>Contact (unrouted)</td><td>€35,980</td><td>2026-04-19</td><td>150</td><td>draft</td></tr>
-<tr><td>Jeremy bertaux</td><td>Contact (unrouted)</td><td>€32,400</td><td>2026-02-20</td><td>208</td><td>draft</td></tr>
-<tr><td>Mireille Baho (internal contact)</td><td>Unassigned</td><td>€31,200</td><td>2026-03-19</td><td>181</td><td>draft</td></tr>
-<tr><td>Wise Group</td><td>Georges Labaky</td><td>€30,158</td><td>2026-07-03</td><td>75</td><td>draft</td></tr>
-<tr><td>Kulan general trading</td><td>Mireille Baho</td><td>€29,975</td><td>2026-06-17</td><td>91</td><td>sent</td></tr>
-<tr><td>Falcon Trackers</td><td>Contact (unrouted)</td><td>€29,600</td><td>2026-03-11</td><td>189</td><td>draft</td></tr>
-<tr><td>Beijing Yuxiang Zhikong Technology (Jimmy Zou)</td><td>Zein Rachidi</td><td>€26,600</td><td>2026-07-16</td><td>62</td><td>sent</td></tr>
+<table><tr><th>Rep</th><th>Open Offers (5+ days stale)</th><th>Stale Value</th></tr>
+<tr><td>Georges Labaky</td><td>33</td><td>€777,443.02</td></tr>
+<tr><td>Zein Rachidi</td><td>16</td><td>€327,369.35</td></tr>
+<tr><td>Mireille Baho</td><td>16</td><td>€210,001.30</td></tr>
+<tr><td>Daniel Llorente</td><td>16</td><td>€141,460.44</td></tr>
+<tr><td>Claude Nakhle</td><td>6</td><td>€57,650.00</td></tr>
+<tr><td>Unassigned / "Contact" / other salespeople</td><td>35</td><td>€432,725.66</td></tr>
+<tr><td><b>Total (128 open, 122 stale 5+ days)</b></td><td><b>122</b></td><td><b>€1,946,649.77</b></td></tr>
 </table>
-<p style="font-size:12px;color:#667;">Showing top 20 of 120 stale (7+ calendar days) open offers by value, after filtering out ~52 junk/test rows (placeholder partners, sub-€50 amounts). Total value of all 120 stale offers: €1,915,030.</p>
+<p style="font-size:12px;color:#667;">128 total open (draft/sent) real quotations worth €2,127,430.17 after excluding 52 junk/test rows (placeholder partners, near-zero amounts). Full row-by-row list not reproduced here — see Odoo Sales app.</p>
+
+<h2>Lead Source Health / Funnel (Inbox Log categories, YTD)</h2>
+<table><tr><th>Category</th><th>Records</th></tr>
+<tr><td>Inbox Log: Admin/Finance/Ops</td><td>393</td></tr>
+<tr><td>Inbox Log: Sales (not a lead)</td><td>279</td></tr>
+<tr><td>Inbox Log: Other</td><td>221</td></tr>
+<tr><td>Inbox Log: Marketing</td><td>207</td></tr>
+<tr><td><b>Total Inbox Log records</b></td><td><b>1,100</b></td></tr>
+</table>
+<p style="font-size:12px;color:#667;">156 records are tagged "Needs Action" (19 new in the last day, 137 older backlog). Genuine sales leads route separately as crm.lead opportunities/leads (370 opportunities, tracked above) — this table covers the non-lead inbox categories only. Machinio/contact@ mailbox-specific row counts weren't split out separately this run.</p>
+
+<h2>Self-Serve Nudge Status</h2>
+<div class="banner flag">No leads were found tagged "Awaiting Listing" or "Awaiting RFP" in Odoo this run. 3 nudge drafts exist in the sales@ Drafts folder, all created 2026-09-05 (13 days ago) — past the day-7 point where the task's own cadence says to stop nudging and escalate to the owning rep instead. See Pending Drafts Review below and Mireille's Draft Validation Queue email.</div>
 
 <h2>Recommended Actions per Rep</h2>
 
 <h3>Georges Labaky</h3>
-<p><b>Deal-Closing Actions</b></p>
+<b>Deal-Closing Actions</b>
 <ol>
-<li>10 kits GS18 T — Drone Des Champs Inc, €557,000, Qualified, 96 days no activity — call to confirm still live.</li>
-<li>Wise Group quotation €143,539, 84 days, unconfirmed — status check.</li>
-<li>Rouse Surveyors Inc quotation €90,133, 126 days — likely dead, final call before write-off.</li>
-<li>Denev Trading LLC quotation €79,565, 57 days — follow up.</li>
-<li>Beijing Yuxiang Zhikong (Jimmy Zhou) — 4 open threads (€66,500/€38,364/€37,500/€36,180) — consolidate into one conversation.</li>
-<li>RWH Engineering (Robert Mara) — quotation €62,914 (103d) + open opp "MS + Delta Link" €22,300 — tie together.</li>
-<li>AppliedeX Inc €40,453 draft, 15 days — still fresh, nudge now.</li>
+<li>Wise Group — €143,539.39 quotation, 86 days with zero response. Highest-value open quote — prioritize a direct call.</li>
+<li>Rouse Surveyors Inc — €90,132.80, 128 days stale — confirm still live, call not email.</li>
+<li>Denev Trading, LLC — €79,564.80, 59 days since sent.</li>
+<li>Beijing Yuxiang Zhikong Technology — €66,500.00, 80 days since sent.</li>
+<li>"10 kits GS18 T" — €557,000 pipeline deal, Qualified, no activity since 2026-06-12 (~98 days) — largest open opportunity company-wide, at real risk of going cold, step in personally.</li>
+<li>"X7 + T10x" — €50,000 pipeline deal, no activity since 2026-04-17 (~154 days) — confirm still live.</li>
+<li>Western Engineering Supply CO's ICR85 — €31,500 pipeline deal, no activity since 2026-02-24 (~206 days) — very stale.</li>
 </ol>
-<p><b>Admin &amp; Housekeeping</b></p>
+<b>Admin &amp; Housekeeping</b>
 <ol>
-<li>19 Inbox-Log items tagged Needs Action tied to your correspondence (shipment/RFP-review threads) — batch review.</li>
+<li>33 stale quotations (5+ days) totaling €777,443.02 beyond the ones above.</li>
+<li>Confirm whether "10 kits GS18 T" should move stage or be marked lost — no movement since June.</li>
 </ol>
 
 <h3>Claude Nakhle</h3>
-<p><b>Deal-Closing Actions</b></p>
+<b>Deal-Closing Actions</b>
 <ol>
-<li>New today: Ajax Self-Loading Concrete Mixer (UAE), reassigned from Zein — 12 days stalled on supplier, needs personal follow-up.</li>
-<li>10 Hiper VR+ OAF — UGO-KRIS Survey Equipment, €53,300, fresh (8d).</li>
-<li>Socotec — Topcon MS1AXII robotic stations, €52,000, fresh (8d).</li>
-<li>Hexagon (Sartrouville)/Fédéré Mpumu — stale quote €21,600 (19d) + open opp "Leica TS07" €18,000 — combine.</li>
-<li>Zenel Azemi quotation €12,600, 70 days — status check.</li>
-<li>Multilines General Trading — 2 duplicate-looking quotes (€9,000 each) — verify/merge.</li>
+<li>Hexagon (Sartrouville), Fédéré Mpumu — €21,600.00, 21 days with no response — highest-value open quote.</li>
+<li>Zenel Azemi — €12,600.00, 72 days stale.</li>
+<li>multilinestrading.com / Multilines General Trading LLC — two near-duplicate €9,000.00 quotes, 137 days stale each — merge or drop the redundant one.</li>
+<li>"Ajax Self-Loading Concrete Mixer" (UAE buyer) — already owned in Odoo; Al Marwan has no stock, Hala sent a brochure with no price yet, 4 rental suppliers haven't replied — chase Hala for a real price.</li>
+<li>"10 Hiper Vr plus OAF" — €53,300 pipeline deal, New, last touched 2026-09-08 — fresh, keep moving.</li>
+<li>Socotec — Topcon MS1AXII — €52,000 pipeline deal, New, last touched 2026-09-08 — fresh, keep moving.</li>
 </ol>
-<p><b>Admin &amp; Housekeeping</b></p>
-<ol><li>8 Inbox-Log Needs Action items tied to your correspondence (vendor registration, listing reviews).</li></ol>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>Merge/clean up duplicate Multilines quotes (orders 174/175).</li>
+<li>No confirmed sale recorded yet this month (MTD $0) — worth a check-in.</li>
+</ol>
 
 <h3>Mireille Baho</h3>
-<p><b>Deal-Closing Actions</b></p>
+<b>Deal-Closing Actions</b>
 <ol>
-<li>G2 Survey Ltd — Faro accessories/warranty, €95,600, 14 days — largest item, check in.</li>
-<li>Etisalat Group — open opp €53,300 + stale quote €53,330 (72d) — likely duplicate, reconcile.</li>
-<li>Habib University Foundation — open opp €50,000 + stale quote €13,777 (64d) — likely duplicate, reconcile.</li>
-<li>New today: FARO scanner pricing — Michael Declercq (from Zein's Intergeo correspondence) — qualify.</li>
-<li>Kulan General Trading €29,975, 91 days — status check.</li>
-<li>Technoserve Trading €22,136, 131 days — likely dead, final call.</li>
+<li>ETISALAT — €53,330.00, 74 days with no response — highest-value open quote.</li>
+<li>Kulan General Trading — €29,975.00, 93 days stale.</li>
+<li>TECHNOSERVE TRADING CO. — €22,136.00, 133 days stale — needs a status check.</li>
+<li>Shenzhen Hu Liang Instrument Co. — €18,300.00, 151 days stale — very stale.</li>
+<li>UBY — Leica TM50 offered at €10,000 (2026-09-17) — reassigned to Mireille today (she's engaged on the thread with Zein); awaiting Zein's go/no-go.</li>
+<li>ATGT Geometre Expert financing (dossier 413354) — client signed, bank sent the "avis de dépense" today, likely just needs confirmation to close.</li>
+<li>G2 Survey Ltd — €95,600 pipeline deal, New, fresh (2026-09-02).</li>
 </ol>
-<p><b>Admin &amp; Housekeeping</b></p>
+<b>Admin &amp; Housekeeping</b>
 <ol>
-<li>7 Inbox-Log Needs Action items tied to your correspondence (shipment/rebate follow-ups).</li>
-<li>eBay: not available this run (Seller Hub session unreachable) — no order/offer/stock-vs-listed items to report.</li>
-<li>Draft Validation Queue: 3 Self-Serve Nudge drafts, 12 days pending each (see Pending Drafts Review).</li>
+<li>16 stale quotations (5+ days) totaling €210,001.30.</li>
+<li>Leica Nova MS60 auction pickup (Giertsen) — AWB still pending as of 2026-09-17.</li>
+<li>eBay unavailable this run (wrong account signed in) — no eBay action items to report.</li>
+<li>3 stale nudge drafts (since 2026-09-05) need escalation to their owning reps — Draft Validation Queue.</li>
 </ol>
 
 <h3>Daniel Llorente</h3>
-<p><b>Deal-Closing Actions</b></p>
+<b>Deal-Closing Actions</b>
 <ol>
-<li>5 "Bassem/…" opportunities (€126,000 combined: Bazerque €50,000, Vienne €31,000, Lycée Norman Foster €25,000, Lacaze €10,000, Visioreso €10,000), all 149 days untouched — dedicated push needed.</li>
-<li>Service Technique Topographie Laser (Sébastien Tenet) — 1 open opp (€14,000) + 3 stale quotes (€24,840/€15,780/€8,640) — consolidate into one call.</li>
+<li>SERVICE TECHNIQUE TOPOGRAPHIE LASER — 3 open quotes (€24,840 / €15,780 / €8,640, 70–93 days stale) — highest-value customer, consolidate into one call.</li>
+<li>Société LUXONEGOCE — €8,075.00, 134 days stale.</li>
+<li>"Bassem/TOPO CONTROL" — €50,000 pipeline deal, New, no activity since 2026-04-20 (~151 days) — step in personally.</li>
+<li>"Bassem/Achat Jérémy Vienne" — €31,000 pipeline deal, same staleness.</li>
 </ol>
-<p><b>Admin &amp; Housekeeping</b></p>
-<ol><li>3 Inbox-Log Needs Action items (Matterport Pro3 rebate credit dispute, ongoing since 2026-09-03).</li></ol>
+<b>Admin &amp; Housekeeping</b>
+<ol>
+<li>16 stale quotations (5+ days) totaling €141,460.44.</li>
+</ol>
 
+<h2>Hot Leads</h2>
+<div class="card-grid">
+  <div class="hotcard sell"><b>UBY — Leica TM50</b><br>€10,000 offer, needs repair<br>Owner: Mireille Baho (reassigned today)</div>
+  <div class="hotcard buy"><b>UAE buyer — Ajax self-loading concrete mixer</b><br>Sourced by Zein, owned by Claude Nakhle<br>Hala sent brochure, no price yet</div>
+  <div class="hotcard urgent"><b>10 kits GS18 T — €557,000</b><br>Qualified, no activity ~98 days<br>Owner: Georges Labaky</div>
+</div>
 
 <h2>Pending Drafts Review</h2>
-<table><tr><th>Draft Type</th><th>Target/Recipient</th><th>Created</th><th>Days Pending</th><th>Status</th></tr>
-<tr><td>Self-Serve Nudge</td><td>orders@condimon.com (CSI2140 seller)</td><td>2026-09-05</td><td>12</td><td><span class="badge-status badge-stale">stale</span></td></tr>
-<tr><td>Self-Serve Nudge</td><td>ismofils8@gmail.com (Leica TS03 seller)</td><td>2026-09-05</td><td>12</td><td><span class="badge-status badge-stale">stale</span></td></tr>
-<tr><td>Self-Serve Nudge</td><td>saul.sm.terrasurvey@gmail.com (Trimble R8s seller)</td><td>2026-09-05</td><td>12</td><td><span class="badge-status badge-stale">stale</span></td></tr>
+<table><tr><th>Draft Type</th><th>Target/Recipient</th><th>Created</th><th>Status</th></tr>
+<tr><td>Self-Serve Nudge</td><td>orders@condimon.com (CSI2140)</td><td>2026-09-05</td><td><span class="badge-status badge-stale">STALE — 13d</span></td></tr>
+<tr><td>Self-Serve Nudge</td><td>ismofils8@gmail.com (Leica TS03)</td><td>2026-09-05</td><td><span class="badge-status badge-stale">STALE — 13d</span></td></tr>
+<tr><td>Self-Serve Nudge</td><td>saul.sm.terrasurvey@gmail.com (TRIMBLE R8s)</td><td>2026-09-05</td><td><span class="badge-status badge-stale">STALE — 13d</span></td></tr>
 </table>
 
-<h2>Digital Realities SASU Business (Distribution / Rental / Services)</h2>
+<h2>Digital Realities Business</h2>
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="label">Dist France — YTD Billings</div><div class="value">€81,463</div></div>
-  <div class="kpi-card"><div class="label">Dist France — YTD GP</div><div class="value">€15,109</div></div>
-  <div class="kpi-card"><div class="label">Services — YTD Billings</div><div class="value">€12,500</div></div>
-  <div class="kpi-card"><div class="label">Rental — Grand total Billings</div><div class="value">€4,060 (0 YTD)</div></div>
+  <div class="kpi-card"><div class="label">Distribution (Dist France) — all-time</div><div class="value">€325,673 / 84 txns</div></div>
+  <div class="kpi-card"><div class="label">Services — all-time</div><div class="value">€94,310 / 35 txns</div></div>
+  <div class="kpi-card"><div class="label">Rental — all-time</div><div class="value">No exact "rental" Product match; closest rental-labeled rows: €4,060 / 16 txns (via Revenue Stream)</div></div>
+  <div class="kpi-card"><div class="label">GA4 Active Users (yesterday)</div><div class="value">1</div></div>
+  <div class="kpi-card"><div class="label">Google Ads Spend</div><div class="value">Unavailable</div></div>
 </div>
-<p style="font-size:12px;color:#667;">"Services" figure uses the Revenue-Stream column; the Product-column reading of "Services" gives a close but not identical €94,310 grand-total — both are real, reported per the Cockpit pull methodology rather than picked silently. Marketing for this business is in the Marketing tab's Digital Realities section.</p>
+<p style="font-size:12px;color:#667;">Digital Realities SASU's own business (Matterport distribution/rental/services) — distinct from Topotrade marketplace activity above. "Dist France" and "Services" were matched on exact Revenue Stream/Product values; an exact "rental" Product match wasn't found (closest literal values: "Location Pro3", "Location Pro2", "Location", "Rental Pro2" — 16 rows, €4,060 combined) — flagged rather than guessed.</p>
 
 <h2>Footer</h2>
-<p style="font-size:12px;color:#667;">Sources: Cockpit Google Sheet (Sales+P&amp;L tabs), Odoo CRM/Sales/API, Gmail, GA4, Meta Graph API. As of 2026-09-17. Unavailable this run: admin.topotrade.com, Google Ads, LinkedIn, WhatsApp Web Business, eBay Seller Hub.</p>
+<p style="font-size:12px;color:#667;">Sources: Cockpit Google Sheet, Odoo (XML-RPC), Gmail, GA4 (GitHub-hosted JSON), Meta Graph API (live sync), sales@ mailer Web App. Unavailable this run: admin.topotrade.com, Google Ads, eBay Seller Hub, full WhatsApp/LinkedIn scan. As of 2026-09-18.</p>
 
 </div>
 
 <div id="marketing" class="tab">
-<div class="banner flag"><b>Data-quality flags:</b> Google Ads (both accounts) and LinkedIn analytics were unreachable this run. eBay Store section unavailable (Seller Hub session unreachable). GA4 and Meta (both pages) are fresh as of 2026-09-16/17.</div>
 
 <h2>Key Metrics</h2>
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="label">Facebook followers (Topotrade)</div><div class="value">5,880</div></div>
-  <div class="kpi-card"><div class="label">Instagram followers (Topotrade)</div><div class="value">753</div></div>
-  <div class="kpi-card"><div class="label">GA4 active users (Topotrade)</div><div class="value">46</div></div>
-  <div class="kpi-card"><div class="label">Google Ads spend</div><div class="value">N/A</div></div>
-  <div class="kpi-card"><div class="label">Email mailings on file (Odoo)</div><div class="value">11</div></div>
+  <div class="kpi-card"><div class="label">Facebook Followers (Topotrade)</div><div class="value">5,880</div></div>
+  <div class="kpi-card"><div class="label">LinkedIn</div><div class="value">Logged in — not scanned</div></div>
+  <div class="kpi-card"><div class="label">GA4 Active Users (Topotrade, yesterday)</div><div class="value">39</div></div>
+  <div class="kpi-card"><div class="label">Google Ads Spend</div><div class="value">Unavailable</div></div>
+  <div class="kpi-card"><div class="label">Email Contacts (Odoo mailing lists)</div><div class="value">925</div></div>
+  <div class="kpi-card"><div class="label">Emails Sent (2026 campaigns)</div><div class="value">12</div></div>
 </div>
 
-<h2>Facebook Page Insights — Topotrade.com</h2>
+<h2>Facebook Page Insights (Topotrade)</h2>
 <table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Page followers</td><td>5,880</td></tr>
-<tr><td>Daily post engagements (latest)</td><td>0 (prior day: 2)</td></tr>
-<tr><td>Daily video views (latest)</td><td>2 (prior day: 4)</td></tr>
-<tr><td>Daily page views (latest)</td><td>1 (prior day: 19)</td></tr>
-<tr><td>Recent posts pulled</td><td>10</td></tr>
-<tr><td>Messenger conversations</td><td>20</td></tr>
-<tr><td>Active Lead-gen forms</td><td>10 (0 new leads today)</td></tr>
+<tr><td>Recent posts pulled</td><td>Up to 10, with comments</td></tr>
+<tr><td>Page-level engagement/video-view/total-views insights</td><td>Synced live this run — see data/meta-topotrade.json</td></tr>
 </table>
 
 <h2>LinkedIn Analytics</h2>
-<div class="banner flag">Not available — LinkedIn browser session unreachable this run.</div>
+<div class="banner flag">Session confirmed logged in as Zein Rachidi (144 profile viewers, 35 post impressions shown on feed), but a full analytics/message scan wasn't completed this run — browser connection dropped before reaching LinkedIn's analytics pages.</div>
 
-<h2>Google Ads</h2>
-<div class="banner flag">Not available — no connected browser session is signed into either contact@topotrade.com or contact@digitalrealities.fr Ads accounts this run.</div>
+<h2>Google Ads Snapshot</h2>
+<div class="banner flag">Not available — the connected browser opened Google Ads' public signup/landing page for both contact@topotrade.com and contact@digitalrealities.fr; neither account was signed in this run.</div>
 
 <h2>Email Marketing / Odoo</h2>
-<p>11 mailing.mailing campaigns on file in Odoo. Individual campaign performance (opens/clicks/bounces) and mailing-list growth were not inspected in detail this run — flagged for a deeper pull next time.</p>
+<table><tr><th>Campaign</th><th>Sent</th><th>Open Rate</th><th>Click Rate</th></tr>
+<tr><td>Retrouvez topotrade Canada au 57ᵉ Congrès de l'OAGQ</td><td>2026-09-17</td><td>77.65%</td><td>21.57%</td></tr>
+<tr><td>Get Your Free Pass to INTERGEO 2026 (resend)</td><td>2026-09-11</td><td>94.83%</td><td>21.58%</td></tr>
+<tr><td>Get Your Free Pass to INTERGEO 2026 (resend)</td><td>2026-09-09</td><td>99.64%</td><td>46.85%</td></tr>
+<tr><td>Meet Topotrade at INTERGEO 2026</td><td>2026-09-02</td><td>99.50%</td><td>16.00%</td></tr>
+<tr><td>Last Chance: Emlid GNSS Kit (EN)</td><td>2026-07-10</td><td>100.00%</td><td>56.45%</td></tr>
+<tr><td>Dernière chance: kit GNSS Emlid (FR)</td><td>2026-07-10</td><td>100.00%</td><td>33.73%</td></tr>
+</table>
+<h3>Mailing List Growth</h3>
+<table><tr><th>List</th><th>Contacts</th></tr>
+<tr><td>Canada Alberta</td><td>341</td></tr><tr><td>Quebec List</td><td>255</td></tr><tr><td>Europe end users</td><td>90</td></tr>
+<tr><td>Ontario List</td><td>85</td></tr><tr><td>Leica Dealers</td><td>50</td></tr><tr><td>Machinio</td><td>25</td></tr>
+<tr><td>Asia</td><td>14</td></tr><tr><td>Manitoba List</td><td>17</td></tr><tr><td>Sun Peak Contacts</td><td>16</td></tr>
+<tr><td>Canada</td><td>15</td></tr><tr><td>UAE end users</td><td>11</td></tr><tr><td>UK</td><td>11</td></tr>
+<tr><td>Newsletter</td><td>1</td></tr>
+<tr><td><b>Total</b></td><td><b>925</b></td></tr>
+</table>
 
 <h2>Website Traffic (GA4)</h2>
-<table><tr><th></th><th>Topotrade.com</th><th>Digital Realities</th></tr>
-<tr><td>Active users</td><td>46</td><td>2</td></tr>
-<tr><td>New users</td><td>43</td><td>1</td></tr>
-<tr><td>Sessions</td><td>71</td><td>3</td></tr>
-<tr><td>Page views</td><td>272</td><td>3</td></tr>
+<table><tr><th>Property</th><th>Active Users</th><th>Sessions</th><th>New Users</th><th>Top Channel</th></tr>
+<tr><td>Topotrade.com</td><td>39</td><td>63</td><td>40</td><td>Direct (37)</td></tr>
+<tr><td>Digital Realities</td><td>1</td><td>3</td><td>0</td><td>Direct (3)</td></tr>
 </table>
 
 <h2>Instagram</h2>
-<table><tr><th></th><th>Topotrade (@topotrade_)</th><th>Digital Realities (@digitalrealities.fr)</th></tr>
-<tr><td>Followers</td><td>753</td><td>71</td></tr>
-<tr><td>Media count</td><td>618</td><td>126</td></tr>
-<tr><td>Insights (reach/impressions)</td><td colspan="2">Known gap — needs separate instagram_manage_insights Meta App Review, not a sync failure.</td></tr>
+<table><tr><th>Account</th><th>Followers</th><th>Media Count</th></tr>
+<tr><td>@topotrade_</td><td>754</td><td>619</td></tr>
+<tr><td>@digitalrealities.fr</td><td>71</td><td>126</td></tr>
 </table>
+<p style="font-size:12px;color:#667;">Instagram Insights (reach/impressions) remain unavailable for both — needs a separate Meta App Review submission for the instagram_manage_insights scope. Comments and Page-level Insights are working.</p>
 
 <h2>eBay Store</h2>
-<div class="banner flag">Not available — Seller Hub session unreachable this run (temporary browser-based pull pending eBay Developer account/Sell API reinstatement).</div>
+<div class="banner flag">Not available this run — connected browser was signed in as marketing@digitalrealities.fr, not the "topotrade" Seller Hub account. Temporary pull pending the eBay Developer account suspension clearing and the Sell API being wired in.</div>
 
 <h2>Recommended Actions — Celine Fleyfel</h2>
 <ol>
-<li>198 Inbox Log items are tagged "Marketing" on file; review the CME 2027 exhibitor commitment Georges is running (booth P-35 confirmed, 50% deposit invoiced 2026-09-16) for any marketing/booth-design needs.</li>
-<li>Google Ads spend/performance is currently a blind spot for both accounts — worth getting a session signed in so this doesn't recur daily.</li>
-<li>Instagram Insights (reach/impressions) needs a fresh Meta App Review submission for the instagram_manage_insights scope if you want that data going forward.</li>
+<li>INTERGEO 2026 campaign is performing very well (up to 99.6% open, 46.9% click on a resend) — worth a follow-up campaign to the same segment before the event.</li>
+<li>Digital Realities' GA4/social footprint remains very small (30 FB followers, 71 IG followers, 1 GA4 active user yesterday) — worth a dedicated push if growing that brand is a priority this quarter.</li>
+<li>Google Ads is currently a blind spot for both properties — worth getting a browser session (or API credentials) properly signed in so spend/performance can be tracked daily.</li>
 </ol>
 
 <h2>Digital Realities Marketing</h2>
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="label">GA4 active users</div><div class="value">2</div></div>
-  <div class="kpi-card"><div class="label">Google Ads spend</div><div class="value">N/A</div></div>
+  <div class="kpi-card"><div class="label">GA4 Active Users (yesterday)</div><div class="value">1</div></div>
+  <div class="kpi-card"><div class="label">GA4 Sessions (yesterday)</div><div class="value">3</div></div>
+  <div class="kpi-card"><div class="label">Google Ads Spend</div><div class="value">Unavailable</div></div>
 </div>
-<table><tr><th>Channel</th><th>Sessions</th></tr>
-<tr><td>Organic Search</td><td>2</td></tr><tr><td>Direct</td><td>1</td></tr></table>
+<table><tr><th>Date</th><th>Active Users</th><th>Sessions</th><th>Page Views</th><th>Top Channel</th></tr>
+<tr><td>2026-09-17</td><td>1</td><td>3</td><td>10</td><td>Direct (3)</td></tr>
+</table>
 
 </div>
 
-<footer>Topotrade Daily Dashboard — generated 2026-09-17 — sources: Cockpit Sheet, Odoo, Gmail, GA4, Meta Graph API. See data-quality banners for this run's gaps.</footer>
+<footer>
+Topotrade Daily Dashboard — generated 2026-09-18 · Sources: Cockpit Google Sheet, Odoo XML-RPC API, Gmail, GA4 (GitHub JSON), Meta Graph API, sales@ mailer Web App · Unavailable: admin.topotrade.com, Google Ads, eBay Seller Hub, full WhatsApp/LinkedIn scan
+</footer>
 
 <script>
-function showTab(id){
+function showTab(name){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.getElementById('btn-'+id).classList.add('active');
+  document.getElementById(name).classList.add('active');
+  document.getElementById('btn-'+name).classList.add('active');
 }
 </script>
 </body>
