@@ -2,386 +2,307 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Digest — Tuesday, September 15 2026</title>
+<title>Daily Digest — Thursday, September 17 2026</title>
 <style>
-  :root{
-    --bg:#FCFCFB;
-    --wash:#F9F9F7;
-    --ink:#2E2C27;
-    --ink-soft:#6B6A63;
-    --ink-grey:#B4B3A8;
-    --hairline:#E4E3DC;
-    --clay:#C6613F;
-    --clay-hover:#AE5133;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    padding:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  }
-  .headline-font{
-    font-family: Georgia, "Times New Roman", serif;
-  }
-  .band{
-    width:100%;
-  }
-  .band-top{ background:var(--wash); border-bottom:1px solid var(--hairline); }
-  .band-bottom{ background:var(--bg); }
-  .content{
-    max-width:860px;
-    margin:0 auto;
-    padding:48px 24px 56px 24px;
-  }
-  .day-date{
-    color:var(--ink-soft);
-    font-size:14px;
-    letter-spacing:0.02em;
-    margin:0 0 10px 0;
-  }
-  .headline{
-    color:var(--ink);
-    font-size:40px;
-    line-height:1.25;
-    margin:0 0 32px 0;
-    font-weight:600;
-  }
-  @media (max-width:640px){
-    .headline{ font-size:30px; }
-  }
-  .drawing{ width:100%; height:auto; display:block; margin-bottom:8px; }
-  .acts{
-    display:flex;
-    width:100%;
-    margin-top:8px;
-  }
-  .act{
-    flex:1;
-    padding:18px 20px 0 20px;
-    border-left:1px solid var(--hairline);
-  }
-  .act:first-child{ border-left:none; padding-left:0; }
-  .act-time{
-    font-weight:600;
-    font-size:13px;
-    color:var(--ink);
-    text-transform:none;
-    margin-bottom:8px;
-  }
-  .act-sentence{
-    font-size:14px;
-    line-height:1.55;
-    color:var(--ink-soft);
-    margin:0;
-  }
-  @media (max-width:640px){
-    .acts{ flex-direction:column; }
-    .act{ border-left:none; border-top:1px solid var(--hairline); padding:16px 0 0 0; margin-top:16px; }
-    .act:first-child{ border-top:none; margin-top:0; }
-  }
-  .section{
-    margin-top:44px;
-  }
-  .section:first-of-type{
-    margin-top:0;
-  }
-  .section-heading{
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--ink);
-    margin:0 0 6px 0;
-  }
-  .numbers-line{
-    font-size:14px;
-    color:var(--ink-soft);
-    margin:0 0 18px 0;
-    line-height:1.6;
-  }
-  .numbers-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:10px 0 18px 0;
-    font-size:13.5px;
-  }
-  .numbers-table td{
-    padding:5px 14px 5px 0;
-    color:var(--ink-soft);
-    border-bottom:1px solid var(--hairline);
-    white-space:nowrap;
-  }
-  .numbers-table td.label{ color:var(--ink); font-weight:600; }
-  .todo-list{
-    list-style:none;
-    margin:0;
-    padding:0;
-  }
-  .todo-list li{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    padding:10px 0;
-    border-bottom:1px solid var(--hairline);
-  }
-  .todo-list li:last-child{ border-bottom:none; }
-  .todo-list .num{
-    color:var(--ink-grey);
-    font-size:13px;
-    font-variant-numeric:tabular-nums;
-    min-width:16px;
-    padding-top:2px;
-    flex-shrink:0;
-  }
-  .item-check{
-    -webkit-appearance:none;
-    appearance:none;
-    width:16px;
-    height:16px;
-    min-width:16px;
-    border:1.5px solid var(--ink-grey);
-    border-radius:4px;
-    margin:2px 0 0 0;
-    flex-shrink:0;
-    position:relative;
-    cursor:pointer;
-    background:var(--bg);
-  }
-  .item-check:checked{
-    background:var(--clay);
-    border-color:var(--clay);
-  }
-  .item-check:checked::after{
-    content:"";
-    position:absolute;
-    left:4px;
-    top:1px;
-    width:4px;
-    height:8px;
-    border:solid #FCFCFB;
-    border-width:0 2px 2px 0;
-    transform:rotate(45deg);
-  }
-  .item-body{ flex:1; }
-  .item-title{
-    font-weight:600;
-    color:var(--ink);
-    font-size:14.5px;
-    display:block;
-    margin-bottom:2px;
-  }
-  .item-sentence{
-    font-size:14px;
-    color:var(--ink-soft);
-    line-height:1.55;
-    margin:0;
-  }
-  .todo-list li.done .item-title{ color:var(--ink-grey); text-decoration:line-through; }
-  .todo-list li.done .item-sentence{ color:var(--ink-grey); text-decoration:line-through; }
-  .done-divider{
-    border:none;
-    border-top:1px solid var(--hairline);
-    margin:4px 0;
-    position:relative;
-  }
-  .done-divider-label{
-    font-size:11px;
-    color:var(--ink-grey);
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    padding:8px 0 4px 0;
-    display:block;
-  }
-  .portfolio-item{
-    margin:0 0 18px 0;
-  }
-  .portfolio-item .item-title{
-    font-size:14.5px;
-    margin-bottom:4px;
-  }
-  .portfolio-item p{
-    font-size:14px;
-    line-height:1.6;
-    color:var(--ink-soft);
-    margin:0;
-  }
-  .disclaimer{
-    font-size:12.5px;
-    color:var(--ink-grey);
-    margin-top:20px;
-    line-height:1.5;
-  }
+@font-face {
+  font-family: 'Fraunces';
+  font-weight: 600;
+  font-style: normal;
+  src: url(data:font/woff2;base64,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) format('woff2');
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #FCFCFB;
+  color: #2E2C27;
+  font-family: -apple-system, "Segoe UI", sans-serif;
+}
+.band { width: 100%; }
+.band-top { background: #F9F9F7; border-bottom: 1px solid #E1E1DF; }
+.band-bottom { background: #FCFCFB; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+.day-date { color: #6B6A63; font-size: 14px; margin-bottom: 8px; }
+.headline { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 40px; line-height: 1.25; margin: 0 0 32px 0; color: #2E2C27; }
+.drawing { margin-bottom: 8px; }
+.acts { display: flex; margin-top: 16px; }
+.act { flex: 1; padding: 0 20px; position: relative; }
+.act:not(:first-child) { border-left: 1px solid #E4E3DC; }
+.act-time { font-weight: 700; font-size: 13px; color: #2E2C27; margin-bottom: 8px; }
+.act-text { font-size: 14px; color: #6B6A63; line-height: 1.5; }
+@media (max-width: 640px) {
+  .acts { flex-direction: column; }
+  .act { border-left: none !important; border-top: 1px solid #E4E3DC; padding: 16px 0; }
+  .act:first-child { border-top: none; padding-top: 0; }
+  .headline { font-size: 30px; }
+}
+.sec-heading { font-size: 20px; font-weight: 700; margin: 0 0 16px 0; color: #2E2C27; }
+.sub-heading { font-size: 14px; font-weight: 700; margin: 24px 0 12px 0; color: #2E2C27; text-transform: uppercase; letter-spacing: 0.03em; }
+.table-heading { font-size: 13px; font-weight: 700; margin: 20px 0 8px 0; color: #6B6A63; text-transform: uppercase; letter-spacing: 0.03em; }
+.block { padding: 32px 0; border-bottom: 1px solid #E4E3DC; }
+.block:last-child { border-bottom: none; }
+.numbers { margin-bottom: 8px; }
+.num-row { display: flex; gap: 18px; font-size: 14px; padding: 6px 0; flex-wrap: wrap; }
+.num-label { color: #6B6A63; min-width: 160px; font-weight: 600; }
+.num-val { color: #2E2C27; }
+.num-target { color: #6B6A63; font-size: 13px; margin-top: 8px; font-style: normal; }
+.numbers-grid { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-bottom: 8px; }
+.num-pill { display: flex; flex-direction: column; }
+.num-pill-label { font-size: 12px; color: #6B6A63; text-transform: uppercase; letter-spacing: 0.03em; }
+.num-pill-val { font-size: 16px; color: #2E2C27; font-weight: 700; }
+table.data-table { border-collapse: collapse; width: 100%; margin-bottom: 4px; font-size: 13px; }
+table.data-table th { text-align: left; color: #6B6A63; font-weight: 600; padding: 6px 10px 6px 0; border-bottom: 1px solid #E4E3DC; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+table.data-table td { padding: 6px 10px 6px 0; border-bottom: 1px solid #F0F0EE; color: #2E2C27; }
+ul.todo { list-style: none; margin: 0; padding: 0; }
+li.item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; }
+label.check { flex: 0 0 auto; cursor: pointer; margin-top: 2px; }
+label.check input { position: absolute; opacity: 0; width: 0; height: 0; }
+label.check .box { display: inline-block; width: 16px; height: 16px; border: 1.5px solid #B4B3A8; border-radius: 4px; position: relative; background: #FCFCFB; }
+label.check input:checked + .box { background: #C6613F; border-color: #C6613F; }
+label.check input:checked + .box::after { content: ''; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: solid #FCFCFB; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.item-body { font-size: 14px; line-height: 1.5; }
+.item-title { font-weight: 700; color: #2E2C27; }
+.item-sentence { color: #6B6A63; }
+li.item.done .item-title, li.item.done .item-sentence { color: #B4B3A8; text-decoration: line-through; }
+.done-divider { border: none; border-top: 1px solid #E4E3DC; margin: 12px 0; }
+.divider-label { font-size: 11px; color: #B4B3A8; text-transform: uppercase; letter-spacing: 0.05em; margin: 12px 0 4px 0; }
+.portfolio-p { font-size: 14px; line-height: 1.6; color: #6B6A63; margin: 0 0 14px 0; }
+.portfolio-name { color: #2E2C27; font-weight: 700; }
+.portfolio-disclaimer { font-size: 12px; color: #B4B3A8; font-style: italic; margin-top: 16px; }
 </style>
 </head>
 <body>
-
 <div class="band band-top">
-  <div class="content">
-    <p class="day-date">Tuesday · September 15 2026</p>
-    <h1 class="headline headline-font">Intergeo has you today, Zein — two meetings, then Munich's evening is yours.</h1>
-
-    <svg class="drawing" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,140 C120,140 200,139 280,138 C340,137 380,120 420,105 C450,94 480,92 504,92 C528,92 545,100 560,100 C590,100 610,95 630,88 C650,80 660,72 672,68 C700,60 730,58 760,60 C790,62 815,64 840,66"
-            fill="none" stroke="#2E2C27" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="448" cy="97" r="7" fill="#2E2C27"/>
-      <circle cx="504" cy="92" r="7" fill="#2E2C27"/>
-      <circle cx="672" cy="68" r="8" fill="#2E2C27"/>
-      <path d="M700,42 a10,10 0 1,0 12,14 a13,13 0 1,1 -12,-14 Z" fill="#C6613F"/>
-    </svg>
-
-    <div class="acts">
-      <div class="act">
-        <div class="act-time">8 AM – 4 PM</div>
-        <p class="act-sentence">Nothing on the calendar until mid-afternoon — a clear runway before the show floor.</p>
-      </div>
-      <div class="act">
-        <div class="act-time">4 – 6 PM</div>
-        <p class="act-sentence">Two meetings run back to back: Topotrade Sales &amp; Marketing, then Digital Realities' Intergeo session with SHARE3DCAM.</p>
-      </div>
-      <div class="act">
-        <div class="act-time">8 PM onward</div>
-        <p class="act-sentence">The Emlid Beer Fest closes the day, partners only, at Augustiner Alter Wirt in Munich.</p>
-      </div>
-    </div>
+  <div class="wrap">
+    <div class="day-date">Thursday · September 17 2026</div>
+    <h1 class="headline">Two sit-downs carve out your midday, Zein — the rest is yours.</h1>
+    <div class="drawing"><svg viewBox="0 0 840 170" width="100%" height="170" xmlns="http://www.w3.org/2000/svg">
+<path d="M 10.0 135.0 C 33.3 134.7, 110.0 134.5, 150.0 133.0 C 190.0 131.5, 226.4 132.3, 250.0 126.0 C 273.6 119.7, 276.4 97.3, 291.4 95.0 C 306.4 92.7, 323.3 112.5, 340.0 112.0 C 356.7 111.5, 364.8 89.3, 391.4 92.0 C 418.1 94.7, 456.9 121.7, 500.0 128.0 C 543.1 134.3, 595.0 130.0, 650.0 130.0 C 705.0 130.0, 800.0 128.3, 830.0 128.0" fill="none" stroke="#2E2C27" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="291.4" cy="95.0" r="9" fill="#2E2C27"/>
+<circle cx="391.4" cy="92.0" r="9" fill="#2E2C27"/>
+</svg></div>
+    <div class="acts"><div class="act"><div class="act-time">12 – 11:45 AM</div><div class="act-text">The morning is clear until the Topcon sit-down at Intergeo.</div></div><div class="act"><div class="act-time">11:45 AM – 2:30 PM</div><div class="act-text">Back to back: Topcon at Intergeo, then the Levit Solutions check-in.</div></div><div class="act"><div class="act-time">2:30 PM onward</div><div class="act-text">Nothing else on the calendar — the afternoon and evening are open.</div></div></div>
   </div>
 </div>
-
 <div class="band band-bottom">
-  <div class="content">
-
-    <div class="section">
-      <h2 class="section-heading">Topotrade</h2>
-      <ul class="todo-list" id="list-topotrade">
-        <li data-id="topotrade-1"><input type="checkbox" class="item-check" data-id="topotrade-1"><div class="item-body"><span class="item-title">Meet with Mohammed Makki in Abu Dhabi</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-2"><input type="checkbox" class="item-check" data-id="topotrade-2"><div class="item-body"><span class="item-title">Contact Jad Kobeissi</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-3"><input type="checkbox" class="item-check" data-id="topotrade-3"><div class="item-body"><span class="item-title">Connect eBay to the daily dashboard task</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-4"><input type="checkbox" class="item-check" data-id="topotrade-4"><div class="item-body"><span class="item-title">Release DM guarantee</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-5"><input type="checkbox" class="item-check" data-id="topotrade-5"><div class="item-body"><span class="item-title">Follow up with Dubai Trade on the import code</span><p class="item-sentence">Standing item — obtaining the import code from Dubai Trade is still open.</p></div></li>
-        <li data-id="topotrade-6"><input type="checkbox" class="item-check" data-id="topotrade-6"><div class="item-body"><span class="item-title">Contact French Tech Abu Dhabi and Dubai</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-7"><input type="checkbox" class="item-check" data-id="topotrade-7"><div class="item-body"><span class="item-title">Find distressed Gulf contractors for used equipment</span><p class="item-sentence">Ask Claude to look for contractors in the Gulf that are distressed or have declared bankruptcy, to see about buying used equipment from them.</p></div></li>
-        <li data-id="topotrade-8"><input type="checkbox" class="item-check" data-id="topotrade-8"><div class="item-body"><span class="item-title">Follow up with Rebecca on Marlene's issue</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-9"><input type="checkbox" class="item-check" data-id="topotrade-9"><div class="item-body"><span class="item-title">Offer Nader Jbeili the Olivier equipment</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-10"><input type="checkbox" class="item-check" data-id="topotrade-10"><div class="item-body"><span class="item-title">Follow up with Nexity on the Paris travaux</span><p class="item-sentence">The works in the 20th arrondissement, Paris, are still pending a follow-up with Nexity.</p></div></li>
-        <li data-id="topotrade-11"><input type="checkbox" class="item-check" data-id="topotrade-11"><div class="item-body"><span class="item-title">Follow up with Nexity on the Poitiers travaux</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-12"><input type="checkbox" class="item-check" data-id="topotrade-12"><div class="item-body"><span class="item-title">Re-engage pending items in admin.topotrade.com</span><p class="item-sentence">Pending orders, listings and dropped carts still need going through — check with Claude on how to approach re-engaging those customers.</p></div></li>
-        <li data-id="topotrade-13"><input type="checkbox" class="item-check" data-id="topotrade-13"><div class="item-body"><span class="item-title">Contact Rita at BNP Paribas Paris</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-14"><input type="checkbox" class="item-check" data-id="topotrade-14"><div class="item-body"><span class="item-title">Modify address on EDF DR</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-15"><input type="checkbox" class="item-check" data-id="topotrade-15"><div class="item-body"><span class="item-title">List Almarwan items for sale</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-16"><input type="checkbox" class="item-check" data-id="topotrade-16"><div class="item-body"><span class="item-title">Send JP the remaining MVP scope</span><p class="item-sentence">You already asked JP for this on the 14th, in the Topotrade Dev Plan email thread; Levit Solutions says the post-MVP plan is coming by the end of the week.</p></div></li>
-        <li data-id="topotrade-17"><input type="checkbox" class="item-check" data-id="topotrade-17"><div class="item-body"><span class="item-title">Look for a small office space in Abu Dhabi</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="topotrade-18"><input type="checkbox" class="item-check" data-id="topotrade-18"><div class="item-body"><span class="item-title">Contact Rudy</span><p class="item-sentence">Standing item, added to your list in the Google Doc.</p></div></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2 class="section-heading">Personal</h2>
-      <ul class="todo-list" id="list-personal">
-        <li data-id="personal-1"><input type="checkbox" class="item-check" data-id="personal-1"><div class="item-body"><span class="item-title">Transfer the du number to another phone</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="personal-2"><input type="checkbox" class="item-check" data-id="personal-2"><div class="item-body"><span class="item-title">Pay Ly's HY1 school fees</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="personal-3"><input type="checkbox" class="item-check" data-id="personal-3"><div class="item-body"><span class="item-title">Check for an April vacation in Japan</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-        <li data-id="personal-4"><input type="checkbox" class="item-check" data-id="personal-4"><div class="item-body"><span class="item-title">Tell Rhea you want to stop the Sodeco rent</span><p class="item-sentence">Standing item, still open, on your list from the Google Doc.</p></div></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2 class="section-heading">Portfolio</h2>
-      <p class="numbers-line">Covering the last completed US session, Monday, September 14, 2026.</p>
-
-      <div class="portfolio-item">
-        <span class="item-title">SpaceX (SPCX)</span>
-        <p>Shares slid about 2% in early trading to $148 amid the broad AI-stock selloff and continuing post-IPO insider lockup releases; Greenlight Capital's David Einhorn warned the $1.75 trillion IPO valuation could mark a speculative market top. The stock recovered through the session to reclaim the $150 level as SpaceX's market cap neared $2 trillion, with some Wall Street targets pointing toward $200. Separately, SpaceX launched three satellites for SES on a Falcon 9 on Sunday — its 700th Falcon launch to date.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">Intel (INTC)</span>
-        <p>Shares fell about 5.6% to close near $97, part of the broad semiconductor selloff tied to AI-safety concerns. Apple also told Mac App Store developers it may drop support for Intel-based Macs in apps requiring macOS 13 or later, another step away from Intel silicon. The stock remains up sharply for the year, +163% year-to-date.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">IBM (IBM)</span>
-        <p>Bucked the sector's decline, rising about 2.4% to close near $247 after Bank of America lifted its price target from $315 to $330. IBM continues to lean on AI and quantum-computing partnerships, including with NASA and Lockheed Martin.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">Vanguard S&amp;P 500 Acc UCITS ETF (VUAA)</span>
-        <p>Tracks the S&amp;P 500, which closed down 0.48% at 7,619.95 as the broader market retreated — see the market note below.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">NVIDIA (NVDA)</span>
-        <p>Shares fell about 3.4% to close near $218, caught up in the AI-stock selloff after Anthropic CEO Dario Amodei published an essay urging a slowdown in frontier AI development, a call echoed by OpenAI's Sam Altman and Elon Musk over the weekend. Nvidia's $12.9 billion Hugging Face acquisition, announced September 3, and a possible investment in Anthropic's IPO remain in focus longer term.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">Moderna (MRNA)</span>
-        <p>One of the day's bright spots — shares closed around $147, supported by two clinical wins: the Merck-partnered personalized mRNA melanoma vaccine hit its Phase 3 goals, and the seasonal flu shot mFLUSIVA received FDA approval. The company also trimmed its 2026 expense guidance while reaffirming up to 10% revenue growth.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">ASML Holding (ASML)</span>
-        <p>Shares fell sharply, about 7.2%, to close near $1,575, underperforming the broader market on the same AI-slowdown worries plus lingering export-control and geopolitical concerns. Analysts stayed constructive — Cantor Fitzgerald reiterated an Overweight rating with a €2,500 target.</p>
-      </div>
-      <div class="portfolio-item">
-        <span class="item-title">Broader market</span>
-        <p>Major indexes fell Monday as investors weighed the AI-slowdown call from Amodei and Altman, a resignation from an Anthropic researcher warning of safety risks, and a spike in oil prices (Brent above $107) tied to escalating Middle East tensions, including attacks on Saudi shipping and energy infrastructure. The S&amp;P 500 closed down 0.48% at 7,619.95, the Dow slipped 0.29% to 52,421.28, and the Nasdaq lost 0.56% to 26,186.41. Treasury yields rose to multi-year highs — the 10-year touched 5%, its highest since 2023 — as markets priced in roughly an 85% chance of a Fed rate hike this week. Semiconductor and hardware names led the losses while software and cybersecurity stocks, including CrowdStrike and Palo Alto Networks, outperformed.</p>
-      </div>
-      <p class="disclaimer">This is informational only, not financial advice.</p>
-    </div>
-
+  <div class="wrap">
+    
+<section class="block">
+<h2 class="sec-heading">Topotrade</h2>
+<h3 class="sub-heading">Numbers</h3>
+<div class="numbers"><div class="num-row"><span class="num-label">YTD 2026 (Jan–Sep)</span><span class="num-val">GMV €1,571,842</span><span class="num-val">GP2 €466,574</span><span class="num-val">Net Profit €25,692</span></div><div class="num-row"><span class="num-label">MTD Sep 2026</span><span class="num-val">GMV €118,410</span><span class="num-val">GP2 €29,127</span><span class="num-val">Net Profit −€15,501 (net loss this month)</span></div><div class="num-target">Annual target: €3,000,000 revenue / €930,000 GP. September target: €250,000 revenue / €77,500 GP.</div></div>
+<h3 class="sub-heading">To-do</h3>
+<ul class="todo" id="list-topotrade"><li class="item" data-id="topotrade-1">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-1"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Check in on Drone Des Champs Inc</span><span class="item-sentence"> Your single largest pipeline deal, €557,000 with Georges, has gone quiet for 96 days — worth a personal call. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-2">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-2"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Push the Ajax concrete mixer supplier deal</span><span class="item-sentence"> Reassigned to Claude today after your own Al Marwan correspondence went 12 days without a firm quote — now his to drive. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-3">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-3"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Status-check the Wise Group quote</span><span class="item-sentence"> €143,539, sent 84 days ago by Georges and still unconfirmed — needs a status check, not another silent follow-up. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-4">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-4"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Push the five stalled “Bassem” leads</span><span class="item-sentence"> €126,000 combined across five opportunities logged the same day 149 days ago, all still untouched by Daniel. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-5">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-5"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Follow up G2 Survey Ltd</span><span class="item-sentence"> €95,600 Faro accessories/warranty deal, 14 days old — the largest item in Mireille&#x27;s queue. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-6">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-6"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Decide on Rouse Surveyors Inc</span><span class="item-sentence"> €90,133 quote sent 126 days ago by Georges, likely dead — worth one last call before write-off. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-7">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-7"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Qualify the FARO scanner lead for Michael Declercq</span><span class="item-sentence"> Sourced from your own Intergeo follow-up, no item or value confirmed yet — Mireille needs a qualifying call. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-8">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-8"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Reconcile the Etisalat and Habib University duplicates</span><span class="item-sentence"> Etisalat Group (€53,300 open + €53,330 stale quote) and Habib University Foundation (€50,000 open + €13,777 stale quote) each look logged twice in Mireille&#x27;s pipeline. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-9">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-9"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Merge the duplicate Multilines General Trading quotes</span><span class="item-sentence"> Two identical-looking €9,000 quotes from the same day, 135 days old, likely a duplicate lead under Claude. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-10">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-10"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Consolidate the Service Technique Topographie Laser threads</span><span class="item-sentence"> Four separate open threads (one opportunity plus three quotes, €24,840/€15,780/€8,640) all 68–96 days old under Daniel — worth one conversation. (from today&#x27;s Topotrade digest)</span></div>
+</li><li class="item" data-id="topotrade-11">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-11"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Decide on the Bad Twin Capital outreach</span><span class="item-sentence"> Matt Gould reached out Sept 16 asking if Topotrade would consider a fundraise or exit conversation — no reply sent yet.</span></div>
+</li><li class="item" data-id="topotrade-12">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-12"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">File the UAE Corporate Tax Return</span><span class="item-sentence"> Recurring urgent reminders from tax.gov.ae for Topotrade LLC-FZ, received three times in the last two days — needs actual filing action.</span></div>
+</li><li class="item" data-id="topotrade-13">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-13"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Reply to four pending LinkedIn messages</span><span class="item-sentence"> From Florent, Valérie, Andy, and Katja per the digest notifications — check LinkedIn directly since the browser session couldn&#x27;t pull content this run.</span></div>
+</li><li class="item" data-id="topotrade-14">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-14"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Check WhatsApp Business for pending items</span><span class="item-sentence"> Reminders and tasks there weren&#x27;t visible this run since the browser session was unreachable — worth a check on your phone.</span></div>
+</li><li class="item" data-id="topotrade-15">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-15"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">RSVP to the Forum des Dirigeants afterwork</span><span class="item-sentence"> Paris, Oct 15 — low priority, only if you&#x27;re interested.</span></div>
+</li><li class="item" data-id="topotrade-16">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-16"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Decide on the INTERGEO 2027 booth rebooking</span><span class="item-sentence"> Before the early-bird window closes.</span></div>
+</li><li class="item" data-id="topotrade-17">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-17"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Meet with Mohammed Makki in Abu Dhabi</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-18">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-18"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Contact Jad Kobeissi</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-19">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-19"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Connect eBay to the daily dashboard task</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-20">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-20"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Release DM guarantee</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-21">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-21"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Follow up with Dubai Trade to obtain the import code</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-22">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-22"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Contact French Tech Abu Dhabi and Dubai</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-23">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-23"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Ask Claude to find contractors in the Gulf that are distressed or have declared bankruptcy, to see about buying used equipment from them</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-24">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-24"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Follow up with Rebecca on Marlene&#x27;s issue</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-25">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-25"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Offer Nader Jbeili the Olivier equipment</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-26">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-26"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Follow up with Nexity on the travaux (20th arrondissement, Paris)</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-27">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-27"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Follow up with Nexity on the travaux in Poitiers</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-28">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-28"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Go through the pending items in admin.topotrade.com (pending orders, listings, dropped carts, etc.) and re-engage those customers</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-29">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-29"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Contact Rita at BNP Paribas Paris</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-30">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-30"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Modify address on EDF DR</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-31">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-31"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">List Almarwan items for sale</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-32">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-32"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Send email to JP about remaining scope of MVP</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-33">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-33"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Look for a small office space in Abu Dhabi</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="topotrade-34">
+<label class="check"><input type="checkbox" class="item-check" data-id="topotrade-34"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Contact Rudy</span><span class="item-sentence"> </span></div>
+</li></ul>
+</section>
+    
+<section class="block">
+<h2 class="sec-heading">Legends Own The Game</h2>
+<h3 class="sub-heading">Numbers</h3>
+<div class="numbers numbers-grid"><div class="num-pill"><span class="num-pill-label">YTD Sales</span><span class="num-pill-val">AED 22,808,233.52</span></div><div class="num-pill"><span class="num-pill-label">YTD Gross Profit</span><span class="num-pill-val">AED 6,586,831.79 (29%)</span></div><div class="num-pill"><span class="num-pill-label">MTD Sales</span><span class="num-pill-val">AED 1,977,048.35</span></div><div class="num-pill"><span class="num-pill-label">MTD Gross Profit</span><span class="num-pill-val">AED 642,946.93 (33%)</span></div></div>
+<h4 class="table-heading">Top 10 customers by YTD sales</h4>
+<table class="data-table"><thead><tr><th>Customer</th><th>YTD Sales</th><th>YTD GP</th><th>MTD Sales</th><th>MTD GP</th></tr></thead><tbody><tr><td>Roj Agha</td><td>AED 6,596,425.55</td><td>AED 1,701,758.20</td><td>AED 483,572.84</td><td>AED 140,003.59</td></tr><tr><td>Manuel Ogaza</td><td>AED 2,041,926.48</td><td>AED 639,916.22</td><td>AED 135,624.38</td><td>AED 39,039.23</td></tr><tr><td>Said Deniev</td><td>AED 1,097,760.24</td><td>AED 406,467.81</td><td>AED 412,512.38</td><td>AED 164,406.52</td></tr><tr><td>Jack Tai</td><td>AED 925,187.41</td><td>AED 229,542.13</td><td>no MTD activity</td><td>—</td></tr><tr><td>Karim Abouseda</td><td>AED 914,040.11</td><td>AED 270,086.58</td><td>AED 21,307.14</td><td>AED 10,458.09</td></tr><tr><td>LOTG Walk In (generic bucket)</td><td>AED 794,616.62</td><td>AED 242,971.92</td><td>AED 71,764.76</td><td>AED 23,004.55</td></tr><tr><td>Aaron Dray</td><td>AED 670,306.13</td><td>AED 240,818.44</td><td>AED 129,551.90</td><td>AED 45,208.56</td></tr><tr><td>Mahdiar Ahmadi</td><td>AED 663,617.25</td><td>AED 168,394.52</td><td>AED 5,928.57</td><td>AED 1,777.11</td></tr><tr><td>Mishaal Alireza</td><td>AED 538,077.12</td><td>AED 159,501.94</td><td>AED 14,834.17</td><td>AED 3,180.95</td></tr><tr><td>Youbetterfly Garments Trading LLC</td><td>AED 509,263.33</td><td>AED 136,961.50</td><td>AED 179,764.29</td><td>AED 48,028.79</td></tr></tbody></table>
+<h4 class="table-heading">Top 10 products by YTD revenue</h4>
+<table class="data-table"><thead><tr><th>Product</th><th>YTD Revenue</th><th>YTD GP</th><th>Margin</th><th>Units Sold YTD</th></tr></thead><tbody><tr><td>Topps UCC Chrome 2025-26 Sapphire Hobby Box</td><td>AED 498,732.57</td><td>AED 148,092.57</td><td>30%</td><td>90</td></tr><tr><td>Topps Real Madrid Los Blancos 25/26 Deck Box</td><td>AED 383,607.62</td><td>AED 198,589.22</td><td>52%</td><td>144</td></tr><tr><td>2026 Panini Prizm FIFA World Cup Soccer Hobby Box</td><td>AED 364,536.19</td><td>AED 93,537.79</td><td>26%</td><td>84</td></tr><tr><td>Topps NBA Cosmic Basketball 2025-26 Hobby Box</td><td>AED 283,220.38</td><td>AED 80,425.66</td><td>28%</td><td>80</td></tr><tr><td>2025-26 Bowman Basketball Sapphire Edition Box</td><td>AED 271,071.77</td><td>AED 45,884.97</td><td>17%</td><td>20</td></tr><tr><td>2025-2026 Topps Chrome Sapphire Edition Basketball Box</td><td>AED 267,184.76</td><td>AED 61,325.46</td><td>23%</td><td>10</td></tr><tr><td>Topps NBA Motif Basketball 2025-26 Hobby Box</td><td>AED 254,862.48</td><td>AED 71,082.99</td><td>28%</td><td>21</td></tr><tr><td>2026 Premier League Finest Hobby Box</td><td>AED 248,171.43</td><td>AED 58,005.03</td><td>23%</td><td>96</td></tr><tr><td>2024-25 Panini One &amp; One Basketball Hobby Box</td><td>AED 220,459.24</td><td>AED 52,517.04</td><td>24%</td><td>42</td></tr><tr><td>Topps Basketball Finest 2025-26 Hobby Box</td><td>AED 209,159.05</td><td>AED 56,176.65</td><td>27%</td><td>64</td></tr></tbody></table>
+<h4 class="table-heading">Top 10 products by YTD gross profit</h4>
+<table class="data-table"><thead><tr><th>Product</th><th>YTD GP</th><th>YTD Revenue</th><th>Margin</th></tr></thead><tbody><tr><td>Topps Real Madrid Los Blancos 25/26 Deck Box</td><td>AED 198,589.22</td><td>AED 383,607.62</td><td>52%</td></tr><tr><td>Topps UCC Chrome 2025-26 Sapphire Hobby Box</td><td>AED 148,092.57</td><td>AED 498,732.57</td><td>30%</td></tr><tr><td>2026 Panini Prizm FIFA World Cup Soccer Hobby Box</td><td>AED 93,537.79</td><td>AED 364,536.19</td><td>26%</td></tr><tr><td>PSA Category: Express</td><td>AED 87,924.14</td><td>AED 176,952.38</td><td>50%</td></tr><tr><td>PSA Category: Express Dual Service</td><td>AED 83,097.48</td><td>AED 154,085.88</td><td>54%</td></tr><tr><td>Topps NBA Cosmic Basketball 2025-26 Hobby Box</td><td>AED 80,425.66</td><td>AED 283,220.38</td><td>28%</td></tr><tr><td>PSA Category: Regular</td><td>AED 80,344.39</td><td>AED 180,476.19</td><td>45%</td></tr><tr><td>Topps NBA Motif Basketball 2025-26 Hobby Box</td><td>AED 71,082.99</td><td>AED 254,862.48</td><td>28%</td></tr><tr><td>2025-2026 Topps Chrome Sapphire Edition Basketball Box</td><td>AED 61,325.46</td><td>AED 267,184.76</td><td>23%</td></tr><tr><td>Topps UCC Chrome 2025-26 Jumbo Box</td><td>AED 60,826.20</td><td>AED 163,210.20</td><td>37%</td></tr></tbody></table>
+<h4 class="table-heading">Top categories by sales (Jan 1–Sep 17, 2026)</h4>
+<table class="data-table"><thead><tr><th>Category</th><th>YTD Revenue</th><th>YTD GP</th><th>Margin</th></tr></thead><tbody><tr><td>Card Boxes</td><td>AED 19,712,634.61</td><td>AED 5,624,133.39</td><td>29%</td></tr><tr><td>PSA Services</td><td>AED 1,307,768.88</td><td>AED 524,637.99</td><td>40%</td></tr><tr><td>Sports Memorabilia</td><td>AED 797,950.53</td><td>AED 194,144.89</td><td>24%</td></tr><tr><td>Cards</td><td>AED 646,360.24</td><td>AED 102,735.89</td><td>16%</td></tr><tr><td>Accessories</td><td>AED 164,547.40</td><td>AED 56,539.15</td><td>34%</td></tr><tr><td>Packs</td><td>AED 82,425.41</td><td>AED 24,853.87</td><td>30%</td></tr><tr><td>Shipping Service</td><td>AED 45,424.63</td><td>AED 40,149.63</td><td>88%</td></tr><tr><td>Non-Sports Memorabilia</td><td>AED 20,209.52</td><td>AED 6,787.08</td><td>34%</td></tr><tr><td>Comics</td><td>AED 13,095.24</td><td>AED 3,139.23</td><td>24%</td></tr><tr><td>Figurines</td><td>AED 9,066.67</td><td>AED 2,681.69</td><td>30%</td></tr></tbody></table>
+<h3 class="sub-heading">To-do</h3>
+<ul class="todo" id="list-lotg"><li class="item" data-id="lotg-1">
+<label class="check"><input type="checkbox" class="item-check" data-id="lotg-1"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Receive the overdue Topps purchase order #1791669</span><span class="item-sentence"> 4 units, AED 16,244.76, from Topps – Collect Fanatics, was due Sept 14 and is now overdue. (per Lightspeed)</span></div>
+</li><li class="item" data-id="lotg-2">
+<label class="check"><input type="checkbox" class="item-check" data-id="lotg-2"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Receive the overdue Topps purchase order #1791668</span><span class="item-sentence"> 32 units, AED 44,941.12, from Topps – Collect Fanatics, was due Sept 14 and is now overdue. (per Lightspeed)</span></div>
+</li><li class="item" data-id="lotg-3">
+<label class="check"><input type="checkbox" class="item-check" data-id="lotg-3"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Review the exchange of emails with Mishaal and prepare for the meeting with him</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="lotg-4">
+<label class="check"><input type="checkbox" class="item-check" data-id="lotg-4"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Work on the financials of the card show (ask Majd and Ramzi for documents)</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="lotg-5">
+<label class="check"><input type="checkbox" class="item-check" data-id="lotg-5"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Work on the acquisition plan for the Europe businesses</span><span class="item-sentence"> </span></div>
+</li></ul>
+</section>
+    
+<section class="block">
+<h2 class="sec-heading">Personal</h2>
+<h3 class="sub-heading">To-do</h3>
+<ul class="todo" id="list-personal"><li class="item" data-id="personal-1">
+<label class="check"><input type="checkbox" class="item-check" data-id="personal-1"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Transfer the du number to another phone</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="personal-2">
+<label class="check"><input type="checkbox" class="item-check" data-id="personal-2"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Pay Ly&#x27;s HY1 school fees</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="personal-3">
+<label class="check"><input type="checkbox" class="item-check" data-id="personal-3"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Check for an April vacation in Japan</span><span class="item-sentence"> </span></div>
+</li><li class="item" data-id="personal-4">
+<label class="check"><input type="checkbox" class="item-check" data-id="personal-4"><span class="box"></span></label>
+<div class="item-body"><span class="item-title">Inform Rhea that you want to stop the rent in Sodeco</span><span class="item-sentence"> </span></div>
+</li></ul>
+</section>
+    
+<section class="block">
+<h2 class="sec-heading">Portfolio</h2>
+<p class="portfolio-p"><span class="portfolio-name">SpaceX (SPCX).</span> Shares traded in a $144.15–$152.93 range and closed near $151.22, up roughly 2% on the session. The move tracked confirmation of a late-September Starship test flight targeting an orbital Starlink deployment, anticipated Nasdaq-100 rebalancing that would lift SpaceX&#x27;s index weight, and continued attention to its commercial expansion plans. Analyst consensus stays Buy-leaning (29 buy vs. 2 sell) with an average 12-month target of $222.05.</p><p class="portfolio-p"><span class="portfolio-name">Intel (INTC).</span> Closed at $101.05, up 4.03% on above-average volume. Gains followed reports of talks with SK Hynix on domestic US chip manufacturing, plus price-target hikes from Tigress and Northland (up to $145) tied to the AI-driven turnaround and “Terafab” foundry strategy. Separately, Intel Foundry and ASML confirmed High-NA EUV lithography has reached high-volume manufacturing, and Intel plans a roughly 10% PC CPU price increase effective October 5.</p><p class="portfolio-p"><span class="portfolio-name">IBM.</span> Fell about 3–4%, continuing a pullback after a roughly 40% rally since late July — largely read as profit-taking. Contributing factors included the recent finalization of a $1 billion CHIPS Act award (a possible “sell the news” reaction) and reports of delayed enterprise software upgrades weighing on near-term revenue. The decline was stock-specific: the broader tech sector (XLK) rose 0.81% the same day.</p><p class="portfolio-p"><span class="portfolio-name">Vanguard S&amp;P 500 UCITS ETF Acc (VUAA).</span> No holding-specific news. As a passive S&amp;P 500 tracker, it mechanically reflected the index&#x27;s −0.45% move that session, net of its own European-listing trading-hours and FX timing.</p><p class="portfolio-p"><span class="portfolio-name">NVIDIA (NVDA).</span> Closed at $213.90, up 0.82%, outperforming the broader market (Dow −1.21%). Context included ongoing debate over AI safety and the pace of advanced AI development, continued data-center spending durability, and news that NVIDIA formally announced its $12.9 billion acquisition of Hugging Face.</p><p class="portfolio-p"><span class="portfolio-name">Moderna (MRNA).</span> Closed at $145.62, up 1.29%, extending a sharp run (up roughly 143% over the prior month) tied to positive clinical results for its personalized cancer vaccine. Also notable: CFO Jamey Mock sold 34,836 shares (about $4.7M), cutting his direct stake by roughly 37%. Analyst consensus is Hold, with an average price target well below the current price.</p><p class="portfolio-p"><span class="portfolio-name">ASML Holding (ASML).</span> Closed at $1,630.82, up 1.79%, following a same-day announcement (with Intel) that High-NA EUV lithography has reached high-volume manufacturing with over one million wafers processed. Recent quarterly results showed revenue up 21.3% year-over-year, with full-year guidance raised to €43–45B.</p>
+<p class="portfolio-p"><span class="portfolio-name">Broader market.</span> US indices were mixed to lower on September 16: the S&amp;P 500 fell 0.45% to 7,551, the Nasdaq Composite slipped 0.01% to 25,978, and the Dow Jones Industrial Average dropped 1.21% to 51,462. The dominant catalyst was the Federal Reserve&#x27;s unanimous 25-basis-point rate hike to a 3.75–4.00% target range — its first hike in three years — with signals of a possible further hike later in 2026. Technology was the day&#x27;s best-performing sector even as headline indices slipped on rate-hike jitters, a supportive backdrop for the portfolio&#x27;s semiconductor and AI names.</p>
+<p class="portfolio-disclaimer">This section is informational only and is not financial advice.</p>
+</section>
   </div>
 </div>
-
 <script>
-(function(){
-  try {
-    var dateKey = "digest-done-2026-09-15";
-    var state = {};
-    try { state = JSON.parse(localStorage.getItem(dateKey) || "{}"); } catch(e) { state = {}; }
-
-    function sortList(ul){
-      var existingDivider = ul.querySelector('.done-divider-wrap');
-      if (existingDivider) existingDivider.remove();
-      var items = Array.prototype.slice.call(ul.querySelectorAll('li'));
-      var pending = items.filter(function(li){ return !li.classList.contains('done'); });
-      var done = items.filter(function(li){ return li.classList.contains('done'); });
-      pending.forEach(function(li){ ul.appendChild(li); });
-      if (done.length){
-        var wrap = document.createElement('li');
-        wrap.className = 'done-divider-wrap';
-        wrap.style.display = 'block';
-        wrap.style.padding = '0';
-        wrap.style.border = 'none';
-        wrap.innerHTML = '<hr class="done-divider"><span class="done-divider-label">Done</span>';
-        ul.appendChild(wrap);
-      }
-      done.forEach(function(li){ ul.appendChild(li); });
+(function() {
+  var dateKey = 'digest-done-2026-09-17';
+  function loadState() {
+    try { return JSON.parse(localStorage.getItem(dateKey) || '{}'); } catch (e) { return {}; }
+  }
+  function saveState(state) {
+    try { localStorage.setItem(dateKey, JSON.stringify(state)); } catch (e) {}
+  }
+  function sortList(ul) {
+    var items = Array.prototype.slice.call(ul.querySelectorAll('li.item'));
+    var divider = ul.querySelector('.done-divider-wrap');
+    if (divider) divider.remove();
+    var pending = items.filter(function(li){ return !li.classList.contains('done'); });
+    var done = items.filter(function(li){ return li.classList.contains('done'); });
+    items.forEach(function(li){ ul.removeChild(li); });
+    pending.forEach(function(li){ ul.appendChild(li); });
+    if (done.length > 0) {
+      var wrap = document.createElement('li');
+      wrap.className = 'done-divider-wrap';
+      wrap.style.listStyle = 'none';
+      wrap.innerHTML = '<hr class="done-divider"><div class="divider-label">Done</div>';
+      ul.appendChild(wrap);
     }
-
-    function applyState(cb){
-      var id = cb.getAttribute('data-id');
-      var li = cb.closest('li');
-      var checked = !!state[id];
-      cb.checked = checked;
-      if (checked) { li.classList.add('done'); } else { li.classList.remove('done'); }
-    }
-
+    done.forEach(function(li){ ul.appendChild(li); });
+  }
+  function init() {
+    var state = loadState();
     var checkboxes = document.querySelectorAll('.item-check');
-    checkboxes.forEach(function(cb){ applyState(cb); });
-
-    var lists = document.querySelectorAll('.todo-list');
-    lists.forEach(function(ul){ sortList(ul); });
-
-    checkboxes.forEach(function(cb){
-      cb.addEventListener('change', function(){
-        var id = cb.getAttribute('data-id');
-        var li = cb.closest('li');
-        state[id] = cb.checked;
-        try { localStorage.setItem(dateKey, JSON.stringify(state)); } catch(e) {}
+    checkboxes.forEach(function(cb) {
+      var id = cb.getAttribute('data-id');
+      var li = cb.closest('li.item');
+      if (state[id]) {
+        cb.checked = true;
+        li.classList.add('done');
+      }
+      cb.addEventListener('change', function() {
+        try {
+          var st = loadState();
+          st[id] = cb.checked;
+          saveState(st);
+        } catch (e) {}
         if (cb.checked) { li.classList.add('done'); } else { li.classList.remove('done'); }
-        var ul = li.closest('.todo-list');
-        sortList(ul);
+        sortList(li.closest('ul.todo'));
       });
     });
-  } catch(e) {}
+    document.querySelectorAll('ul.todo').forEach(sortList);
+  }
+  try { init(); } catch (e) {}
 })();
 </script>
-
 </body>
 </html>
