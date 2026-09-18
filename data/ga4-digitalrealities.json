@@ -1,20 +1,16 @@
 {
-  "date": "2026-09-16",
-  "updatedAt": "2026-09-17T02:24:01.890Z",
-  "activeUsers": 2,
-  "newUsers": 1,
+  "date": "2026-09-17",
+  "updatedAt": "2026-09-18T02:24:03.310Z",
+  "activeUsers": 1,
+  "newUsers": 0,
   "sessions": 3,
-  "pageViews": 3,
+  "pageViews": 10,
   "conversions": 0,
-  "avgSessionDurationSeconds": 3,
+  "avgSessionDurationSeconds": 74,
   "topChannels": [
     {
-      "channel": "Organic Search",
-      "sessions": 2
-    },
-    {
       "channel": "Direct",
-      "sessions": 1
+      "sessions": 3
     }
   ]
 }
