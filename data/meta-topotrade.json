@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-18",
-  "updatedAt": "2026-09-18T05:41:54.760121Z",
+  "date": "2026-09-19",
+  "updatedAt": "2026-09-19T07:15:15.274572Z",
   "page": {
     "name": "Topotrade.com",
-    "fan_count": 5880,
-    "followers_count": 5880,
+    "fan_count": 5879,
+    "followers_count": 5879,
     "instagram_business_account": {
       "id": "17841416108569441"
     },
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
-            "value": 0,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "value": 7,
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 2,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "value": 4,
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
-            "value": 2,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "value": 1,
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "value": 13,
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
-            "value": 1,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "value": 5,
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
