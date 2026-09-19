@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-18",
-  "updatedAt": "2026-09-18T05:42:05.693174Z",
+  "date": "2026-09-19",
+  "updatedAt": "2026-09-19T07:15:24.902584Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -56,11 +56,11 @@
         "values": [
           {
             "value": 1,
-            "end_time": "2026-09-15T07:00:00+0000"
+            "end_time": "2026-09-17T07:00:00+0000"
           },
           {
-            "value": 2,
-            "end_time": "2026-09-16T07:00:00+0000"
+            "value": 4,
+            "end_time": "2026-09-18T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
