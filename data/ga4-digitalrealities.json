@@ -1,16 +1,11 @@
 {
-  "date": "2026-09-18",
-  "updatedAt": "2026-09-19T02:24:02.734Z",
-  "activeUsers": 1,
+  "date": "2026-09-19",
+  "updatedAt": "2026-09-20T02:24:01.765Z",
+  "activeUsers": 0,
   "newUsers": 0,
-  "sessions": 2,
-  "pageViews": 2,
+  "sessions": 0,
+  "pageViews": 0,
   "conversions": 0,
   "avgSessionDurationSeconds": 0,
-  "topChannels": [
-    {
-      "channel": "Direct",
-      "sessions": 2
-    }
-  ]
+  "topChannels": []
 }
