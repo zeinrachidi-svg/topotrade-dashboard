@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-22",
-  "updatedAt": "2026-09-22T05:13:06.373484Z",
+  "date": "2026-09-23",
+  "updatedAt": "2026-09-23T05:38:12.028798Z",
   "page": {
     "name": "Topotrade.com",
     "fan_count": 5879,
@@ -17,12 +17,12 @@
         "period": "day",
         "values": [
           {
-            "value": 2,
-            "end_time": "2026-09-19T07:00:00+0000"
+            "value": 0,
+            "end_time": "2026-09-20T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-20T07:00:00+0000"
+            "end_time": "2026-09-21T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 11,
-            "end_time": "2026-09-19T07:00:00+0000"
-          },
-          {
             "value": 3,
             "end_time": "2026-09-20T07:00:00+0000"
+          },
+          {
+            "value": 0,
+            "end_time": "2026-09-21T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 3,
-            "end_time": "2026-09-19T07:00:00+0000"
-          },
-          {
             "value": 7,
             "end_time": "2026-09-20T07:00:00+0000"
+          },
+          {
+            "value": 0,
+            "end_time": "2026-09-21T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "Topotrade Canada sera au 57\u1d49 Congr\u00e8s de l\u2019OAGQ !\n\n\ud83d\udcc5 24\u201325 septembre 2026\n\ud83d\udccd Saint-Hyacinthe, Qu\u00e9bec\n\nVenez rencontrer notre \u00e9quipe et \u00e9changer avec nous autour de vos besoins en \u00e9quipements de g\u00e9omatique, neufs ou d\u2019occasion.\n\nAchetez \u2022 Vendez \u2022 \u00c9changez en toute confiance.\n\nOn a h\u00e2te de vous y retrouver ! \ud83c\udde8\ud83c\udde6\n\n#topotrade #OAGQ2026 #Geomatique #ArpenteursGeometres #Topographie Quebec Geospatial Surveying",
+      "created_time": "2026-09-22T08:17:59+0000",
+      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1714826623980277",
+      "id": "534109496935441_1714826623980277"
+    },
     {
       "message": "INTERGEO 2026 - 15 - 17 September \ud83c\udf0e 2026, what a great experience!\n\nWe had an amazing time exhibiting, connecting with professionals from around the world, exchanging ideas, and sharing more about topotrade.com\n\nThank you to everyone who visited our booth and made these days so memorable. It was a pleasure meeting you!\n\nThat\u2019s a wrap for this year \nSee you at INTERGEO next year! \n\n#INTERGEO2026 #topotrade #Geospatial #Surveying #Geomatics",
       "created_time": "2026-09-17T15:06:30+0000",
@@ -153,27 +159,6 @@
       "created_time": "2026-06-15T10:04:42+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1619242680205339",
       "id": "534109496935441_1619242680205339"
-    },
-    {
-      "message": "Topotrade is actively looking to purchase Leica Geosystems TM series monitoring total stations worldwide.\n\nCurrently sourcing:\n\u2022 Leica TM30\n\u2022 Leica TM50\n\u2022 Leica TM60\n\nUsed, surplus, or available stock, we\u2019d like to hear from you.\n\n\ud83d\udce9 Contact@topotrade.com\n\n#Leica #LeicaGeosystems #TM30 #TM50 #TM60 #Surveying #Geomatics #Monitoring #TotalStation",
-      "created_time": "2026-05-22T08:10:36+0000",
-      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1595565605906380",
-      "comments": {
-        "data": [
-          {
-            "message": "",
-            "created_time": "2026-05-27T08:22:26+0000",
-            "id": "1595565605906380_27521713227435867"
-          }
-        ],
-        "paging": {
-          "cursors": {
-            "before": "MQZDZD",
-            "after": "MQZDZD"
-          }
-        }
-      },
-      "id": "534109496935441_1595565605906380"
     }
   ],
   "messengerConversations": [
@@ -604,7 +589,7 @@
   "instagram": {
     "username": "topotrade_",
     "followers_count": 756,
-    "media_count": 619,
+    "media_count": 620,
     "id": "17841416108569441"
   },
   "_knownGaps": [
