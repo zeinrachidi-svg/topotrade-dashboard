@@ -1,0 +1,28 @@
+{
+  "mailbox": "zein.rachidi@topotrade.com",
+  "since": "2026-09-25 04:25:56",
+  "generatedAt": "2026-09-25T04:57:27.945Z",
+  "stats": {
+    "scriptCreated": 1,
+    "scriptUpdated": 0,
+    "scriptNonLead": 93,
+    "scriptErrors": 0,
+    "scriptTotal": 94,
+    "odooTotal": 94,
+    "mismatch": false
+  },
+  "leads": [
+    {
+      "type": "Lead",
+      "name": "ADAGE - Trimble TDL 2.4GHz radio antennas",
+      "contact": "Thibaut NUGUE",
+      "company": "ADAGE",
+      "email": "t.nugue@adage.pro",
+      "phone": "04.77.71.70.35",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 04:43:45",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2408&model=crm.lead&view_type=form"
+    }
+  ],
+  "nonLeadCount": 93
+}
