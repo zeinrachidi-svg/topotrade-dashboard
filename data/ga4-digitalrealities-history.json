@@ -370,5 +370,25 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-24",
+    "updatedAt": "2026-09-25T02:24:02.059Z",
+    "activeUsers": 4,
+    "newUsers": 4,
+    "sessions": 4,
+    "pageViews": 18,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 139,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 3
+      },
+      {
+        "channel": "Referral",
+        "sessions": 1
+      }
+    ]
   }
 ]
