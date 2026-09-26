@@ -1,0 +1,233 @@
+{
+  "generatedAt": "2026-09-26T06:29:45.112Z",
+  "stuckDaysThreshold": 5,
+  "totalShipments": 14,
+  "exceptionCount": 0,
+  "stuckCount": 0,
+  "shipments": [
+    {
+      "taskId": 75,
+      "title": "[1Z0476AR0490801490] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/YumQm-KZqWBlqrE3nHcRlvkSKrEplQQshcAGXnZ1VZZ3iU2PWKmQOsEpH34i1q1xrg44eBQSyqEdm7uBysQAxO2TVDHuGKgpbX8BMLywc4gOPuTQYOn7ba_EemcQZ5jRtyUqWJo15iuqIXjfZcCLm4C3_W_ckM9gYVJ0zj6uEWWPQ2T23icOg7AOuXbubauPpmzG5jTBDKwb_SmQzn40BjmFz8Ya6KBFtL9nOqsFPRrVI-t4y4KK3W7MgzdyL4-ZkggvRJP5hjkxpTQXA6HxR3GdTQcRIqrwsK9lrIOPvfT-hCvZRJeCqFuIGqeZT-MQi64vWxwGViHPV2H_EZjFHTHkH_VUG0YVNC_f6RC-hopFrtIsZsHJCwVkmLB745YxJhUD_2sAEkHP4_oYWTW0gQx6WjejHZbn8lCgqyOnArfN_wCe6b8garCttahG679_Jn5XejATfRfys3Zzs58-zZgUgdwQZPqvVjpIW9AR6W_6g6D8XctRgTYwv6vFGgF4eXjHtMFFsvBcgTopLnu4TPW513C7t2n9SyM_Nm75tVcxi-RTzodustFKfoaFR5LNjk7jyMId-Dx3ivNY_IltxP1Qzz08_ezUVhmSikM-cxLDGQj-b29gF8sLdA",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "06/08/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:41",
+      "lastUpdatedAt": "2026-09-26 06:29:42",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 74,
+      "title": "[3184861912] DHL shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/hqXXEGih4_Ms8GLl6LyAF1u5cBMiQN2TOy7eF4qp_3gT6uQCsDmEIYv4V99xMw-lPMV3lGOjVEF91A6P0WQiVIWf3vGFuVOedX8o7JIe7t6TsgUtjFGHz2vNQ7MNftcXw4UTiltGMV5Lcw4bh4vt4_Wtaz4Ek3zsRk8TqvALdVQlGMSUgSba3wtQcf0t8fajyCl4R_X4lm2TzRymKbpGjOMZpeau-HhZoHd-0-BsMGTAlmUCj4PyLJCpksNSj99cWgt6LTAU1o1RgolcHfNJ_76DSAq1YrhGpGKjogIqIDYu0wtjzEdG7GBut3L3jHBjtYrTSCNOLi7dfPb3KkcaFiZb8rDyz76RaziTFTZ2JOl7of9WOp2unM8sncou77L4fUBPrjgg82HpKGfgcL72k0dwR29ldZY04qc1-vP9I46P4VkTq2r17YE722vTwVFbwNnGZmE4vnlBuV8YbXdIRQNCmUKBpoYHUnprfa26MbXY1Q9bJC1p86tsp-IC0GKPYdi_nksGWsANf0MpzDg09UOePrwC_axkPhzAwKq12AiveHIpPanZwLW8rDqER6kxVpcgxa9g0JdI2xgb8WzsRsUKMwaAXrS3IyZ7tEsZQNhs2QthuDF4J2Z-PA",
+      "carrier": "DHL",
+      "status": "in_transit",
+      "expectedDelivery": "18/08/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:39",
+      "lastUpdatedAt": "2026-09-26 06:29:39",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 73,
+      "title": "[6916683480] DHL shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/pDAPbL_INa7nU2g2qszgfJLhK-3oU3PcPyBrIg6CU-pYcyZre_5j5S6zIEDNvlWcBCWK2HSIHAt18g3hk5xG5ZVYoq7kkCoZi25LPAXNN0znlBr6NSvmNAKUjmVK3UeqHrjnXAFXQkxkXPrXmqXgr11R0k1-r6as5zea2SwUzWCxHlKlYQgcK4qnhT22RPBBEouGMDMvovpyWSWlrqye-9Zy5afh-Pe-pnSpbl0mX67Wtq1Dv4DQ8vivgJprIY3ItJH-OV4CX726UW3TCurQ-iTIhN6m8imOEMYuv2oCl0LTslBb6MVS1k-9SpWUJ_cVkXTzL7e039G10biB5grVHpESSuOVZh3oTrKnfBG5G_asr6LligY4zmyHTC3umfAfzfONAvo17wWl5FvH92LsR7sN2WByGstp6Q-65-4ugdwmP6uH_8g2vNoqcSYPoN3NArfiQ6j4_FhM8rkvIn83P8tzRZZUvoOzrQNHLv1XrejCjqn3U6fTGlIAeFF-EGsmnZkCKhg5H_B_MpLKhhD-L3aprpDiBCX7FuRxsQUISE3qVu5TnNM3d3o9cCT3mng7Blxrvyek1mmHljwI3rnLgWf61evKSyjt7cTUi1V-wx9KuEaQxDSDjuFySg",
+      "carrier": "DHL",
+      "status": "in_transit",
+      "expectedDelivery": "24/08/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:35",
+      "lastUpdatedAt": "2026-09-26 06:29:37",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 72,
+      "title": "[1Z0476AR6893540656] Upela shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/5V7gJX8G4HK_-qjtJOnYY9NRknMSCYCTGHSdllOeWNo2gkxgDZF97E2s8urr5uMdwmizhqknRmwtyvyN6FZfB91WaZPJNXBN2CG69d40fBtVwsiXwulieUqwlcfwR-ApqHxGtCvQ4QC6k4L7007add-5Bq7n1sKV9PP6Hku-LyV0zgSIqugoLIHdKYKDZYF8vSYyRWLNL8dM6tVGTjHKwyzgVQ9YVciBKm8n42Fs3dW-ESxqvU9y8WYov4DhwODw62rXHiDMy_cQFyjPA5JcWXUZWH-_mWif7oxeJX0bJeLsAZdeuF7aS7yjtQeGcOkNepdZf1QPR1E3eE5Np70R7v-yyu9vC-MU9ZPby5-9Fga7ztWkF0NXu8j_OjhoF4sgi588bR10nklDEKt5W-HTYQHIHGh0AHSVqBgB_IA3YbReq_iQ3XxLTLKQ0egKQqsj_ZcyHe2Aqfp0OnPNUSpg_NZIxId_DmspgTEeAkioeBgtO6KcwYHHkSWl7L0IIZ6syT_wyGQENJVPDlKs7HbcKhNnnbIC_wu592OzTIEvLKC3dI6p7mRfR0cpn-uXCovxM7qWInfXNiDLeNDTEeerIuvgO1GmMQPhnYEEde2KJJ0bSERRM60Ibgg0nw",
+      "carrier": "Upela",
+      "status": "unknown",
+      "expectedDelivery": "-",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:34",
+      "lastUpdatedAt": "2026-09-26 06:29:34",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 71,
+      "title": "[1Z0476AR9199577134] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/xAhUsEHfAhOQngsgu7TsuR7T_F7K1uzve-AUGKr4rHagcCyhLDlpCUs5zSZHd9nUu95S7GSESZlxR_W-R5M_frzohdLCKPVQ2YDy3Ov35u7vSKSlZYbfEmap3nIu9xwXJxd9TyM4OnQ5ObIj0N-HTWUlSRwmuNTmXK95XOiIFhzIkfN6fXBPP6PE_YBBIOdeGUpF7N1rlRfuQeaOutctH3GvPDIcvcSql2h5SWsafSF6pBjWfjcDj0s8u_h-vcIoNuTO_omxNR-UiBHtVkdDFxF_K6k1HCikuTGmccTKylBl8Vhj3MPPsg_VtOQHhCY5hOdyzIvD2AJ92nYC3A2plVctOYnhjhL5lQQn5K_HWDZ8yXKB0cBAyReW7cWltlWKsh0aCeNWe4tRdSr7T2_J15XWi39lruKQnpJfwi9vsYbs-fCcJj8xvUzQwJqtEmUnW_YGWiJUppenMCqLfdPXuQnTDVPQP145gGdtJWsXCqqE31X2x78u3e7RgCbDp4cNU7Uja9xP-kF6dNSQN_KZU2yNJnx8qoEGL074i8jlE85_V4dhOn9VwY9z3rb1wEHMQlCUCprqR96iGSvHNN102UVjPPDA8nnx4oWvnFq8p8s6VwdaL3G8OVLyNg",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "26/08/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:32",
+      "lastUpdatedAt": "2026-09-26 06:29:36",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 70,
+      "title": "[1ZF0884V6893683669] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/_bsodkndBQVHRt4i7WUKKpFkYt4SCZusw7SvmR9j7KVBdDb5JFNC4AK5H2ZWeBSzMNyEx4FczEi9B3HsWFzWRKaKZJqDYHNsbOXZP6vvYASrCmMJn22RW9weczq7Yz-birGnRtMvEGpxu4Kwac0JqyJ1kUnujJP6SqldL8-SnANxVGYAEzRYcGJYvNQ-bToT4odphZkW48c4wChw8-sAB4WxvMwErqBZxE8QmnqMhoIUG5g4-WLX7jy7D7-23LiueoG38WaNv7iqxXtmIzKiHq_VHU1g5VW_-zOpP-Xc7nMqs90x83ncPA5bxXnGJT_XhRiHF2tUVg0DrYAgYu2NLhfO2N_uhSPcJoQF-HAPxAtX5D5vZDYIym3FuahpwLu7tgva_rWkAztyt-a-YLwRPDjaxdITfx6isfgRPG-PVGgCKwMgIxgpXmqAHf4Og98w8kDg__8uM7GDprWJ2vYyeGtntCTj-HEIo7AATYbg2C8l62hcyIAMiA79D7a6WoqVBTOmSxkn9hkxh105ptX3Ht0vUSC9h4rneJ8XaC8qCjpmBhLEDze-ssrbTlQ36Kb1_QPBmnSIeJ7WRaL5h_j96E_N1I8ckOO5ELbfaw-bv2T9zeWkb1nUR4OGaw",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "02/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:29",
+      "lastUpdatedAt": "2026-09-26 06:29:30",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 69,
+      "title": "[2579171103] DHL shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/iy46icKUVvnBwT3zENk5crlzdVI9RA2sefvlGAZ2_QrOz_MAOQ2p5w5JhXp6IT8IKjAt1sMLM3oN-tO0qE2-TkxTY5S90hELnil2W86LrGywGuWp3qZ2AupT8OYd5Da_CrgBlD5V8rcrKPndHbodG2SVBdGPr2ox0jXhYApkRjz9789BvNXJg4FjqtJVx_m_vFEYW7gMBmLnlsG231DvGtWm5R8T9PQy1DviIrfd2sVQ4H1iGPS_8GEixIg-ctitJ9BfXJdy923aCZ2ikjpm_ZURHLLCiQ-OXXeU4h1Z-k1WT5YZRBDLYUxiNQAtZ7V9HaDadhm807XlxLaoKNrRgNjAJUkSWzsS3fysN8jAo6AbtWT9WbH-HvQqE3DfYHlw7ECscMuyI5aTjjhmTr2lEXsW6qQcx_lHbX4fwE2v4_aWlXIDQZy538VGVHLrHRAS8r0JJ8IJw9M_FDP4M_1AIo_vHsL3_7UOnM1OWQjx_JHdyLYMSd7WfQioRrAKPE3DMeXReT8Jjos617kRp27L_71k_3aBW95C5mgAhDmt11nvt835S_MD5U111HcwK7lu7oGGDIDkGWhj9jAARsn7bDtcBBJ105zr3hJ9Fs9LtGRsg0n4bMrmNKgzWQ",
+      "carrier": "DHL",
+      "status": "in_transit",
+      "expectedDelivery": "03/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:27",
+      "lastUpdatedAt": "2026-09-26 06:29:30",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 68,
+      "title": "[vous] Upela shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/m54vo6TdAgSQ1FarkyZaQVeoLkjW8nGzisKrxO4bMmOd7ymcaFw9SXZUDBBbsrsHFw4D4xJuz1e-qFp-jxrGxoSy-nVneaYARn-QdSGOR6e_FS_26kW5NkIMe-SfrsXzBtH5or4bS6cr81cizRc_JE95ZEe3dffmKrn4RyFnpY0gMVqsK_pDyftQylvt2TbiMh56Pm_Me4dV3-KTfO2am8RI8c7BLc9oJEVQmp4vYH-CZBHGOHnlsqZQvo8egCxRIUV8JstSqn0E5ZnKgxTAYAbzVEXq_R-2doKsxwAFY9GQpsmUV-UgKUJVvlQvcE3tibOp0EdfhH1wLd3TECqbzIvepHAkIxxN2dnKAa3F7-SunH5nnrleOHvK7WgHq-FRFJ63rrmc-obbbK9YKqV17izH0Jt9DjpiJS2OuZ7dY8w6hd-bYyLg5aUFADxBfBkoISq0M_lEw2y_8w4_7gvZIyO4BsfUxSeEyEfikfooVdhUJWTXG-ZhgGydgBYOA0fLiT8sn9gbb911k9icclkdC52QDqCFXnp6uC-h8EySqsszCtmYC5HFuXpFAZh5mQsj53rRfFpYH_CoH_FJUMrrsgMKtUWcS1YWqwzE-j78XhWZ_amcaWXh931bvQ",
+      "carrier": "Upela",
+      "status": "unknown",
+      "expectedDelivery": "-",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:26",
+      "lastUpdatedAt": "2026-09-26 06:29:26",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 67,
+      "title": "[1Z0476AR6893595642] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/HBLoL9l3s550peMqdchxJUpuWdHoK_m8giVKJRQZet6M1Iw7JF68P8tbi4RkyoXJUzJJaycujpnp2Vh96LlSZSChyiVaDynD2DOgShqQBvCjIOY5a1Od-28iB19GqL7tUZplPOeikX3SXGyl4P6AwhvIE78E0xGXAz73S2gTOqrBnzlQZHoJol3yU8jmeYQPzj5BvbaL0F6axm4WPw-zXcOKZds3onBdnE8ujmDRLSC9p30G50moORfc57Q93-hV2pGPQW1lMQJE8flHReS5tBXz77gNoo9WV96WLmc9412Vh7NnAghzEGs8pUeneuvdoRfAhRGJT9hP0CvUWplvqcn7NoW59PYW5zOYImUC_DYqXvl8uYx-CuT-uu7RMZv3v4AQVMa1nRO5cAmQzMFKZbImdSEbhyWrnu5UmHUzZrvSD-achMInRWuXFAdXCd69ExVTL5TITO8lGYt2taduXdW4yt_dIjsKUNgyscpFGiKcN11D7nW_u75md3kbvA5B_AwI3MEQsSwuD74GT9WSOZXdi535808K7rjQeyMcd6vJgfjHGtcTzskL9kmqTEe0ovW8MyZ7NGM3kAaC0zPU4giiBtK17_s8gHTeA6b3KlV6bSG2rgzv7CVXNg",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "10/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:23",
+      "lastUpdatedAt": "2026-09-26 06:29:24",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 66,
+      "title": "[1660976811] DHL shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/Q7l3ae-9u6yzXI4uUwCCEKgDx7CdIrrjdwgv9xabdKaDn4aIMGN9wNjVtHCaiEPR-FnpzGIiw2PzUS4aWkedVk3jC-0AQneMYfZ6lEG2c2vE7Mk7FjVuiTTWBY0JpzNozN6S8cCKThWZS2o9-9xK2aio_il7LVs3ogDXyED_tiSRj82PuqjgfsTJkNuSn666qgcKC01EvwNq4WER3DNu4sZNbSKzZOFfea3Zs9Uxb8zNQORS51_Z7HF51iRuBf5L4xJK09pgNs_J_XmC-VBbttfvuDpWOqU77pTqWLPkekiiRgZvmke1oCMp9Nik0kuq9MY6fj4pIrc-uAm6SxfVivqWFKc1f62RpxwcCSm3DhNi6iuDWILdMeznHkzBJYIJv4B0JqdEwYbOp8FcdB7LM2MfJuGKhiJ-zn0ASMbpVB6Rh1wk9ElHEbPaWiGy-OfKpqJjwjG5JhqclvKnIBAbaZehQXBP3CWRi9F_XoZ8oE0K3_JYpMou6zG9ghjDgLySyE5GaP9U1bgdI52cTWOmnz3B8F3Sl0sG9GTfSWyQAk9hrC-KhuPwtecxQj6lIRn4ZwD9KyyHzs-o7Djd4kz6Bb1SxFmNh4Hnq7CLrBQ5pDJdvAnjV1Ntlb5fqA",
+      "carrier": "DHL",
+      "status": "in_transit",
+      "expectedDelivery": "21/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:17",
+      "lastUpdatedAt": "2026-09-26 06:29:21",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 65,
+      "title": "[1Z0476ARDK95606272] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/ujHSdHo6h7FD0w5Cz9s1BUUKjuj-bY4gorhzOrSXThUNp9jMM1mZlsof3TC0JBvBHp0_8UuvWtwUMM9j54NeSumSqeDHvIvalgSYk7LVxFP2w9K2CPZjUkieSEIHvNYqiSnrtmxtne4ITAgaZLODcuJW8Tv3rVyt7CMYPUZp2EYIBHGG8s4RBm1-PGddQQvsBFQMXs8xicFSLibM9IP-9-lMeekBZFu2lOtfVGH8xzfxIw8SdRI20PIoOpS7Q5qtZ-J_gbjkY48FYAhgZndEYMYLHcT1XSi9aa-2ThMTvVhJk28q58kQha-8xSeOAIEXXiAo0TrFbKId8Dxhisr0hJzf1XWKu0CtunkBbsrnz0AwnzLQViOnEVSwQXWYkV3DBuXhspEl_tuWpBeMXT3Hb7y7IYOSTxIDHtl6DbRrQT3u0vWqlGfyDM69VBFUcGyc-KXkJ05S140cX49TTSdwttoGpUElRE4gJdEV-b9zt56u5Dn5RsNNc19BGOGsmEntZSJ6uBkl9xvql_VBi8-H7HV_xyLVTRu4uMDnNXTi92C1RjfBaqHph0cp1yISVc_sA6h4ATfUsE2D6c659JySMltvgaCV9Xl66kHPSQ66yWHzmhKNDJX0SgvtCA",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "22/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:17",
+      "lastUpdatedAt": "2026-09-26 06:29:19",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 64,
+      "title": "[1Z0476AR0492636255] UPS shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/wOwyYaervSBi76c3KOWSkNZ7_HBm5wg9Bs5O-cVm0Z77nFFSekzfuql_mJnZrCb3DBGpelGtUdKPUffjCHu5v2gDyli3JJZXtR9iux-pVCC1bTnlD-wWDOmE9vyDpcF4e5aViL55jCx2Z5ENUQdQ1sfvFgX1K8K5oPLF2wRvelMUFMIUS66tnESVDRD2ZeDWY4w4o10b5z9nufti1Q0mp_BAsXNeCR-OpxkgoIVo2YeYHDS_GmcMlEZ87BGAq3-Ak86xPKXps-6QEp9z8uPAaAc3sUot3wBKUxXw9kNjUuDnkqHp7xC4O3iB0OzUU5AMxynEYc7O8jB2AEhrOMTmP29X2IJJuaqDSEyO8kWj2IjcE3xOSonuziZ8VPULPQcxStboSXjmrx7xFPtJCpdHXMPeBY4TN5YWVwTNkPrLi0NseonLLpZFaloFi2-E3TOLa8pRrpySf618uwsSnUJ0rB8CRH1OBu4IshEocRPVRXf2Lz671t_I5dFEbgKpq9Q1_HTUjGtVcoNaa7g_3iwy9shKvswTyB6MFB2j3pK6JXXl-J1bOQX-RuBz8FABgC-SXVeuXiyixblSVSkVT-HTmDoRvGb3VXxT4BBf_zL43pbRY4RNsHg7u7etJw",
+      "carrier": "UPS",
+      "status": "in_transit",
+      "expectedDelivery": "29/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:15",
+      "lastUpdatedAt": "2026-09-26 06:29:15",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 63,
+      "title": "[1ZF0884V6892469474] Upela shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/54daMopj-xF5s5xxM8iGkuKQ05RKMddTn6dfGOGvhtntQNmPVNdtDW7oLaUZXLPmnXSOXWTCkOgsgI7W0R5lmfBiQvp6QTVtFbO_LQuGnn1xGErASyqeQyDl9G75TL3mlPpB3fl_ttwGpP_PeJMlvY9S4ffopkNNpSRgMhtTWkgD0_hLcGRLn6jT0OvueN49GWSeXZcpQVNeJA8ZRxe7SxoC7QYQjpEF7fcE_ESe6H1BmkMxbZY5qt3F7My5ZMlmiS5poTQS43hWYT3Zv9byGonpJlHksmb1awdsVpFxREdGTivFLdmnrLjemnoRwHZmcfvdap9lvyJlp_auYITk7r6yGhHsiFPGlzgYvEniaXCVGVWMS_1SrSmzxFw9j8OK6IDau0-DKcrQi34qwaQ8UayubSATkkMcXEqwwUZ0lt47N5q523tKFwsXzhYFT2OoFej4ScFnUQQ1nCZpIWeQ70uhhOvK4Hs863CYH33orIErEYRrwiSmPND0wFnCQ7omFY36nPh4zSZmaGYZxQ-plyDnUtYzP09r4zfvVQwnDsTcx9fuIEmG5VnxfBCxqB-0prkeDvOSaM8y1Tmfvkf6EL-nNYug2cWX6Aj785aaaOzKpzAJXf2ox2WCTA",
+      "carrier": "Upela",
+      "status": "unknown",
+      "expectedDelivery": "-",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:13",
+      "lastUpdatedAt": "2026-09-26 06:29:13",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    },
+    {
+      "taskId": 62,
+      "title": "[3145001440] DHL shipment",
+      "trackingLink": "https://diebheg.r.bh.d.sendibt3.com/tr/cl/nIC2kP7hdHV-2luvpbtoFDUftydmBmScMkpdKJYFQwROhCflMgx1B1qE5qO9T_6beOZkMi7l3qeeQdIcRSyY62yWmrVrjpsEL1zBqpxbC6ICdqSQROxyHlS9jf_JtByKkFPGgzHiPrTKJH8uY9FH0bgH8kNi8qg-NR6yA3sOTQw-cB06uTpvimHjUvasqZcQnGl0-Qu2uGhVZg3Fr2bfVMEKqSM4ihjqHngFG5psIc6oWxnLTCDxgd-8ZFYwr0OOcusWwm3c6DQi7EdZtLgNPxtfvtffRVgjRmTUHT53iHKCCu9qxQObndRyyPRMHaBOjPT_QV_2Sg6DjW2b_I9PP4UPNfTH8IR8X0Q7HIujYyhTadiQ-AdI4bwnd6ab2W6WSUo4-SOEOBH9RzrK5d22gRWSVwnWTNg9jN0r5oEfLJpjips5xzBpq4RMEeEPVRPuOhqxvDRuMHBmUiOW3bS-ggel_OvJsvkkCDWiPCCNwS2II0ewoHz-rYljfxXcvM3uuj--MHB-8vFNjVW-kzA2WLBryD2dwkb4TzIxJuudfVuidTFWdAeetn2TmD9ArtQvIsHNTfLgdc8wH5Ndcok0wme-96aYl_JnMdRlBTygqi4G2G_qzZZkJU6Nyw",
+      "carrier": "DHL",
+      "status": "in_transit",
+      "expectedDelivery": "28/09/2026",
+      "stage": null,
+      "createdAt": "2026-09-26 06:29:12",
+      "lastUpdatedAt": "2026-09-26 06:29:12",
+      "daysSinceUpdate": 0,
+      "flags": {
+        "exception": false,
+        "stuck": false
+      }
+    }
+  ]
+}
