@@ -1,0 +1,386 @@
+{
+ "date": "2026-09-26",
+ "sprint": "New Topo-sprint 11",
+ "sprintId": 1523,
+ "source": "live",
+ "counts": {
+  "To Do": 0,
+  "In Progress": 7,
+  "code review": 6,
+  "Ready for QA": 3,
+  "under testing": 34,
+  "Ready for Release": 30,
+  "Done": 9,
+  "Rejected": 3
+ },
+ "issues": {
+  "LCB-1022": {
+   "status": "under testing",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-1023": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-1032": {
+   "status": "Done",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2457": {
+   "status": "under testing",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2487": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-2488": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-2574": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2575": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2592": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2745": {
+   "status": "Done",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2749": {
+   "status": "Done",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2762": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2763": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2764": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2765": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2766": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2767": {
+   "status": "Ready for Release",
+   "assignee": "-"
+  },
+  "LCB-2779": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2818": {
+   "status": "Rejected",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-2874": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3068": {
+   "status": "Rejected",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3069": {
+   "status": "Rejected",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3168": {
+   "status": "code review",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3169": {
+   "status": "code review",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3590": {
+   "status": "In Progress",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3595": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3641": {
+   "status": "under testing",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3645": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3646": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3647": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3648": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3649": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3650": {
+   "status": "Ready for Release",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3653": {
+   "status": "under testing",
+   "assignee": "Hussein Atiah"
+  },
+  "LCB-3681": {
+   "status": "under testing",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3687": {
+   "status": "under testing",
+   "assignee": "Hussein Atiah"
+  },
+  "LCB-3689": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3690": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3691": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3692": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3693": {
+   "status": "under testing",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3694": {
+   "status": "under testing",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3695": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3696": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3697": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3698": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3699": {
+   "status": "under testing",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3700": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3701": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3702": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3703": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3704": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3706": {
+   "status": "code review",
+   "assignee": "Hussein Atiah"
+  },
+  "LCB-3707": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3708": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3709": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3710": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3719": {
+   "status": "under testing",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3720": {
+   "status": "under testing",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3721": {
+   "status": "code review",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3722": {
+   "status": "code review",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3723": {
+   "status": "Ready for QA",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3724": {
+   "status": "Ready for QA",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3725": {
+   "status": "In Progress",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3726": {
+   "status": "In Progress",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3728": {
+   "status": "In Progress",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3729": {
+   "status": "Ready for QA",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3730": {
+   "status": "In Progress",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3749": {
+   "status": "Ready for Release",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3750": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3751": {
+   "status": "Ready for Release",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3752": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3753": {
+   "status": "Ready for Release",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3754": {
+   "status": "Ready for Release",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3755": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3756": {
+   "status": "under testing",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3757": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3758": {
+   "status": "In Progress",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3759": {
+   "status": "In Progress",
+   "assignee": "Ali Saayed"
+  },
+  "LCB-3760": {
+   "status": "Ready for Release",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3761": {
+   "status": "Ready for Release",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3762": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3763": {
+   "status": "Ready for Release",
+   "assignee": "Ray Aouad"
+  },
+  "LCB-3764": {
+   "status": "Done",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3765": {
+   "status": "Done",
+   "assignee": "Zeinab Fawaz"
+  },
+  "LCB-3766": {
+   "status": "Ready for Release",
+   "assignee": "fatima hbeish"
+  },
+  "LCB-3767": {
+   "status": "Done",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3768": {
+   "status": "Done",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3769": {
+   "status": "Done",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3770": {
+   "status": "Done",
+   "assignee": "Rawan Mortada"
+  },
+  "LCB-3773": {
+   "status": "code review",
+   "assignee": "Hussein Atiah"
+  },
+  "LCB-3777": {
+   "status": "Ready for Release",
+   "assignee": "Ali Saayed"
+  }
+ }
+}
