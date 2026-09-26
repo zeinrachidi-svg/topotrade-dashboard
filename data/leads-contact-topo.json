@@ -1,0 +1,116 @@
+{
+  "mailbox": "contact@topotrade.com",
+  "since": "2026-09-24 03:59:23",
+  "generatedAt": "2026-09-26T03:59:23.155Z",
+  "stats": {
+    "scriptCreated": 1,
+    "scriptUpdated": 0,
+    "scriptNonLead": 23,
+    "scriptErrors": 0,
+    "scriptTotal": 24,
+    "odooTotal": 261,
+    "mismatch": true
+  },
+  "leads": [
+    {
+      "type": "Lead",
+      "name": "JGC - Faro and Trimble equipment quotation",
+      "contact": "Gregory Billiris",
+      "company": "JGC",
+      "email": "gbilliris@jgc.gr",
+      "phone": "+30 697 320 2182",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 16:52:48",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2532&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Emerson CSi 2130 availability inquiry",
+      "contact": "Claude Nakhle",
+      "company": "Topotrade",
+      "email": "claude.nakhle@topotrade.com",
+      "phone": "+9613192575",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-25 15:20:10",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2524&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Flying Colors Air Parts - Trimble AeroAntenna AT1675-180 GNSS antenna",
+      "contact": "Zein Rachidi",
+      "company": "Flying Colors Air Parts",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "+1 (352) 728-1900",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-09-25 12:39:09",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2496&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Leica iCON iCR70/iCR80 total station",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 12:35:43",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2495&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - 10x Leica TM60 total stations",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 12:35:32",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2494&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - 10x Leica TS11 total stations",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 12:35:21",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2493&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Leica TS15 Robotic Total Station inquiry",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 12:35:09",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2492&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Trimble AV39 GNSS antenna quote",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-25 12:30:19",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2488&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Haj Unus Osman Enterprise - Emerson CSi 2130 Machinery Health Analyzer",
+      "contact": "Unus Osman",
+      "company": "Haj Unus Osman Enterprise",
+      "email": "unusosman30@gmail.com",
+      "phone": "+233 53 183 5053",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-24 19:37:58",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2333&model=crm.lead&view_type=form"
+    }
+  ],
+  "nonLeadCount": 252
+}
