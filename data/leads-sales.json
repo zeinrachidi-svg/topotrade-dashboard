@@ -1,16 +1,28 @@
 {
   "mailbox": "sales@topotrade.com",
-  "since": "2026-09-26 03:10:36",
-  "generatedAt": "2026-09-27T03:10:31.298Z",
+  "since": "2026-09-27 03:10:32",
+  "generatedAt": "2026-09-28T03:10:33.813Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 8,
+    "scriptNonLead": 1,
     "scriptErrors": 0,
-    "scriptTotal": 8,
-    "odooTotal": 26,
+    "scriptTotal": 1,
+    "odooTotal": 16,
     "mismatch": true
   },
-  "leads": [],
-  "nonLeadCount": 26
+  "leads": [
+    {
+      "type": "Lead",
+      "name": "C?sar SLEIMAN - CHCNAV RS10 specs inquiry",
+      "contact": "C?sar SLEIMAN",
+      "company": "",
+      "email": "tarekbaker@hotmail.fr",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-27 09:03:02",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2581&model=crm.lead&view_type=form"
+    }
+  ],
+  "nonLeadCount": 15
 }
