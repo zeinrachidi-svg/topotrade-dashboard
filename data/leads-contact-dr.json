@@ -1,16 +1,28 @@
 {
   "mailbox": "contact@digitalrealities.fr",
-  "since": "2026-09-26 03:25:11",
-  "generatedAt": "2026-09-27T03:25:07.279Z",
+  "since": "2026-09-27 03:25:08",
+  "generatedAt": "2026-09-28T03:25:08.476Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 1,
+    "scriptNonLead": 0,
     "scriptErrors": 0,
-    "scriptTotal": 1,
-    "odooTotal": 25,
+    "scriptTotal": 0,
+    "odooTotal": 16,
     "mismatch": true
   },
-  "leads": [],
-  "nonLeadCount": 25
+  "leads": [
+    {
+      "type": "Lead",
+      "name": "C?sar SLEIMAN - CHCNAV RS10 specs inquiry",
+      "contact": "C?sar SLEIMAN",
+      "company": "",
+      "email": "tarekbaker@hotmail.fr",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-27 09:03:02",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2581&model=crm.lead&view_type=form"
+    }
+  ],
+  "nonLeadCount": 15
 }
