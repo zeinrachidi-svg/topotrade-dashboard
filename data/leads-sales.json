@@ -1,28 +1,50 @@
 {
   "mailbox": "sales@topotrade.com",
-  "since": "2026-09-27 03:10:32",
-  "generatedAt": "2026-09-28T03:10:33.813Z",
+  "since": "2026-09-28 03:10:34",
+  "generatedAt": "2026-09-29T03:10:34.586Z",
   "stats": {
-    "scriptCreated": 0,
+    "scriptCreated": 2,
     "scriptUpdated": 0,
-    "scriptNonLead": 1,
+    "scriptNonLead": 23,
     "scriptErrors": 0,
-    "scriptTotal": 1,
-    "odooTotal": 16,
+    "scriptTotal": 25,
+    "odooTotal": 78,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "C?sar SLEIMAN - CHCNAV RS10 specs inquiry",
-      "contact": "C?sar SLEIMAN",
-      "company": "",
-      "email": "tarekbaker@hotmail.fr",
+      "name": "Topotrade North America - Leica iCR70 and AP20 pricing request",
+      "contact": "Georges Labaky",
+      "company": "Topotrade North America",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "(+1) 343 996 3977",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-09-28 19:40:11",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2658&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "TUC RAIL - Matterport inquiry for building condition survey",
+      "contact": "Nicolas Sarton",
+      "company": "TUC RAIL",
+      "email": "nicolas.sarton@tucrail.be",
+      "phone": "+32499575314",
+      "rep": "Daniel LLORENTE",
+      "createdAt": "2026-09-28 15:02:31",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2638&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "TopoTrade - Used Leica AT401 price and availability",
+      "contact": "Zein Rachidi",
+      "company": "TopoTrade",
+      "email": "zein.rachidi@topotrade.com",
       "phone": "",
       "rep": "Mireille Baho",
-      "createdAt": "2026-09-27 09:03:02",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2581&model=crm.lead&view_type=form"
+      "createdAt": "2026-09-28 05:05:30",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2594&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 15
+  "nonLeadCount": 75
 }
