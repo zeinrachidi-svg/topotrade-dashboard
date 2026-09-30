@@ -1,50 +1,50 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-09-28 04:57:27",
-  "generatedAt": "2026-09-29T04:57:26.939Z",
+  "since": "2026-09-29 04:57:27",
+  "generatedAt": "2026-09-30T04:57:27.971Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 37,
+    "scriptNonLead": 56,
     "scriptErrors": 0,
-    "scriptTotal": 37,
-    "odooTotal": 78,
+    "scriptTotal": 56,
+    "odooTotal": 130,
     "mismatch": true
   },
   "leads": [
     {
-      "type": "Lead",
-      "name": "Topotrade North America - Leica iCR70 and AP20 pricing request",
-      "contact": "Georges Labaky",
-      "company": "Topotrade North America",
-      "email": "georges.labaky@topotrade.com",
-      "phone": "(+1) 343 996 3977",
+      "type": "Opportunity",
+      "name": "Silvia - Trimble S6 robotic stations pricing inquiry",
+      "contact": "Silvia",
+      "company": "",
+      "email": "",
+      "phone": "",
       "rep": "Georges Labaky",
-      "createdAt": "2026-09-28 19:40:11",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2658&model=crm.lead&view_type=form"
+      "createdAt": "2026-09-30 04:30:30",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2796&model=crm.lead&view_type=form"
     },
     {
-      "type": "Lead",
-      "name": "TUC RAIL - Matterport inquiry for building condition survey",
-      "contact": "Nicolas Sarton",
-      "company": "TUC RAIL",
-      "email": "nicolas.sarton@tucrail.be",
-      "phone": "+32499575314",
+      "type": "Opportunity",
+      "name": "Capture Solutions (Romain Sommero) - BLK2GO + BLK ARC trade-in / buy-back",
+      "contact": "Romain Sommero",
+      "company": "Capture Solutions",
+      "email": "romain.sommero@capture-solutions.fr",
+      "phone": "06 77 03 84 03",
       "rep": "Daniel LLORENTE",
-      "createdAt": "2026-09-28 15:02:31",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2638&model=crm.lead&view_type=form"
+      "createdAt": "2026-09-30 04:30:08",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2793&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "TopoTrade - Used Leica AT401 price and availability",
+      "name": "TopoTrade - MicaSense sensor and drone platform quote",
       "contact": "Zein Rachidi",
       "company": "TopoTrade",
       "email": "zein.rachidi@topotrade.com",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-09-28 05:05:30",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2594&model=crm.lead&view_type=form"
+      "phone": "+33 6 76 30 73 56",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-29 09:00:12",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2703&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 75
+  "nonLeadCount": 127
 }
