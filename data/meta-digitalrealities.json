@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-29",
-  "updatedAt": "2026-09-29T04:16:05.485436Z",
+  "date": "2026-09-30",
+  "updatedAt": "2026-09-30T04:17:02.547842Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-26T07:00:00+0000"
+            "end_time": "2026-09-27T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-26T07:00:00+0000"
+            "end_time": "2026-09-27T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 0,
-            "end_time": "2026-09-26T07:00:00+0000"
+            "value": 1,
+            "end_time": "2026-09-27T07:00:00+0000"
           },
           {
             "value": 1,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "De la r\u00e9alit\u00e9 aux donn\u00e9es 3D. \ud83c\udf10\n\nChez Digital Realities, nous transformons les environnements r\u00e9els en donn\u00e9es 3D exploitables gr\u00e2ce \u00e0 des technologies avanc\u00e9es de scan 3D, jumeaux num\u00e9riques et solutions g\u00e9ospatiales.\n\nDe la capture \u00e0 la mod\u00e9lisation, nous vous accompagnons pour donner une nouvelle dimension \u00e0 vos projets.\n\n\ud83d\udccd Showroom \u00e0 Lyon\n  www.digitalrealities.fr\n\n#DigitalRealities #InnovationGeospatiale #Scan3D #JumeauNumerique #Matterport #Geospatial #BIM #3DTechnology",
+      "created_time": "2026-09-29T08:27:32+0000",
+      "permalink_url": "https://www.facebook.com/1113606917670894/posts/1139475925083993",
+      "id": "105165231847100_1139475925083993"
+    },
     {
       "message": "Passez \u00e0 un niveau sup\u00e9rieur avec le Matterport Pro3 \nDisponible d\u00e8s 296\u20ac/mois HT en LLD sur 24 mois.\nCapturez, scannez et impressionnez.\n\n#Matterport #Innovation #3DScanning #DigitalRealities",
       "created_time": "2026-04-09T07:41:52+0000",
@@ -138,12 +144,6 @@
       "created_time": "2024-02-13T10:41:13+0000",
       "permalink_url": "https://www.facebook.com/1113606917670894/posts/432122262486033",
       "id": "105165231847100_432122262486033"
-    },
-    {
-      "message": "Craquez pour l'exceptionnel ! Offre sp\u00e9ciale sur les Matterport PRO2 et PRO3 seules, ou avec leurs packs exclusifs. \nProfitez de tarifs imbattables jusqu'au 29 f\u00e9vrier. \n\u2757Faites vite \u2757 pour b\u00e9n\u00e9ficier des meilleurs prix Matterport et r\u00e9v\u00e9ler la magie de la capture immersive.\n\nSouscription des abonnements SAAS suivant vos besoins sur le lien Digital Realities ci-dessous\nhttps://bit.ly/47HarhU \n\n#Digital #realities #camera #3D #realitevirtuelle #surveying #location #scanner  #tour #service #3d #cartographie #Innovation #Immobilier #360Tour #concurrence #matterport #pro2 #pro3",
-      "created_time": "2024-01-18T10:20:10+0000",
-      "permalink_url": "https://www.facebook.com/1113606917670894/posts/416621660702760",
-      "id": "105165231847100_416621660702760"
     }
   ],
   "messengerConversations": [
@@ -369,7 +369,7 @@
   "instagram": {
     "username": "digitalrealities.fr",
     "followers_count": 72,
-    "media_count": 126,
+    "media_count": 127,
     "id": "17841448326726715"
   },
   "_knownGaps": [
