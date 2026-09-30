@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-29",
-  "updatedAt": "2026-09-29T04:15:52.413863Z",
+  "date": "2026-09-30",
+  "updatedAt": "2026-09-30T04:16:49.747471Z",
   "page": {
     "name": "Topotrade.com",
-    "fan_count": 5877,
-    "followers_count": 5877,
+    "fan_count": 5881,
+    "followers_count": 5881,
     "instagram_business_account": {
       "id": "17841416108569441"
     },
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-26T07:00:00+0000"
+            "end_time": "2026-09-27T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-09-26T07:00:00+0000"
+            "value": 2,
+            "end_time": "2026-09-27T07:00:00+0000"
           },
           {
             "value": 2,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 7,
-            "end_time": "2026-09-26T07:00:00+0000"
-          },
-          {
             "value": 1,
             "end_time": "2026-09-27T07:00:00+0000"
+          },
+          {
+            "value": 7,
+            "end_time": "2026-09-28T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "Equipment in stock and ready to be shipped!\nWe currently have a selection of Leica surveying equipment available:\n\u2022 Leica TS16 P 5\u201d\n\u2022 Leica TS07\n\u2022 Leica TM50\n\u2022 Leica MS60\nAvailable now and ready to be shipped worldwide.\nInterested in one of these units? Contact our team for more information, availability, and pricing.\n\ud83d\udce9 contact@topotrade.com\n\ud83c\udf10 www.topotrade.com\n\n#topotrade #Leica #TotalStation #Geospatial #Surveying",
+      "created_time": "2026-09-29T08:31:24+0000",
+      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1722529059876700",
+      "id": "534109496935441_1722529059876700"
+    },
     {
       "message": "Topotrade Canada sera au 57\u1d49 Congr\u00e8s de l\u2019OAGQ !\n\n\ud83d\udcc5 24\u201325 septembre 2026\n\ud83d\udccd Saint-Hyacinthe, Qu\u00e9bec\n\nVenez rencontrer notre \u00e9quipe et \u00e9changer avec nous autour de vos besoins en \u00e9quipements de g\u00e9omatique, neufs ou d\u2019occasion.\n\nAchetez \u2022 Vendez \u2022 \u00c9changez en toute confiance.\n\nOn a h\u00e2te de vous y retrouver ! \ud83c\udde8\ud83c\udde6\n\n#topotrade #OAGQ2026 #Geomatique #ArpenteursGeometres #Topographie Quebec Geospatial Surveying",
       "created_time": "2026-09-22T08:17:59+0000",
@@ -153,12 +159,6 @@
       "created_time": "2026-07-06T09:17:43+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1639466074849666",
       "id": "534109496935441_1639466074849666"
-    },
-    {
-      "message": "NEW RTC SCANNERS ARE HERE\n\nThinking about upgrading to Leica's latest RTC technology?\n\nDon't let your current scanner collect dust.\n\n- Sell your RTC scanner on Topotrade\n- Reach buyers worldwide\n-Fast evaluation process\n\nTurn your existing equipment into your next investment.\n\n\ud83d\udce9 contact us today www.topotrade.com\n\n#Topotrade #RTC #LeicaGeosystems #LaserScanner #new",
-      "created_time": "2026-06-15T10:04:42+0000",
-      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1619242680205339",
-      "id": "534109496935441_1619242680205339"
     }
   ],
   "messengerConversations": [
