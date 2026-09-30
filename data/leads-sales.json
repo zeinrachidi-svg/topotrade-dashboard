@@ -1,50 +1,28 @@
 {
   "mailbox": "sales@topotrade.com",
-  "since": "2026-09-28 03:10:34",
-  "generatedAt": "2026-09-29T03:10:34.586Z",
+  "since": "2026-09-29 03:10:35",
+  "generatedAt": "2026-09-30T03:10:34.004Z",
   "stats": {
-    "scriptCreated": 2,
-    "scriptUpdated": 0,
-    "scriptNonLead": 23,
+    "scriptCreated": 1,
+    "scriptUpdated": 1,
+    "scriptNonLead": 52,
     "scriptErrors": 0,
-    "scriptTotal": 25,
-    "odooTotal": 78,
+    "scriptTotal": 53,
+    "odooTotal": 123,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "Topotrade North America - Leica iCR70 and AP20 pricing request",
-      "contact": "Georges Labaky",
-      "company": "Topotrade North America",
-      "email": "georges.labaky@topotrade.com",
-      "phone": "(+1) 343 996 3977",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-09-28 19:40:11",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2658&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "TUC RAIL - Matterport inquiry for building condition survey",
-      "contact": "Nicolas Sarton",
-      "company": "TUC RAIL",
-      "email": "nicolas.sarton@tucrail.be",
-      "phone": "+32499575314",
-      "rep": "Daniel LLORENTE",
-      "createdAt": "2026-09-28 15:02:31",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2638&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "TopoTrade - Used Leica AT401 price and availability",
+      "name": "TopoTrade - MicaSense sensor and drone platform quote",
       "contact": "Zein Rachidi",
       "company": "TopoTrade",
       "email": "zein.rachidi@topotrade.com",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-09-28 05:05:30",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2594&model=crm.lead&view_type=form"
+      "phone": "+33 6 76 30 73 56",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-29 09:00:12",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2703&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 75
+  "nonLeadCount": 122
 }
