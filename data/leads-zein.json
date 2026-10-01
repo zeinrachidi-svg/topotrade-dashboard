@@ -1,50 +1,116 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-09-29 04:57:27",
-  "generatedAt": "2026-09-30T04:57:27.971Z",
+  "since": "2026-09-30 04:57:29",
+  "generatedAt": "2026-10-01T04:57:27.475Z",
   "stats": {
-    "scriptCreated": 0,
+    "scriptCreated": 2,
     "scriptUpdated": 0,
-    "scriptNonLead": 56,
+    "scriptNonLead": 44,
     "scriptErrors": 0,
-    "scriptTotal": 56,
-    "odooTotal": 130,
+    "scriptTotal": 46,
+    "odooTotal": 113,
     "mismatch": true
   },
   "leads": [
     {
-      "type": "Opportunity",
-      "name": "Silvia - Trimble S6 robotic stations pricing inquiry",
-      "contact": "Silvia",
-      "company": "",
-      "email": "",
-      "phone": "",
+      "type": "Lead",
+      "name": "Topotrade North America - Used Faro Quantum Max E 2m",
+      "contact": "Georges Labaky",
+      "company": "Topotrade North America",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "(+1) 343 996 3977",
       "rep": "Georges Labaky",
-      "createdAt": "2026-09-30 04:30:30",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2796&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Opportunity",
-      "name": "Capture Solutions (Romain Sommero) - BLK2GO + BLK ARC trade-in / buy-back",
-      "contact": "Romain Sommero",
-      "company": "Capture Solutions",
-      "email": "romain.sommero@capture-solutions.fr",
-      "phone": "06 77 03 84 03",
-      "rep": "Daniel LLORENTE",
-      "createdAt": "2026-09-30 04:30:08",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2793&model=crm.lead&view_type=form"
+      "createdAt": "2026-09-30 14:05:15",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2884&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "TopoTrade - MicaSense sensor and drone platform quote",
+      "name": "Topotrade North America - Sourcing a Trimble S6",
+      "contact": "Georges Labaky",
+      "company": "Topotrade North America",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "(+1) 343 996 3977",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-09-30 13:55:09",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2880&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Faro Quantum Max E 2m availability",
+      "contact": "George",
+      "company": "Topotrade",
+      "email": "contact@topotrade.com",
+      "phone": "+33 1 86 65 14 61",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-30 13:48:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2877&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Markus Schmidt - Faro Quantum Max E 2m inquiry",
+      "contact": "Markus Schmidt",
+      "company": "Markus Schmidt",
+      "email": "markus.schmidt456@gmx.com",
+      "phone": "+1 835-869-7060",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-09-30 13:38:06",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2875&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Opportunity",
+      "name": "sham development's RS4 Pro B&R",
+      "contact": "",
+      "company": "sham development",
+      "email": "engaliomarr@gmail.com",
+      "phone": "+963 980 026 645",
+      "rep": "Zein Rachidi",
+      "createdAt": "2026-09-30 09:59:04",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2840&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Jeel - Joint presentation call for Jeel Oman",
+      "contact": "Mateus Sione",
+      "company": "Jeel",
+      "email": "mateus.sione@emlid.com",
+      "phone": "+43 660 3260198",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-09-30 09:55:14",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2839&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "TopoTrade - HySpex Mjolnir VS-620 UAV system quote",
       "contact": "Zein Rachidi",
       "company": "TopoTrade",
-      "email": "zein.rachidi@topotrade.com",
-      "phone": "+33 6 76 30 73 56",
+      "email": "hxcontact@neo.no",
+      "phone": "",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-09-29 09:00:12",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2703&model=crm.lead&view_type=form"
+      "createdAt": "2026-09-30 09:07:48",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2835&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Offer to purchase used survey equipment",
+      "contact": "Claude Nakhle",
+      "company": "Topotrade",
+      "email": "claude.nakhle@topotrade.com",
+      "phone": "+961 3192575",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-30 08:10:55",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2830&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Offer to buy used survey equipment",
+      "contact": "Claude Nakhle",
+      "company": "Topotrade",
+      "email": "claude.nakhle@topotrade.com",
+      "phone": "+961 3192575",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-09-30 08:10:26",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=2829&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 127
+  "nonLeadCount": 104
 }
