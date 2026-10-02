@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-30",
-  "updatedAt": "2026-09-30T04:16:49.747471Z",
+  "date": "2026-10-02",
+  "updatedAt": "2026-10-02T03:31:31.754956Z",
   "page": {
     "name": "Topotrade.com",
-    "fan_count": 5881,
-    "followers_count": 5881,
+    "fan_count": 5878,
+    "followers_count": 5878,
     "instagram_business_account": {
       "id": "17841416108569441"
     },
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
-            "value": 0,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "value": 10,
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 2,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
             "value": 2,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "value": 6,
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
-            "value": 7,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "value": 22,
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -587,10 +587,10 @@
   ],
   "recentLeads": [],
   "instagram": {
-    "username": "topotrade_",
+    "id": "17841416108569441",
     "followers_count": 757,
     "media_count": 621,
-    "id": "17841416108569441"
+    "username": "topotrade_"
   },
   "_knownGaps": [
     "Instagram Insights (reach/impressions) not available -- confirmed blocked by missing instagram_manage_insights scope (different from read_insights), needs a separate Meta App Review submission for the Instagram use case."
