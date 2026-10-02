@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-30",
-  "updatedAt": "2026-09-30T04:17:02.547842Z",
+  "date": "2026-10-02",
+  "updatedAt": "2026-10-02T03:31:43.906283Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -56,11 +56,11 @@
         "values": [
           {
             "value": 1,
-            "end_time": "2026-09-27T07:00:00+0000"
+            "end_time": "2026-09-29T07:00:00+0000"
           },
           {
-            "value": 1,
-            "end_time": "2026-09-28T07:00:00+0000"
+            "value": 3,
+            "end_time": "2026-09-30T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -367,10 +367,10 @@
   "leadgenForms": [],
   "recentLeads": [],
   "instagram": {
-    "username": "digitalrealities.fr",
+    "id": "17841448326726715",
     "followers_count": 72,
     "media_count": 127,
-    "id": "17841448326726715"
+    "username": "digitalrealities.fr"
   },
   "_knownGaps": [
     "Instagram Insights (reach/impressions) not available -- confirmed blocked by missing instagram_manage_insights scope (different from read_insights), needs a separate Meta App Review submission for the Instagram use case."
