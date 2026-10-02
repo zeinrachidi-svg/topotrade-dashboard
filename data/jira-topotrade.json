@@ -1,15 +1,15 @@
 {
- "date": "2026-09-30",
+ "date": "2026-10-02",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
  "sprintState": "future (not started)",
  "counts": {
-  "Ready for QA": 9,
-  "To Do": 8,
-  "In Progress": 5,
+  "Ready for QA": 15,
+  "code review": 4,
+  "To Do": 2,
   "under testing": 2,
-  "code review": 1
+  "In Progress": 3
  },
  "issues": {
   "LCB-2818": {
@@ -33,15 +33,15 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3170": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "fatima hbeish"
   },
   "LCB-3171": {
-   "status": "In Progress",
+   "status": "Ready for QA",
    "assignee": "fatima hbeish"
   },
   "LCB-3172": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "fatima hbeish"
   },
   "LCB-3173": {
@@ -81,15 +81,15 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3775": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "Hussein Atiah"
   },
   "LCB-3793": {
-   "status": "In Progress",
+   "status": "Ready for QA",
    "assignee": "Hussein Atiah"
   },
   "LCB-3795": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "Hussein Atiah"
   },
   "LCB-3797": {
@@ -97,29 +97,24 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3798": {
-   "status": "To Do",
-   "assignee": "fatima hbeish"
+   "status": "Ready for QA",
+   "assignee": "Zeinab Fawaz"
   },
   "LCB-3799": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3800": {
-   "status": "To Do",
+   "status": "Ready for QA",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3804": {
    "status": "In Progress",
    "assignee": "Rawan Mortada"
-  }
- },
- "previousSprintFinal": {
-  "sprint": "New Topo-sprint 11",
-  "sprintId": 1523,
-  "closedAt": "2026-09-29T11:33:13Z",
-  "counts": {
-   "Done": 78,
-   "Cancelled": 1
+  },
+  "LCB-3805": {
+   "status": "Ready for QA",
+   "assignee": "Zeinab Fawaz"
   }
  }
 }
