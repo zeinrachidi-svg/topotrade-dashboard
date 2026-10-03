@@ -1,28 +1,50 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-10-01 04:57:28",
-  "generatedAt": "2026-10-02T04:57:28.367Z",
+  "since": "2026-10-02 04:57:29",
+  "generatedAt": "2026-10-03T04:57:26.694Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 45,
+    "scriptNonLead": 49,
     "scriptErrors": 0,
-    "scriptTotal": 45,
-    "odooTotal": 110,
+    "scriptTotal": 49,
+    "odooTotal": 106,
     "mismatch": true
   },
   "leads": [
     {
-      "type": "Opportunity",
-      "name": "Marco Bartolacci - Trimble TX8 scanner (listing #1867), technical questions",
-      "contact": "Marco Bartolacci",
+      "type": "Lead",
+      "name": "Zein Rachidi - Second-hand Trimble SX12 total station",
+      "contact": "Zein Rachidi",
       "company": "",
-      "email": "marco.bartolacci92@gmail.com",
+      "email": "zeinrachidi@gmail.com",
       "phone": "",
+      "rep": "Contact",
+      "createdAt": "2026-10-03 04:35:10",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3133&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade North America - TX8 units for sale",
+      "contact": "Georges Labaky",
+      "company": "Topotrade North America",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "(+1) 343 996 3977",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-02 14:10:08",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3101&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Tise S?sswaren GmbH - Leica DS2000 GPR system",
+      "contact": "Yasar Uere",
+      "company": "Tise S?sswaren GmbH",
+      "email": "yasar.uere@gmail.com",
+      "phone": "+49 177 9416187",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-01 08:08:01",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2928&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-02 08:27:59",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3065&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 109
+  "nonLeadCount": 103
 }
