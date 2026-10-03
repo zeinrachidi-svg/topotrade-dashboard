@@ -1,13 +1,11 @@
 {
- "date": "2026-10-02",
+ "date": "2026-10-03",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
- "sprintState": "future (not started)",
  "counts": {
   "Ready for QA": 15,
-  "code review": 4,
-  "To Do": 2,
+  "code review": 6,
   "under testing": 2,
   "In Progress": 3
  },
@@ -45,7 +43,7 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3173": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "fatima hbeish"
   },
   "LCB-3681": {
@@ -93,7 +91,7 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3797": {
-   "status": "To Do",
+   "status": "code review",
    "assignee": "Hussein Atiah"
   },
   "LCB-3798": {
