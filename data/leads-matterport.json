@@ -1,39 +1,39 @@
 {
   "mailbox": "matterport@digitalrealities.fr",
-  "since": "2026-10-01 03:13:25",
-  "generatedAt": "2026-10-02T03:13:22.879Z",
+  "since": "2026-10-02 03:13:24",
+  "generatedAt": "2026-10-03T03:13:23.548Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 0,
+    "scriptNonLead": 1,
     "scriptErrors": 0,
-    "scriptTotal": 0,
-    "odooTotal": 102,
+    "scriptTotal": 1,
+    "odooTotal": 108,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "Marco Bartolacci - Trimble TX8 scanner inquiry",
-      "contact": "Marco Bartolacci",
-      "company": "",
-      "email": "marco.bartolacci92@gmail.com",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-01 08:08:01",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2928&model=crm.lead&view_type=form"
+      "name": "Topotrade North America - TX8 units for sale",
+      "contact": "Georges Labaky",
+      "company": "Topotrade North America",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "(+1) 343 996 3977",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-02 14:10:08",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3101&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "A - Trimble TX8 Full kit inquiry",
-      "contact": "Marco B",
-      "company": "A",
-      "email": "tolac92@gmail.com",
-      "phone": "+39 333 145 1450",
+      "name": "Tise S?sswaren GmbH - Leica DS2000 GPR system",
+      "contact": "Yasar Uere",
+      "company": "Tise S?sswaren GmbH",
+      "email": "yasar.uere@gmail.com",
+      "phone": "+49 177 9416187",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-01 06:28:01",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=2919&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-02 08:27:59",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3065&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 100
+  "nonLeadCount": 106
 }
