@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-03",
-  "updatedAt": "2026-10-03T03:06:05.564689Z",
+  "date": "2026-10-04",
+  "updatedAt": "2026-10-04T04:27:58.933401Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-30T07:00:00+0000"
+            "end_time": "2026-10-01T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-01T07:00:00+0000"
+            "end_time": "2026-10-02T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-09-30T07:00:00+0000"
+            "end_time": "2026-10-01T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-01T07:00:00+0000"
+            "end_time": "2026-10-02T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 3,
-            "end_time": "2026-09-30T07:00:00+0000"
-          },
-          {
             "value": 0,
             "end_time": "2026-10-01T07:00:00+0000"
+          },
+          {
+            "value": 1,
+            "end_time": "2026-10-02T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -368,7 +368,7 @@
   "recentLeads": [],
   "instagram": {
     "id": "17841448326726715",
-    "followers_count": 72,
+    "followers_count": 73,
     "media_count": 127,
     "username": "digitalrealities.fr"
   },
