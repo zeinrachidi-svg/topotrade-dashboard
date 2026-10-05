@@ -517,5 +517,21 @@
     "conversions": 0,
     "avgSessionDurationSeconds": 0,
     "topChannels": []
+  },
+  {
+    "date": "2026-10-04",
+    "updatedAt": "2026-10-05T02:24:01.880Z",
+    "activeUsers": 1,
+    "newUsers": 1,
+    "sessions": 1,
+    "pageViews": 3,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 37,
+    "topChannels": [
+      {
+        "channel": "Organic Search",
+        "sessions": 1
+      }
+    ]
   }
 ]
