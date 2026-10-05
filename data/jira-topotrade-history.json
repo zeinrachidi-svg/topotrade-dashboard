@@ -5497,5 +5497,123 @@
     "assignee": "Zeinab Fawaz"
    }
   }
+ },
+ {
+  "date": "2026-10-05",
+  "sprint": "New Topo-sprint 12",
+  "sprintId": 2064,
+  "source": "live",
+  "counts": {
+   "Ready for QA": 15,
+   "code review": 6,
+   "under testing": 2,
+   "In Progress": 3
+  },
+  "issues": {
+   "LCB-2818": {
+    "status": "Ready for QA",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3068": {
+    "status": "Ready for QA",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3069": {
+    "status": "Ready for QA",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3168": {
+    "status": "Ready for QA",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3169": {
+    "status": "Ready for QA",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3170": {
+    "status": "code review",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3171": {
+    "status": "Ready for QA",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3172": {
+    "status": "code review",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3173": {
+    "status": "code review",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3681": {
+    "status": "under testing",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3687": {
+    "status": "under testing",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3706": {
+    "status": "Ready for QA",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3725": {
+    "status": "In Progress",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3726": {
+    "status": "In Progress",
+    "assignee": "Rawan Mortada"
+   },
+   "LCB-3728": {
+    "status": "Ready for QA",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3730": {
+    "status": "Ready for QA",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3773": {
+    "status": "Ready for QA",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3775": {
+    "status": "code review",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3793": {
+    "status": "Ready for QA",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3795": {
+    "status": "code review",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3797": {
+    "status": "code review",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3798": {
+    "status": "Ready for QA",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3799": {
+    "status": "Ready for QA",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3800": {
+    "status": "Ready for QA",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3804": {
+    "status": "In Progress",
+    "assignee": "Rawan Mortada"
+   },
+   "LCB-3805": {
+    "status": "Ready for QA",
+    "assignee": "Zeinab Fawaz"
+   }
+  }
  }
 ]
