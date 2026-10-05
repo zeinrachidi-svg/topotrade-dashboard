@@ -1,50 +1,16 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-10-03 04:57:27",
-  "generatedAt": "2026-10-04T04:57:26.870Z",
+  "since": "2026-10-04 04:57:27",
+  "generatedAt": "2026-10-05T04:57:26.519Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 13,
+    "scriptNonLead": 12,
     "scriptErrors": 0,
-    "scriptTotal": 13,
-    "odooTotal": 25,
+    "scriptTotal": 12,
+    "odooTotal": 24,
     "mismatch": true
   },
-  "leads": [
-    {
-      "type": "Lead",
-      "name": "Ont inc - Topcon Hiper VR frequency inquiry",
-      "contact": "Robert Parsons",
-      "company": "Ont inc",
-      "email": "my2beagles@live.ca",
-      "phone": "+1 519-757-2299",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-10-04 00:53:00",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3148&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "A13 INGENIEUR - Matterport Pro3 demo and pricing request",
-      "contact": "Tuan-Tu DANG",
-      "company": "A13 INGENIEUR",
-      "email": "tu.dang@a13-ingenieur.fr",
-      "phone": "+(33)658984733",
-      "rep": "Daniel LLORENTE",
-      "createdAt": "2026-10-03 12:32:30",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3141&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "ABDALLA - Leica TS09PLUS 5'' R500",
-      "contact": "ABDALLA",
-      "company": "",
-      "email": "abdallaazrak5@gmail.com",
-      "phone": "",
-      "rep": "Claude Nakhle",
-      "createdAt": "2026-10-03 12:20:39",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3138&model=crm.lead&view_type=form"
-    }
-  ],
-  "nonLeadCount": 22
+  "leads": [],
+  "nonLeadCount": 24
 }
