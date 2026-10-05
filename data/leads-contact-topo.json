@@ -1,61 +1,16 @@
 {
   "mailbox": "contact@topotrade.com",
-  "since": "2026-10-03 03:59:24",
-  "generatedAt": "2026-10-04T03:59:23.275Z",
+  "since": "2026-10-04 03:59:24",
+  "generatedAt": "2026-10-05T03:59:22.920Z",
   "stats": {
-    "scriptCreated": 1,
+    "scriptCreated": 0,
     "scriptUpdated": 0,
     "scriptNonLead": 1,
     "scriptErrors": 0,
-    "scriptTotal": 2,
-    "odooTotal": 20,
+    "scriptTotal": 1,
+    "odooTotal": 29,
     "mismatch": true
   },
-  "leads": [
-    {
-      "type": "Lead",
-      "name": "Ont inc - Topcon Hiper VR frequency inquiry",
-      "contact": "Robert Parsons",
-      "company": "Ont inc",
-      "email": "my2beagles@live.ca",
-      "phone": "+1 519-757-2299",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-10-04 00:53:00",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3148&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "A13 INGENIEUR - Matterport Pro3 demo and pricing request",
-      "contact": "Tuan-Tu DANG",
-      "company": "A13 INGENIEUR",
-      "email": "tu.dang@a13-ingenieur.fr",
-      "phone": "+(33)658984733",
-      "rep": "Daniel LLORENTE",
-      "createdAt": "2026-10-03 12:32:30",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3141&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "ABDALLA - Leica TS09PLUS 5'' R500",
-      "contact": "ABDALLA",
-      "company": "",
-      "email": "abdallaazrak5@gmail.com",
-      "phone": "",
-      "rep": "Claude Nakhle",
-      "createdAt": "2026-10-03 12:20:39",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3138&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Zein Rachidi - Second-hand Trimble SX12 total station",
-      "contact": "Zein Rachidi",
-      "company": "",
-      "email": "zeinrachidi@gmail.com",
-      "phone": "",
-      "rep": "Contact",
-      "createdAt": "2026-10-03 04:35:10",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3133&model=crm.lead&view_type=form"
-    }
-  ],
-  "nonLeadCount": 16
+  "leads": [],
+  "nonLeadCount": 29
 }
