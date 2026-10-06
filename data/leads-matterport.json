@@ -1,16 +1,94 @@
 {
   "mailbox": "matterport@digitalrealities.fr",
-  "since": "2026-10-04 03:13:24",
-  "generatedAt": "2026-10-05T03:13:24.415Z",
+  "since": "2026-10-05 03:13:25",
+  "generatedAt": "2026-10-06T03:13:45.074Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 1,
+    "scriptNonLead": 0,
     "scriptErrors": 0,
-    "scriptTotal": 1,
-    "odooTotal": 23,
+    "scriptTotal": 0,
+    "odooTotal": 145,
     "mismatch": true
   },
-  "leads": [],
-  "nonLeadCount": 23
+  "leads": [
+    {
+      "type": "Lead",
+      "name": "Geobathy - Leica TDA5005 Total Station inquiry",
+      "contact": "Aissa Houari",
+      "company": "Geobathy",
+      "email": "geobathydz@gmail.com",
+      "phone": "+213 661 44 35 16",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-05 21:53:00",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3310&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Geobathy - Leica TCM 1800 purchase inquiry",
+      "contact": "Aissa Houari",
+      "company": "Geobathy",
+      "email": "geobathydz@gmail.com",
+      "phone": "+213 661 44 35 16",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-05 21:48:05",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3308&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Used Trimble TX8, SX12, S6 inquiry",
+      "contact": "Georges Labaky",
+      "company": "Topotrade",
+      "email": "georges.labaky@topotrade.com",
+      "phone": "+1 343 996 3977",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-05 19:10:15",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3286&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "nader - Leica TDA5005 Total Station offer",
+      "contact": "nader",
+      "company": "",
+      "email": "nadertallatali@gmail.com",
+      "phone": "",
+      "rep": "Contact",
+      "createdAt": "2026-10-05 17:55:25",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3274&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Nader Tallat - Used Leica TM30 total station",
+      "contact": "Nader Tallat",
+      "company": "",
+      "email": "nader_shahd@yahoo.com",
+      "phone": "+966591662767",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-05 14:02:58",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3248&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Filipe Martins - Trimble X9 Pack details inquiry",
+      "contact": "Filipe Fernandes Martins",
+      "company": "Filipe Martins",
+      "email": "filipemartins3d@gmail.com",
+      "phone": "+4915150789896",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-05 12:58:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3244&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Merrett Survey Limited - Leica Smartnet GNSS rental inquiry",
+      "contact": "Peter Merrett",
+      "company": "Merrett Survey Limited",
+      "email": "pjm@merrettsurvey.com",
+      "phone": "+44 (0)1392 362161",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-05 09:10:10",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3229&model=crm.lead&view_type=form"
+    }
+  ],
+  "nonLeadCount": 138
 }
