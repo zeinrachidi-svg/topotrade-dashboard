@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-05",
-  "updatedAt": "2026-10-05T03:15:38.795077Z",
+  "date": "2026-10-07",
+  "updatedAt": "2026-10-07T01:13:51.342449Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "value": 2,
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "Un scan 3D, bien plus qu\u2019une simple image\n\nTransformez vos espaces r\u00e9els en jumeaux num\u00e9riques exploitables pour mieux visualiser, mesurer et collaborer, o\u00f9 que vous soyez.\n\nAvec Digital Realities, donnez une nouvelle dimension \u00e0 vos b\u00e2timents et \u00e0 vos projets gr\u00e2ce aux technologies 3D.\n \nwww.digitalrealities.fr\nContact@digitalrealties.fr\n\n#DigitalRealities #Scan3D #JumeauNumerique #Matterport #BIM",
+      "created_time": "2026-10-05T08:07:40+0000",
+      "permalink_url": "https://www.facebook.com/1113606917670894/posts/1145158261182426",
+      "id": "105165231847100_1145158261182426"
+    },
     {
       "message": "De la r\u00e9alit\u00e9 aux donn\u00e9es 3D. \ud83c\udf10\n\nChez Digital Realities, nous transformons les environnements r\u00e9els en donn\u00e9es 3D exploitables gr\u00e2ce \u00e0 des technologies avanc\u00e9es de scan 3D, jumeaux num\u00e9riques et solutions g\u00e9ospatiales.\n\nDe la capture \u00e0 la mod\u00e9lisation, nous vous accompagnons pour donner une nouvelle dimension \u00e0 vos projets.\n\n\ud83d\udccd Showroom \u00e0 Lyon\n  www.digitalrealities.fr\n\n#DigitalRealities #InnovationGeospatiale #Scan3D #JumeauNumerique #Matterport #Geospatial #BIM #3DTechnology",
       "created_time": "2026-09-29T08:27:32+0000",
@@ -138,12 +144,6 @@
       "created_time": "2024-03-08T11:53:38+0000",
       "permalink_url": "https://www.facebook.com/1113606917670894/posts/445530097811916",
       "id": "105165231847100_445530097811916"
-    },
-    {
-      "message": "Les visites virtuelles \u00e0 360\u00b0 offrent un niveau d'engagement plus \u00e9lev\u00e9 que les m\u00e9dias traditionnels. Elles permettent \u00e0 vos clients d'interagir avec votre espace, vos produits et votre contenu comme s'ils \u00e9taient physiquement pr\u00e9sents, offrant ainsi une exp\u00e9rience remarquablement naturelle.\n\nContactez-nous maintenant pour en savoir plus \n\u2709 Contact@digitalrealities.fr \n\ud83d\udcde+33 4 87 76 78 71\n\n#Digital #realities #camera #3D #realitevirtuelle #surveying #location #scanner  #tour #service #3d #cartographie #Innovation #Immobilier #360Tour #concurrence",
-      "created_time": "2024-02-13T10:41:13+0000",
-      "permalink_url": "https://www.facebook.com/1113606917670894/posts/432122262486033",
-      "id": "105165231847100_432122262486033"
     }
   ],
   "messengerConversations": [
@@ -368,8 +368,8 @@
   "recentLeads": [],
   "instagram": {
     "id": "17841448326726715",
-    "followers_count": 73,
-    "media_count": 127,
+    "followers_count": 72,
+    "media_count": 128,
     "username": "digitalrealities.fr"
   },
   "_knownGaps": [
