@@ -1,13 +1,12 @@
 {
- "date": "2026-10-05",
+ "date": "2026-10-07",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
  "counts": {
-  "Ready for QA": 15,
-  "code review": 6,
-  "under testing": 2,
-  "In Progress": 3
+  "Ready for QA": 19,
+  "under testing": 6,
+  "In Progress": 1
  },
  "issues": {
   "LCB-2818": {
@@ -23,15 +22,15 @@
    "assignee": "Ray Aouad"
   },
   "LCB-3168": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3169": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3170": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "fatima hbeish"
   },
   "LCB-3171": {
@@ -39,11 +38,11 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3172": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "fatima hbeish"
   },
   "LCB-3173": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "fatima hbeish"
   },
   "LCB-3681": {
@@ -55,7 +54,7 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3706": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "Hussein Atiah"
   },
   "LCB-3725": {
@@ -63,7 +62,7 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3726": {
-   "status": "In Progress",
+   "status": "Ready for QA",
    "assignee": "Rawan Mortada"
   },
   "LCB-3728": {
@@ -75,11 +74,11 @@
    "assignee": "Ray Aouad"
   },
   "LCB-3773": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "Hussein Atiah"
   },
   "LCB-3775": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "Hussein Atiah"
   },
   "LCB-3793": {
@@ -87,11 +86,11 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3795": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "Hussein Atiah"
   },
   "LCB-3797": {
-   "status": "code review",
+   "status": "Ready for QA",
    "assignee": "Hussein Atiah"
   },
   "LCB-3798": {
@@ -107,7 +106,7 @@
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3804": {
-   "status": "In Progress",
+   "status": "Ready for QA",
    "assignee": "Rawan Mortada"
   },
   "LCB-3805": {
