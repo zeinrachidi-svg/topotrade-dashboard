@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-05",
-  "updatedAt": "2026-10-05T03:15:23.926226Z",
+  "date": "2026-10-07",
+  "updatedAt": "2026-10-07T01:13:33.686876Z",
   "page": {
     "name": "Topotrade.com",
     "fan_count": 5879,
@@ -17,12 +17,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "value": 0,
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
-            "value": 5,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "value": 1,
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "value": 0,
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
-            "value": 2,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "value": 1,
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-10-02T07:00:00+0000"
+            "value": 3,
+            "end_time": "2026-10-04T07:00:00+0000"
           },
           {
-            "value": 5,
-            "end_time": "2026-10-03T07:00:00+0000"
+            "value": 3,
+            "end_time": "2026-10-05T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "We\u2019re looking for a Trimble SX12! \ud83d\udd0e\nDo you have a Trimble SX12 available for sale? \nGet in touch with the topotrade team and send us the details of your equipment.\n\ud83d\udce9 contact@topotrade.com\n\ud83c\udf10 www.topotrade.com\n\n#topotrade #Trimble #TrimbleSX12 #SX12 #SurveyingEquipment #Geospatial #Sell\n\n        \n\nIs this conversation helpful so far?",
+      "created_time": "2026-10-05T07:55:56+0000",
+      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1729186202544319",
+      "id": "534109496935441_1729186202544319"
+    },
     {
       "message": "Equipment in stock and ready to be shipped!\nWe currently have a selection of Leica surveying equipment available:\n\u2022 Leica TS16 P 5\u201d\n\u2022 Leica TS07\n\u2022 Leica TM50\n\u2022 Leica MS60\nAvailable now and ready to be shipped worldwide.\nInterested in one of these units? Contact our team for more information, availability, and pricing.\n\ud83d\udce9 contact@topotrade.com\n\ud83c\udf10 www.topotrade.com\n\n#topotrade #Leica #TotalStation #Geospatial #Surveying",
       "created_time": "2026-09-29T08:31:24+0000",
@@ -153,12 +159,6 @@
       "created_time": "2026-07-07T09:56:46+0000",
       "permalink_url": "https://www.facebook.com/1692051812924425/posts/1640480864748187",
       "id": "534109496935441_1640480864748187"
-    },
-    {
-      "message": "We're buying Leica TS60 & Trimble S9 1\" Total Stations.\nIf you have one of these instruments available, Topotrade would love to hear from you. \n\n\ud83d\udce9 Contact us on contact@topotrade.com to discuss your equipment\n\ud83c\udf10 www.topotrade.com\n\n#Topotrade #Surveying #Leica #Trimble #TotalStation #Geomatics #SurveyEquipment",
-      "created_time": "2026-07-06T09:17:43+0000",
-      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1639466074849666",
-      "id": "534109496935441_1639466074849666"
     }
   ],
   "messengerConversations": [
@@ -588,8 +588,8 @@
   "recentLeads": [],
   "instagram": {
     "id": "17841416108569441",
-    "followers_count": 757,
-    "media_count": 621,
+    "followers_count": 758,
+    "media_count": 622,
     "username": "topotrade_"
   },
   "_knownGaps": [
