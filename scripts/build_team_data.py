@@ -96,8 +96,11 @@ def find(rows,full):
 m_asof=re.search(r"As of ([0-9A-Za-z ,]{4,30})",s.get_text())
 asof=(m_asof.group(1).strip() if m_asof else str(datetime.date.today()))+" (from the daily run)"
 out={}
+_m={r[0]:r for r in R["mtd"]}
+TEAM_COLS=["Rep","RevRec YTD","GPRec YTD","Tx YTD","RevRec MTD","GPRec MTD","Tx MTD"]
+TEAM_ROWS=[[r[0],r[1],r[2],r[3]]+(_m[r[0]][1:4] if r[0] in _m else ["-","-","-"]) for r in R["ytd"]]
 for first,full,role in PEOPLE:
-    P=dict(name=full,first=first,role=role,asOf=asof,updatedAt=datetime.datetime.utcnow().isoformat()+"Z",kpis=[],tables=[],recs=[],tasks=[],note="")
+    P=dict(team=dict(title="Team comparison",cols=TEAM_COLS,rows=TEAM_ROWS,hl=full),name=full,first=first,role=role,asOf=asof,updatedAt=datetime.datetime.utcnow().isoformat()+"Z",kpis=[],tables=[],recs=[],tasks=[],note="")
     if first in("Georges","Claude","Mireille","Daniel","Zein"):
         y=find(R["ytd"],full); mt=find(R["mtd"],full); team=find(R["ytd"],"Team"); tmt=find(R["mtd"],"Team"); c=find(R["crm"],full)
         P["kpis"]=[dict(label="Revenue YTD",value=y[1],sub=f"{y[6]} vs same period 2025"),dict(label="Gross profit YTD",value=y[2],sub=f"GM {y[4]}"),
