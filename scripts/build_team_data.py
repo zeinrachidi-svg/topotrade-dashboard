@@ -124,6 +124,8 @@ for first,full,role in PEOPLE:
         hl=[h for h in R["hot"] if first.lower() in txt(h).lower()]
         P["tasks"].append(dict(title="Hot leads naming you",cols=["Lead"],rows=[[h] for h in hl]))
         if first=="Zein":
+            P["tasks"][2]=dict(title="Self-serve nudges (all reps, company-wide)",cols=R["n_cols"],rows=R["nud"])
+            P["tasks"][5]=dict(title="Drafts pending review (company-wide)",cols=R["d_cols"],rows=R["drafts"])
             P["tables"].insert(0,dict(title="Pipeline by rep (company)",cols=R["crm_cols"],rows=R["crm"]))
             P["tasks"][3]["title"]="Admin tasks you own (all companies)"
     elif first=="Celine":
