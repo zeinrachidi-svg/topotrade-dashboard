@@ -1,12 +1,12 @@
 {
- "date": "2026-10-07",
+ "date": "2026-10-08",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
  "counts": {
-  "Ready for QA": 19,
-  "under testing": 6,
-  "In Progress": 1
+  "Ready for QA": 18,
+  "under testing": 7,
+  "Ready for Release": 1
  },
  "issues": {
   "LCB-2818": {
@@ -58,7 +58,7 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3725": {
-   "status": "In Progress",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3726": {
@@ -94,7 +94,7 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3798": {
-   "status": "Ready for QA",
+   "status": "Ready for Release",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3799": {
