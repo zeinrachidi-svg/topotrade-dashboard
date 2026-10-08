@@ -93,8 +93,8 @@ def mine(first,x): return first.lower() in txt(x).lower()
 def find(rows,full): 
     for r in rows:
         if r[0]==full: return r
-m_asof=re.search(r"As of ([0-9A-Za-z ,]{4,30})",s.get_text())
-asof=(m_asof.group(1).strip() if m_asof else str(datetime.date.today()))+" (from the daily run)"
+_a=s.find(class_="asof")
+asof=(_a.get_text(strip=True).replace("As of ","") if _a else str(datetime.date.today()))+" (daily run)"
 out={}
 _m={r[0]:r for r in R["mtd"]}
 TEAM_COLS=["Rep","RevRec YTD","GPRec YTD","Tx YTD","RevRec MTD","GPRec MTD","Tx MTD"]
