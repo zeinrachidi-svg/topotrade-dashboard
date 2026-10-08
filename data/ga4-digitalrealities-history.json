@@ -564,5 +564,16 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-10-07",
+    "updatedAt": "2026-10-08T02:24:01.733Z",
+    "activeUsers": 0,
+    "newUsers": 0,
+    "sessions": 0,
+    "pageViews": 0,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 0,
+    "topChannels": []
   }
 ]
