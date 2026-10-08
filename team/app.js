@@ -31,13 +31,17 @@ function render(P){
     var ol=el('ol','acts'); r.items.forEach(function(i){ol.appendChild(el('li',null,i));}); rc.appendChild(ol);});
   if(!P.recs.length) rc.appendChild(el('p','note','No recommended actions yet.'));
   var tk=$('#p-task');
+  var empty=[];
   P.tasks.forEach(function(t){
-    var d=el('details','grp'); if(t.rows.length)d.open=true;
+    if(!t.rows.length){empty.push(t.title.replace(/ \(.*\)$/,''));return;}
+    var d=el('details','grp'); d.open=true;
     d.appendChild(el('summary',null,t.title+' <span class="cnt">'+t.rows.length+'</span>'));
     if(t.note)d.appendChild(el('p','note',t.note));
-    d.appendChild(t.rows.length?tableEl(t.cols,t.rows):el('p','note','Nothing open.'));
+    d.appendChild(tableEl(t.cols,t.rows));
     tk.appendChild(d);
   });
+  if(empty.length) tk.appendChild(el('p','note','Nothing open in: '+empty.join(', ')+'.'));
+  if(!P.tasks.length||empty.length===P.tasks.length) tk.insertBefore(el('p','note','No open tasks for you right now.'),tk.firstChild);
   $('#q').addEventListener('input',function(e){var v=e.target.value.toLowerCase();
     document.querySelectorAll('#p-task tbody tr').forEach(function(r){r.hidden=v&&r.textContent.toLowerCase().indexOf(v)<0;});
     document.querySelectorAll('#p-task details').forEach(function(g){if(v)g.open=true;});});
