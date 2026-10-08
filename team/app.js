@@ -16,6 +16,10 @@ function render(P){
   var nrec=0; P.recs.forEach(function(r){nrec+=r.items.length;});
   var ntask=0; P.tasks.forEach(function(t){ntask+=t.rows.length;});
   $('#c-rec').textContent=nrec; $('#c-task').textContent=ntask;
+  if(P.team){var tm=el('section','teamblk'); tm.appendChild(el('h2',null,P.team.title+' (YTD and MTD)'));
+    tm.appendChild(tableEl(P.team.cols,P.team.rows,P.team.hl));
+    tm.appendChild(el('p','note','USD, split-credit view from the Cockpit sheet. Tx = transaction count.'));
+    $('#kpis').parentNode.insertBefore(tm,$('#kpis'));}
   var kp=$('#kpis'); P.kpis.forEach(function(k){var d=el('div','kpi');
     d.appendChild(el('div','kl',k.label)); d.appendChild(el('div','kv',k.value)); d.appendChild(el('div','ks',k.sub||'')); kp.appendChild(d);});
   if(!P.kpis.length) kp.hidden=true;
