@@ -1258,5 +1258,37 @@
         "sessions": 4
       }
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "updatedAt": "2026-10-09T02:34:49.276Z",
+    "activeUsers": 35,
+    "newUsers": 27,
+    "sessions": 48,
+    "pageViews": 92,
+    "conversions": 1,
+    "avgSessionDurationSeconds": 130,
+    "topChannels": [
+      {
+        "channel": "Direct",
+        "sessions": 40
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 4
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 3
+      },
+      {
+        "channel": "Referral",
+        "sessions": 3
+      },
+      {
+        "channel": "Email",
+        "sessions": 1
+      }
+    ]
   }
 ]
