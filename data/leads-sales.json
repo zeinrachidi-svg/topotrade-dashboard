@@ -1,72 +1,72 @@
 {
   "mailbox": "sales@topotrade.com",
-  "since": "2026-10-07 03:10:34",
-  "generatedAt": "2026-10-08T03:10:33.429Z",
+  "since": "2026-10-08 03:10:34",
+  "generatedAt": "2026-10-09T03:10:33.685Z",
   "stats": {
-    "scriptCreated": 5,
-    "scriptUpdated": 7,
-    "scriptNonLead": 110,
-    "scriptErrors": 16,
-    "scriptTotal": 115,
-    "odooTotal": 197,
+    "scriptCreated": 1,
+    "scriptUpdated": 1,
+    "scriptNonLead": 29,
+    "scriptErrors": 0,
+    "scriptTotal": 30,
+    "odooTotal": 96,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "Topotrade - TS16 total stations details and pricing",
-      "contact": "Mireille Baho",
-      "company": "Topotrade",
-      "email": "mireille.baho@topotrade.com",
+      "name": "etase - Pricing for 4 Leica TM50 units",
+      "contact": "Paul MacArthur",
+      "company": "etase",
+      "email": "pm@etase.co.uk",
       "phone": "",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-07 10:15:19",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3569&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-08 19:52:48",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3733&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Al-Sudoof - Leica TS06 and TS07 inquiry",
-      "contact": "Adnan S. Ibrahim",
-      "company": "Al-Sudoof",
-      "email": "al_sudoof@yahoo.com",
-      "phone": "+964(0)7901365119",
-      "rep": "Claude Nakhle",
-      "createdAt": "2026-10-07 06:30:13",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3497&model=crm.lead&view_type=form"
+      "name": "DRONESIG ? Engenharia & Tecnologia, S.A. - Emlid base/rover package quote",
+      "contact": "Hermenegildo Sebasti?o",
+      "company": "DRONESIG ? Engenharia & Tecnologia, S.A.",
+      "email": "geral@dronesig.co.ao",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-08 18:45:21",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3730&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Topotrade - Ex-rental Emlid RS4 Pro pair",
-      "contact": "Zein Rachidi",
-      "company": "Topotrade",
-      "email": "zein.rachidi@topotrade.com",
-      "phone": "",
+      "name": "Assistance Technique et Maintenance - Used Topcon OS-105 station sale offer",
+      "contact": "Anthony LECOMTE",
+      "company": "Assistance Technique et Maintenance",
+      "email": "atm.lecomte@orange.fr",
+      "phone": "+33 02 41 80 56 26",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-07 06:21:59",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3491&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-08 15:07:54",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3717&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Topotrade - Trimble AV39 GNSS antenna inquiry",
-      "contact": "Zein Rachidi",
-      "company": "Topotrade",
-      "email": "zein.rachidi@topotrade.com",
+      "name": "Alary, St-Pierre et Durocher AG - Sale of used TS12 TCR800 GS15 GS08",
+      "contact": "Marc Lacroix",
+      "company": "Alary, St-Pierre et Durocher AG",
+      "email": "marc.lacroix@asdag.ca",
       "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-07 06:05:42",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3463&model=crm.lead&view_type=form"
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-08 14:58:02",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3716&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Topotrade - Emlid Reach RS4 Pro base rover",
-      "contact": "Zein Rachidi",
-      "company": "Topotrade",
-      "email": "zein.rachidi@topotrade.com",
+      "name": "??????? ????????? ?????????? - Leica TS30 total station sale offer",
+      "contact": "??????? ????????? ??????????",
+      "company": "",
+      "email": "geoirina2014@ukr.net",
       "phone": "",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-07 06:00:51",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3459&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-08 07:33:21",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3674&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 192
+  "nonLeadCount": 91
 }
