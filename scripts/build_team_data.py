@@ -99,6 +99,94 @@ out={}
 _m={r[0]:r for r in R["mtd"]}
 TEAM_COLS=["Rep","RevRec YTD","GPRec YTD","Tx YTD","RevRec MTD","GPRec MTD","Tx MTD"]
 TEAM_ROWS=[[r[0],r[1],r[2],r[3]]+(_m[r[0]][1:4] if r[0] in _m else ["-","-","-"]) for r in R["ytd"]]
+
+# ---------- extra finance tables (billings comparison, personal P&Ls) ----------
+import csv as _csv
+def _money(v,cur="$"): 
+    return "-" if v is None else ("-" if v<0 else "")+cur+f"{abs(v):,.0f}"
+def _pct(a,b): return "n/a" if not b else f"{(a-b)/abs(b)*100:+.0f}%"
+def _prev(tok):
+    cur=api("GET",f"data/team/{tok}.json")
+    try: return json.loads(base64.b64decode(cur["content"]).decode())
+    except Exception: return {}
+def billings_table(path,asof):
+    import re as _re
+    rows=list(_csv.reader(open(path,encoding="utf-8")))
+    h=rows[0]; iD=h.index("Date"); iI=[i for i,x in enumerate(h) if x.replace(" ","")=="Invoicenumber"][0]; iB=h.index("Billings excl Tax")
+    mo={m:i+1 for i,m in enumerate(["january","february","march","april","may","june","july","august","september","october","november","december"])}
+    def pd(x):
+        x=x.strip(); m=_re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})$",x)
+        if m: return datetime.date(int(m[3]),int(m[2]),int(m[1]))
+        m=_re.match(r"(\d{1,2}) ([A-Za-z]+) (\d{4})$",x)
+        if m: return datetime.date(int(m[3]),mo[m[2].lower()],int(m[1]))
+    def num(x):
+        x=_re.sub(r"[^\d.\-]","",x or ""); return float(x) if x not in("","-",".") else 0.0
+    ents=[("FR","Digital Realities SASU (France)"),("AE","Topotrade LLC FZ (UAE)"),("CA","9494-1440 Quebec (Canada)")]
+    a={e:dict(y26=0,y25=0,m26=0,m25=0) for e,_ in ents}
+    for r in rows[1:]:
+        if len(r)<=iB: continue
+        d=pd(r[iD])
+        if not d: continue
+        inv=r[iI].strip(); e="CA" if inv.startswith("CA") else "AE" if inv.startswith("AE") else "FR"
+        b=num(r[iB])
+        for yr,k in((asof.year,"26"),(asof.year-1,"25")):
+            cut=datetime.date(yr,asof.month,min(asof.day,28 if (asof.month==2 and asof.day>28) else asof.day))
+            if d.year==yr and d<=cut:
+                a[e]["y"+k]+=b
+                if d.month==asof.month: a[e]["m"+k]+=b
+    tot=dict(y26=0,y25=0,m26=0,m25=0); out=[]
+    for e,name in ents:
+        v=a[e]; [tot.__setitem__(k,tot[k]+v[k]) for k in v]
+        out.append([name,_money(v["y26"],"EUR "),_money(v["y25"],"EUR "),_pct(v["y26"],v["y25"]),_money(v["m26"],"EUR "),_money(v["m25"],"EUR "),_pct(v["m26"],v["m25"])])
+    out.append(["<b>Total</b>"]+[f"<b>{x}</b>" for x in [_money(tot["y26"],"EUR "),_money(tot["y25"],"EUR "),_pct(tot["y26"],tot["y25"]),_money(tot["m26"],"EUR "),_money(tot["m25"],"EUR "),_pct(tot["m26"],tot["m25"])]])
+    mn=asof.strftime("%b")
+    return dict(title="Billings by billing company: YTD and MTD vs last year",
+        cols=["Billing company",f"YTD {asof.year}",f"YTD {asof.year-1}","YoY",f"MTD {mn} {asof.year}",f"MTD {mn} {asof.year-1}","YoY"],rows=out,
+        note=f"Billings excl. tax in EUR from the Cockpit Sales tab, 1 Jan to {asof.day} {mn} each year. Entity = invoice prefix (CA = Canada, AE = UAE, numbers or blank = France, so not-yet-invoiced Topotrade sales are included). Live sheet, so it can differ slightly from the main dashboard snapshot.")
+def pl_canada(path):
+    import openpyxl
+    ws=openpyxl.load_workbook(path,data_only=True)["P&L Canada"]
+    rows=[list(r) for r in ws.iter_rows(values_only=True)]
+    st=next(i for i,r in enumerate(rows) if r[1] and "Revenue & GP recognition" in str(r[1]))
+    out=[];T=dict(rev=0,gp=0,fc=0,np=0,tr=0,tg=0)
+    for r in rows[st+2:]:
+        if r[1]=="Total" or not hasattr(r[1],"year"): break
+        if r[2] is None: continue
+        out.append([r[1].strftime("%b %Y"),_money(r[2]),_money(r[6]),_money(r[7]),_money(r[8]),_money(r[9]),_money(r[10]),_money(r[11])])
+        T["rev"]+=r[2];T["gp"]+=r[6];T["fc"]+=r[7];T["np"]+=r[8];T["tr"]+=r[10] or 0;T["tg"]+=r[11] or 0
+    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"]),_money(T["gp"]),_money(T["fc"]),_money(T["np"]),"",_money(T["tr"]),_money(T["tg"])]])
+    out.append(["<b>% of YTD target</b>",f"<b>{T['rev']/T['tr']*100:.0f}%</b>" if T["tr"] else "",f"<b>{T['gp']/T['tg']*100:.0f}%</b>" if T["tg"] else "","","","","",""])
+    return dict(title="Topotrade Canada: YTD P&L (USD, revenue and GP recognition)",cols=["Month","RevRec","GPRec","Fixed cost","Net profit","Cumulated profit","RevRec target","GPRec target"],rows=out,
+        note="From the 'Cockpit Report Canada' workbook, P&L Canada tab. YTD = months with actuals; later months only carry budgeted fixed costs.")
+def pl_france(path):
+    import openpyxl
+    ws=openpyxl.load_workbook(path,data_only=True)["P&L"]
+    rows=[list(r) for r in ws.iter_rows(values_only=True)]
+    g=[];cur=None
+    for c in rows[2]:
+        cur=c or cur; g.append(cur)
+    names=rows[3]; out=[];T=dict(rev=0,gp=0,fr=0,pl=0); grp={}
+    for r in rows[4:]:
+        if not hasattr(r[1],"year") : break
+        if r[2] is None or r[1].month>_asof_d.month: continue
+        out.append([r[1].strftime("%b %Y")+(" (month to date)" if False else ""),_money(r[2],"EUR "),_money(r[3],"EUR "),_money(r[5],"EUR "),_money(r[4],"EUR ")])
+        T["rev"]+=r[2];T["gp"]+=r[3];T["fr"]+=r[5] or 0;T["pl"]+=r[4] or 0
+        for i in range(6,len(r)):
+            if isinstance(r[i],(int,float)) and g[i]: grp[g[i]]=grp.get(g[i],0)+r[i]
+    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"],"EUR "),_money(T["gp"],"EUR "),_money(T["fr"],"EUR "),_money(T["pl"],"EUR ")]])
+    t1=dict(title="Digital Realities France: YTD P&L (EUR)",cols=["Month","RevRec","GPRec","Total costs","P&L"],rows=out,
+        note="From the 'Cockpit Report France DR' workbook, P&L tab. The latest month is month-to-date. Nov and Dec only hold budgeted costs and are not in YTD.")
+    t2=dict(title="Costs YTD by category (EUR)",cols=["Category","YTD"],rows=[[k,_money(v,"EUR ")] for k,v in sorted(grp.items(),key=lambda x:-x[1])])
+    return [t1,t2]
+_asof_d=datetime.date.today()
+if os.environ.get("ASOF"): _asof_d=datetime.date.fromisoformat(os.environ["ASOF"])
+EXTRA={}
+if os.path.exists(os.environ.get("SALES_CSV","/nonexistent")):
+    _b=billings_table(os.environ["SALES_CSV"],_asof_d); EXTRA["Georges"]=[_b]; EXTRA["Mireille"]=[_b]
+if os.path.exists(os.environ.get("CANADA_XLSX","/nonexistent")): EXTRA.setdefault("Georges",[]).append(pl_canada(os.environ["CANADA_XLSX"]))
+if os.path.exists(os.environ.get("FRANCE_XLSX","/nonexistent")): EXTRA["Daniel"]=pl_france(os.environ["FRANCE_XLSX"])
+KEEP_TITLES=("Billings by billing company","Topotrade Canada: YTD P&L","Digital Realities France: YTD P&L","Costs YTD by category")
+
 for first,full,role in PEOPLE:
     P=dict(team=dict(title="Team comparison",cols=TEAM_COLS,rows=TEAM_ROWS,hl=full),name=full,first=first,role=role,asOf=asof,updatedAt=datetime.datetime.utcnow().isoformat()+"Z",kpis=[],tables=[],recs=[],tasks=[],note="")
     if first in("Georges","Claude","Mireille","Daniel","Zein"):
@@ -136,6 +224,12 @@ for first,full,role in PEOPLE:
         P["note"]="Ready-to-use suggested posts (sold items, latest listings, wanted items) are on the main dashboard's Marketing tab."
     else:
         P["note"]="Your page is ready, but no daily data feeds it yet (no Odoo salesperson record or Cockpit sales rows under your name). Tell Zein if you should get a rep-style or marketing-style view."
+    _need={"Georges":["Billings by billing company","Topotrade Canada: YTD P&L"],"Mireille":["Billings by billing company"],"Daniel":["Digital Realities France: YTD P&L","Costs YTD by category"]}.get(first,[])
+    P["tables"]+=EXTRA.get(first,[])
+    _have=[t["title"] for t in P["tables"]]
+    if any(not any(h.startswith(n) for h in _have) for n in _need):
+        for t in _prev(tokens[first]).get("tables",[]):
+            if t["title"].startswith(KEEP_TITLES) and not any(h==t["title"] for h in _have): P["tables"].append(t); print("kept previous table for",first,":",t["title"])
     push(f"data/team/{tokens[first]}.json",json.dumps(P,ensure_ascii=False))
     out[first]=sum(len(t["rows"]) for t in P["tasks"])
 print(out)
