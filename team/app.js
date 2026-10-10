@@ -24,7 +24,7 @@ function render(P){
     d.appendChild(el('div','kl',k.label)); d.appendChild(el('div','kv',k.value)); d.appendChild(el('div','ks',k.sub||'')); kp.appendChild(d);});
   if(!P.kpis.length) kp.hidden=true;
   var pf=$('#p-perf'); if(P.note)pf.appendChild(el('p','note',P.note));
-  P.tables.forEach(function(t){pf.appendChild(el('h2',null,t.title)); pf.appendChild(tableEl(t.cols,t.rows,t.hl));});
+  P.tables.forEach(function(t){pf.appendChild(el('h2',null,t.title)); pf.appendChild(tableEl(t.cols,t.rows,t.hl)); if(t.note)pf.appendChild(el('p','note',t.note));});
   if(!P.tables.length&&!P.note) pf.appendChild(el('p','note','No performance data for this view.'));
   var rc=$('#p-rec');
   P.recs.forEach(function(r){rc.appendChild(el('h2',null,r.title+' ('+r.items.length+')'));
