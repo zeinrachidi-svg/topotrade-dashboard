@@ -1,72 +1,28 @@
 {
   "mailbox": "contact@digitalrealities.fr",
-  "since": "2026-10-08 03:25:07",
-  "generatedAt": "2026-10-09T03:25:08.888Z",
+  "since": "2026-10-09 03:25:10",
+  "generatedAt": "2026-10-10T03:25:07.664Z",
   "stats": {
-    "scriptCreated": 0,
+    "scriptCreated": 1,
     "scriptUpdated": 0,
-    "scriptNonLead": 2,
+    "scriptNonLead": 1,
     "scriptErrors": 0,
     "scriptTotal": 2,
-    "odooTotal": 92,
+    "odooTotal": 89,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "etase - Pricing for 4 Leica TM50 units",
-      "contact": "Paul MacArthur",
-      "company": "etase",
-      "email": "pm@etase.co.uk",
+      "name": "fasteignaljosmyndun.is - Matterport Pro3 purchase and Paris delivery",
+      "contact": "Vignir M?r",
+      "company": "fasteignaljosmyndun.is",
+      "email": "vignir@fasteignaljosmyndun.is",
       "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-08 19:52:48",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3733&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "DRONESIG ? Engenharia & Tecnologia, S.A. - Emlid base/rover package quote",
-      "contact": "Hermenegildo Sebasti?o",
-      "company": "DRONESIG ? Engenharia & Tecnologia, S.A.",
-      "email": "geral@dronesig.co.ao",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-08 18:45:21",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3730&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Assistance Technique et Maintenance - Used Topcon OS-105 station sale offer",
-      "contact": "Anthony LECOMTE",
-      "company": "Assistance Technique et Maintenance",
-      "email": "atm.lecomte@orange.fr",
-      "phone": "+33 02 41 80 56 26",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-08 15:07:54",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3717&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Alary, St-Pierre et Durocher AG - Sale of used TS12 TCR800 GS15 GS08",
-      "contact": "Marc Lacroix",
-      "company": "Alary, St-Pierre et Durocher AG",
-      "email": "marc.lacroix@asdag.ca",
-      "phone": "",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-10-08 14:58:02",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3716&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "??????? ????????? ?????????? - Leica TS30 total station sale offer",
-      "contact": "??????? ????????? ??????????",
-      "company": "",
-      "email": "geoirina2014@ukr.net",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-08 07:33:21",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3674&model=crm.lead&view_type=form"
+      "rep": "Daniel LLORENTE",
+      "createdAt": "2026-10-09 17:07:32",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3820&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 87
+  "nonLeadCount": 88
 }
