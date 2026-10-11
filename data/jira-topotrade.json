@@ -1,12 +1,12 @@
 {
- "date": "2026-10-08",
+ "date": "2026-10-11",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
  "counts": {
-  "Ready for QA": 18,
-  "under testing": 7,
-  "Ready for Release": 1
+  "Ready for QA": 11,
+  "under testing": 9,
+  "Ready for Release": 6
  },
  "issues": {
   "LCB-2818": {
@@ -30,11 +30,11 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3170": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3171": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3172": {
@@ -42,15 +42,15 @@
    "assignee": "fatima hbeish"
   },
   "LCB-3173": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "fatima hbeish"
   },
   "LCB-3681": {
-   "status": "under testing",
+   "status": "Ready for Release",
    "assignee": "fatima hbeish"
   },
   "LCB-3687": {
-   "status": "under testing",
+   "status": "Ready for Release",
    "assignee": "Hussein Atiah"
   },
   "LCB-3706": {
@@ -58,11 +58,11 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3725": {
-   "status": "under testing",
+   "status": "Ready for Release",
    "assignee": "fatima hbeish"
   },
   "LCB-3726": {
-   "status": "Ready for QA",
+   "status": "Ready for Release",
    "assignee": "Rawan Mortada"
   },
   "LCB-3728": {
@@ -78,11 +78,11 @@
    "assignee": "Hussein Atiah"
   },
   "LCB-3775": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "Hussein Atiah"
   },
   "LCB-3793": {
-   "status": "Ready for QA",
+   "status": "under testing",
    "assignee": "Hussein Atiah"
   },
   "LCB-3795": {
@@ -106,7 +106,7 @@
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3804": {
-   "status": "Ready for QA",
+   "status": "Ready for Release",
    "assignee": "Rawan Mortada"
   },
   "LCB-3805": {
