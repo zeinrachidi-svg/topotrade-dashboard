@@ -611,5 +611,25 @@
         "sessions": 1
       }
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "updatedAt": "2026-10-11T02:24:01.755Z",
+    "activeUsers": 3,
+    "newUsers": 3,
+    "sessions": 5,
+    "pageViews": 10,
+    "conversions": 0,
+    "avgSessionDurationSeconds": 10,
+    "topChannels": [
+      {
+        "channel": "Organic Search",
+        "sessions": 4
+      },
+      {
+        "channel": "Direct",
+        "sessions": 1
+      }
+    ]
   }
 ]
