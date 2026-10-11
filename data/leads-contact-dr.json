@@ -1,28 +1,39 @@
 {
   "mailbox": "contact@digitalrealities.fr",
-  "since": "2026-10-09 03:25:10",
-  "generatedAt": "2026-10-10T03:25:07.664Z",
+  "since": "2026-10-10 03:25:08",
+  "generatedAt": "2026-10-11T03:25:09.226Z",
   "stats": {
-    "scriptCreated": 1,
+    "scriptCreated": 0,
     "scriptUpdated": 0,
     "scriptNonLead": 1,
     "scriptErrors": 0,
-    "scriptTotal": 2,
-    "odooTotal": 89,
+    "scriptTotal": 1,
+    "odooTotal": 20,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "fasteignaljosmyndun.is - Matterport Pro3 purchase and Paris delivery",
-      "contact": "Vignir M?r",
-      "company": "fasteignaljosmyndun.is",
-      "email": "vignir@fasteignaljosmyndun.is",
+      "name": "THE FUTURE 3D - DJI drone equipment listing inquiry",
+      "contact": "THE FUTURE 3D",
+      "company": "THE FUTURE 3D",
+      "email": "contact@thefuture3d.com",
       "phone": "",
-      "rep": "Daniel LLORENTE",
-      "createdAt": "2026-10-09 17:07:32",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3820&model=crm.lead&view_type=form"
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-10 23:33:17",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3850&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Moi m?me - Sokkia Total Station SRX3 set",
+      "contact": "Riad Khaldi",
+      "company": "Moi m?me",
+      "email": "riadkhaldi2018@gmail.com",
+      "phone": "+213 791 62 94 93",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-10 12:48:08",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3843&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 88
+  "nonLeadCount": 18
 }
