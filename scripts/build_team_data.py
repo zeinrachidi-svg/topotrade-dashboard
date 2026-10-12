@@ -233,3 +233,18 @@ for first,full,role in PEOPLE:
     push(f"data/team/{tokens[first]}.json",json.dumps(P,ensure_ascii=False))
     out[first]=sum(len(t["rows"]) for t in P["tasks"])
 print(out)
+
+# ---------- ensure Team Dashboards tab exists in index.html ----------
+def ensure_team_tab():
+    import re as _re
+    h=api("GET","index.html"); html=base64.b64decode(h["content"]).decode()
+    if "<!--TEAMTAB-->" in html: print("team tab present"); return
+    g=lambda p: base64.b64decode(api("GET",p)["content"]).decode()
+    btn=g("scripts/team_tab_button.html"); blk=g("scripts/team_tab_block.html")
+    a="<button class='tab-btn' onclick=\"showTab('automation')\">Automation Map</button>"
+    t="<script>\nfunction showTab"
+    if html.count(a)!=1 or html.count(t)!=1: print("team tab NOT restored: anchors missing"); return
+    html=html.replace(a,a+btn).replace(t,blk+t)
+    api("PUT","index.html",{"message":"Restore Team Dashboards tab","content":base64.b64encode(html.encode()).decode(),"sha":h["sha"],"branch":"main"}); print("team tab restored")
+
+ensure_team_tab()
