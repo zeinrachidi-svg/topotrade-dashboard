@@ -1,4 +1,5 @@
 (function(){
+var st=document.createElement('style'); st.textContent='td.neg{color:#b3261e!important;background:rgba(179,38,30,.12);font-weight:600} .plblk{margin:0 0 18px}'; document.head.appendChild(st);
 var tok=window.TT, $=function(s){return document.querySelector(s)};
 function el(t,c,h){var e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;}
 function tableEl(cols,rows,hl){
@@ -6,7 +7,7 @@ function tableEl(cols,rows,hl){
   cols.forEach(function(c){tr.appendChild(el('th',null,c));}); th.appendChild(tr); t.appendChild(th);
   var tb=el('tbody');
   rows.forEach(function(r){var tr=el('tr'); if(hl&&String(r[0]).replace(/<[^>]*>/g,'')===hl)tr.className='me';
-    r.forEach(function(c){tr.appendChild(el('td',null,c));}); tb.appendChild(tr);});
+    r.forEach(function(c){var td=el('td',null,c); if(/^-\s?(\$|EUR\s?|\u20ac)\s?\d/.test(String(c).replace(/<[^>]*>/g,'').trim()))td.className='neg'; tr.appendChild(td);}); tb.appendChild(tr);});
   t.appendChild(tb); w.appendChild(t); return w;
 }
 function render(P){
@@ -16,6 +17,8 @@ function render(P){
   var nrec=0; P.recs.forEach(function(r){nrec+=r.items.length;});
   var ntask=0; P.tasks.forEach(function(t){ntask+=t.rows.length;});
   $('#c-rec').textContent=nrec; $('#c-task').textContent=ntask;
+  var PL=P.tables.filter(function(t){return /P&L/.test(t.title);}); P.tables=P.tables.filter(function(t){return !/P&L/.test(t.title);});
+  if(PL.length){var pb=el('section','plblk'); PL.forEach(function(t){pb.appendChild(el('h2',null,t.title)); pb.appendChild(tableEl(t.cols,t.rows,t.hl)); if(t.note)pb.appendChild(el('p','note',t.note));}); $('#kpis').parentNode.insertBefore(pb,$('#kpis'));}
   if(P.team){var tm=el('section','teamblk'); tm.appendChild(el('h2',null,P.team.title+' (YTD and MTD)'));
     tm.appendChild(tableEl(P.team.cols,P.team.rows,P.team.hl));
     tm.appendChild(el('p','note','USD, split-credit view from the Cockpit sheet. Tx = transaction count.'));
