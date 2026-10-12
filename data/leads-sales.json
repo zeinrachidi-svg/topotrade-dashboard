@@ -1,39 +1,28 @@
 {
   "mailbox": "sales@topotrade.com",
-  "since": "2026-10-10 03:10:34",
-  "generatedAt": "2026-10-11T03:10:32.819Z",
+  "since": "2026-10-11 03:10:33",
+  "generatedAt": "2026-10-12T03:10:35.560Z",
   "stats": {
-    "scriptCreated": 0,
-    "scriptUpdated": 0,
-    "scriptNonLead": 7,
+    "scriptCreated": 1,
+    "scriptUpdated": 1,
+    "scriptNonLead": 10,
     "scriptErrors": 0,
-    "scriptTotal": 7,
-    "odooTotal": 21,
+    "scriptTotal": 11,
+    "odooTotal": 29,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "THE FUTURE 3D - DJI drone equipment listing inquiry",
-      "contact": "THE FUTURE 3D",
-      "company": "THE FUTURE 3D",
-      "email": "contact@thefuture3d.com",
+      "name": "Valid Vision - Quote for 3 FARO scanner models",
+      "contact": "Thanachai Wetcherarat",
+      "company": "Valid Vision",
+      "email": "thanachai@validvision.co.th",
       "phone": "",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-10-10 23:33:17",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3850&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Moi m?me - Sokkia Total Station SRX3 set",
-      "contact": "Riad Khaldi",
-      "company": "Moi m?me",
-      "email": "riadkhaldi2018@gmail.com",
-      "phone": "+213 791 62 94 93",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-10 12:48:08",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3843&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-12 01:25:21",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3877&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 19
+  "nonLeadCount": 28
 }
