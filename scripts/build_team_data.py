@@ -187,6 +187,119 @@ if os.path.exists(os.environ.get("CANADA_XLSX","/nonexistent")): EXTRA.setdefaul
 if os.path.exists(os.environ.get("FRANCE_XLSX","/nonexistent")): EXTRA["Daniel"]=pl_france(os.environ["FRANCE_XLSX"])
 KEEP_TITLES=("Billings by billing company","Topotrade Canada: YTD P&L","Digital Realities France: YTD P&L","Costs YTD by category")
 
+
+# ================= COACHING LAYER (today list, pace, attention, drafts, playbook, wins, board, manager) =================
+import calendar as _cal
+INIT={"Georges":"GL","Daniel":"DL","Mireille":"MB","Claude":"CN","Zein":"ZR"}
+MONTHLY_TARGET={"Georges":86000}   # RevRec USD/month, from the Canada Cockpit. Others: self-benchmark until targets are confirmed.
+def _num(x):
+    x=re.sub(r"[^\d.\-]","",str(x or "")); 
+    try: return float(x) if x not in("","-",".") else 0.0
+    except Exception: return 0.0
+def _task(P,start):
+    for t in P["tasks"]:
+        if t["title"].startswith(start): return t
+    return None
+def _rows(P,start):
+    t=_task(P,start); return t["rows"] if t else []
+def _wd_left(d):
+    last=_cal.monthrange(d.year,d.month)[1]; n=0
+    for day in range(d.day+1,last+1):
+        if datetime.date(d.year,d.month,day).weekday()<5: n+=1
+    return n
+def coach_stats(P):
+    ov=[txt(r[1])+" ("+txt(r[2])+")" for r in _rows(P,"Yesterday") if "overdue" in txt(r[3]).lower()]
+    st=[r for r in _rows(P,"Self-serve") if (_num(r[5])>=7 or txt(r[7]).strip().upper().startswith("Y"))]
+    dr=[r for r in _rows(P,"Drafts") if _num(r[3])>=2]
+    sh=[r for r in _rows(P,"Shipments") if "BLOCKED" in txt(r[0]).upper()]
+    oq=[r for r in _rows(P,"Open quotations") if _num(r[6])>7]
+    risk=sum(_num(r[4]) for r in oq)
+    return dict(overdue=ov,stale=st,drafts=dr,blocked=sh,oldq=oq,risk=risk)
+def _short(x,n=190):
+    x=txt(x); return x if len(x)<=n else x[:n-1]+"…"
+def build_today(P,S):
+    c=[]
+    deal=P["recs"][0]["items"] if P["recs"] else []
+    if deal: c.append(dict(text=_short(deal[0]),why="Top deal-closing action in today's recommendations."))
+    for a in S["overdue"]: c.append(dict(text="Close the overdue action: "+a,why="Overdue items stay on this list until done."))
+    for r in S["stale"]: c.append(dict(text=f"Call or write to {_short(r[0],70)} about {_short(r[2],60)}",why=f"Self-serve nudge pending {txt(r[5])} days"+(", escalated." if txt(r[7]).upper().startswith("Y") else ".")))
+    for r in S["oldq"]: c.append(dict(text=f"Follow up quote {txt(r[0])} to {txt(r[1])} ({txt(r[4])})",why=f"Sent {txt(r[6])} days ago with no answer."))
+    for r in S["blocked"]: c.append(dict(text=f"Unblock: {_short(r[3],80)} ({txt(r[1])})",why="Shipment is blocked; every day adds cost and customer risk."))
+    for r in S["drafts"]: c.append(dict(text=f"Review the draft to {_short(r[1],70)}",why=f"Draft waiting {txt(r[3])} days."))
+    for it in deal[1:]: c.append(dict(text=_short(it),why="Next deal-closing action."))
+    return c[:3]
+def build_pace(first,full,mtd_row,ytd_row,d):
+    if not mtd_row or not ytd_row: return None
+    mt=_num(mtd_row[1]); y=_num(ytd_row[1]); frac=(d.month-1+d.day/_cal.monthrange(d.year,d.month)[1])
+    tgt=MONTHLY_TARGET.get(first); lab="monthly RevRec target"
+    if not tgt: tgt=y/frac if frac else 0; lab="your YTD monthly average (no target set yet)"
+    left=_wd_left(d); gap=max(tgt-mt,0); dayfrac=d.day/_cal.monthrange(d.year,d.month)[1]
+    return dict(mtd=_money(mt),target=_money(tgt),label=lab,gap=_money(gap),daysLeft=left,perDay=_money(gap/left) if left else _money(gap),
+        pct=round(mt/tgt*100) if tgt else 0,expected=round(dayfrac*100),month=d.strftime("%B"))
+def email_for(r):
+    m=re.search(r"[\w.+-]+@[\w-]+\.[\w.-]+",txt(r[0])); return m.group(0) if m else ""
+def build_drafts(first,S,P):
+    out=[]
+    rows=S["stale"]+[r for r in _rows(P,"Self-serve") if r not in S["stale"]]
+    for r in rows[:4]:
+        lead=re.sub(r"\s*\(.*","",txt(r[0])).strip() or "there"; item=txt(r[2]); intent=txt(r[1]).lower()
+        if intent.startswith("sell"):
+            body=f"Hi,\n\nFollowing up on your {item}. We have active buyers and open RFPs for this type of equipment, so I would like to list it this week.\nCould you send the serial numbers, condition, a few photos and your target price?\n\nBest regards,\n{first}"
+            sub=f"Listing your {item}: next step"
+            wa=f"Hi, it's {first} from Topotrade. We have buyers for your {item}. Can you send serial numbers, photos and your target price so I can list it this week?"
+        else:
+            body=f"Hi,\n\nFollowing up on your interest in {item}. I can confirm availability and send you a quote today. Is this still on your radar, and what timeline are you working to?\n\nBest regards,\n{first}"
+            sub=f"{item}: availability and quote"
+            wa=f"Hi, it's {first} from Topotrade. Still interested in {item}? I can confirm availability and send a quote today."
+        out.append(dict(title=f"Follow-up: {lead}",to=email_for(r),subject=sub,body=body,wa=wa))
+    for r in S["oldq"][:2]:
+        body=f"Hi,\n\nI am following up on our quotation {txt(r[0])} for {txt(r[2])} ({txt(r[4])}). Do you have any questions, or can I help you move forward this week?\n\nBest regards,\n{first}"
+        out.append(dict(title=f"Quote follow-up: {txt(r[1])}",to="",subject=f"Quotation {txt(r[0])}: following up",body=body,wa=f"Hi, it's {first} from Topotrade. Any questions on quotation {txt(r[0])}? Happy to adjust to move forward."))
+    return out
+def build_playbook(first,S,P):
+    has=lambda s: _task(P,s) is not None
+    R_=[]
+    R_.append(("No overdue actions",not S["overdue"],"auto"))
+    if has("Self-serve"): R_.append(("Self-serve nudges followed up within 7 days",not S["stale"],"auto"))
+    if has("Drafts"): R_.append(("Drafts reviewed within 48 hours",not S["drafts"],"auto"))
+    if has("Open quotations"): R_.append(("Open quotations followed up within 7 days",not S["oldq"],"auto"))
+    if has("Shipments"): R_.append(("Blocked shipments have a next step today",not S["blocked"],"auto"))
+    for s in ["Reply to every new lead within 24 hours","Log a note in Odoo after every call or meeting","Contact at least 3 new marketplace users or sellers this week"]: R_.append((s,None,"self"))
+    return [dict(rule=a,ok=b,kind=k) for a,b,k in R_]
+def sales_rows(path):
+    rows=list(_csv.reader(open(path,encoding="utf-8"))); h=rows[0]; return h,rows[1:]
+def _pd(x):
+    x=x.strip(); m=re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})$",x)
+    mo={m_:i+1 for i,m_ in enumerate(["january","february","march","april","may","june","july","august","september","october","november","december"])}
+    if m: return datetime.date(int(m[3]),int(m[2]),int(m[1]))
+    m=re.match(r"(\d{1,2}) ([A-Za-z]+) (\d{4})$",x)
+    if m and m[2].lower() in mo: return datetime.date(int(m[3]),mo[m[2].lower()],int(m[1]))
+def wins_for(first,path,d):
+    h,rows=sales_rows(path); ini=INIT.get(first); out=[]; tot=0
+    for r in rows:
+        if len(r)<19: continue
+        dt=_pd(r[4])
+        if not dt or not(d-datetime.timedelta(days=6)<=dt<=d): continue
+        if (r[5].strip().upper()!=ini): continue
+        b=_num(r[16]); tot+=b
+        out.append([dt.strftime("%d %b"),r[14] or "-",r[7] or r[2] or "-",_money(b,"EUR "),_money(_num(r[18]),"EUR ")])
+    return out,tot
+def team_week(path,d):
+    h,rows=sales_rows(path); res={}
+    for f,ini in INIT.items():
+        n=0;tot=0
+        for r in rows:
+            if len(r)<19: continue
+            dt=_pd(r[4])
+            if dt and d-datetime.timedelta(days=6)<=dt<=d and r[5].strip().upper()==ini: n+=1; tot+=_num(r[16])
+        res[f]=(n,tot)
+    return res
+HIST_PATH="data/team/history.json"
+try: HIST=json.loads(base64.b64decode(api("GET",HIST_PATH)["content"]).decode())
+except Exception: HIST={}
+_dkey=_asof_d.isoformat()
+WEEK=team_week(os.environ["SALES_CSV"],_asof_d) if os.path.exists(os.environ.get("SALES_CSV","/nonexistent")) else {}
+PENDING={}; STATS={}
 for first,full,role in PEOPLE:
     P=dict(team=dict(title="Team comparison",cols=TEAM_COLS,rows=TEAM_ROWS,hl=full),name=full,first=first,role=role,asOf=asof,updatedAt=datetime.datetime.utcnow().isoformat()+"Z",kpis=[],tables=[],recs=[],tasks=[],note="")
     if first in("Georges","Claude","Mireille","Daniel","Zein"):
@@ -230,9 +343,54 @@ for first,full,role in PEOPLE:
     if any(not any(h.startswith(n) for h in _have) for n in _need):
         for t in _prev(tokens[first]).get("tables",[]):
             if t["title"].startswith(KEEP_TITLES) and not any(h==t["title"] for h in _have): P["tables"].append(t); print("kept previous table for",first,":",t["title"])
-    push(f"data/team/{tokens[first]}.json",json.dumps(P,ensure_ascii=False))
+    # ---- coaching enrichment ----
+    S=coach_stats(P); STATS[first]=S; prevJ=_prev(tokens[first])
+    P["today"]=build_today(P,S)
+    if first in INIT:
+        P["pace"]=build_pace(first,full,find(R["mtd"],full),find(R["ytd"],full),_asof_d)
+        if WEEK:
+            P["wins"]=dict(rows=wins_for(first,os.environ["SALES_CSV"],_asof_d)[0],total=_money(wins_for(first,os.environ["SALES_CSV"],_asof_d)[1],"EUR "))
+        elif prevJ.get("wins"): P["wins"]=prevJ["wins"]
+    P["attn"]=[dict(label="Overdue actions",n=len(S["overdue"]),detail="; ".join(S["overdue"])),
+               dict(label="Stale nudges (7+ days)",n=len(S["stale"]),detail="; ".join(_short(r[0],50) for r in S["stale"])),
+               dict(label="Drafts waiting 2+ days",n=len(S["drafts"]),detail="; ".join(_short(r[1],50) for r in S["drafts"])),
+               dict(label="Blocked shipments",n=len(S["blocked"]),detail="; ".join(_short(r[3],50) for r in S["blocked"])),
+               dict(label="Quotes unanswered 7+ days",n=len(S["oldq"]),detail=("at risk "+_money(S["risk"])) if S["oldq"] else "")]
+    P["drafts"]=build_drafts(first,S,P) if first in INIT or first=="Zein" else []
+    P["playbook"]=build_playbook(first,S,P)
+    HIST.setdefault(_dkey,{})[first]=dict(overdue=len(S["overdue"]),stale=len(S["stale"]),drafts=len(S["drafts"]))
+    PENDING[first]=P
     out[first]=sum(len(t["rows"]) for t in P["tasks"])
 print(out)
+# ---- history trim + streaks + accountability board + manager view ----
+for k in sorted(HIST)[:-60]: HIST.pop(k)
+def streak(f):
+    n=0
+    for k in sorted(HIST,reverse=True):
+        h=HIST[k].get(f)
+        if h is None: break
+        if h["overdue"]==0 and h["stale"]==0: n+=1
+        else: break
+    return n
+REPS=["Georges","Claude","Mireille","Daniel"]
+board=[]
+for f in REPS:
+    S=STATS[f]; n,tot=WEEK.get(f,(None,None))
+    board.append([f,str(len(S["overdue"])),str(len(S["stale"])),str(len(S["drafts"])),str(len(S["blocked"])),
+        "-" if n is None else str(n),"-" if tot is None else _money(tot,"EUR "),f"{streak(f)} day"+("" if streak(f)==1 else "s")])
+BOARD=dict(title="Team accountability board",cols=["Rep","Overdue","Stale nudges","Old drafts","Blocked ship.","Deals 7d","Billings 7d","Clean streak"],rows=board,
+    note="Clean streak = consecutive daily runs with no overdue action and no stale nudge. It starts counting from the first run after this feature was added.")
+mgr_rows=[]
+for f in REPS:
+    S=STATS[f]; pc=PENDING[f].get("pace") or {}
+    mgr_rows.append([f,"<br>".join(S["overdue"]) or "-","<br>".join(_short(r[0],60)+" ("+txt(r[5])+"d)" for r in S["stale"]) or "-","<br>".join(_short(r[3],60) for r in S["blocked"]) or "-",
+        (f"{pc['pct']}% of target, needs {pc['perDay']}/day" if pc else "-")])
+MGR=dict(title="Manager view: who needs a push",cols=["Rep","Overdue actions","Stale nudges","Blocked shipments","Pace this month"],rows=mgr_rows)
+for first,P in PENDING.items():
+    P["board"]=BOARD
+    if first=="Zein": P["manager"]=MGR
+    push(f"data/team/{tokens[first]}.json",json.dumps(P,ensure_ascii=False))
+push(HIST_PATH,json.dumps(HIST))
 
 # ---------- ensure Team Dashboards tab exists in index.html ----------
 def ensure_team_tab():
