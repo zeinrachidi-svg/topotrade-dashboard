@@ -1,28 +1,116 @@
 {
   "mailbox": "contact@topotrade.com",
-  "since": "2026-10-11 03:59:25",
-  "generatedAt": "2026-10-12T03:59:22.943Z",
+  "since": "2026-10-12 03:59:23",
+  "generatedAt": "2026-10-13T03:59:25.703Z",
   "stats": {
-    "scriptCreated": 0,
+    "scriptCreated": 3,
     "scriptUpdated": 0,
-    "scriptNonLead": 2,
+    "scriptNonLead": 16,
     "scriptErrors": 0,
-    "scriptTotal": 2,
-    "odooTotal": 27,
+    "scriptTotal": 19,
+    "odooTotal": 147,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "Valid Vision - Quote for 3 FARO scanner models",
-      "contact": "Thanachai Wetcherarat",
-      "company": "Valid Vision",
-      "email": "thanachai@validvision.co.th",
+      "name": "Nick Williams - DJI Matrice 300 RTK availability",
+      "contact": "Nick Williams",
+      "company": "",
+      "email": "nicholas.williams757@gmail.com",
+      "phone": "",
+      "rep": "Contact",
+      "createdAt": "2026-10-12 14:13:13",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4001&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Filipe Martins - Trimble SX12 software inclusion inquiry",
+      "contact": "Filipe Fernandes Martins",
+      "company": "Filipe Martins",
+      "email": "filipemartins3d@gmail.com",
+      "phone": "+4915150789896",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-12 12:48:00",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3988&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Dronetec Consults Limited - Emlid Reach pricing and reseller terms",
+      "contact": "Rodney N.A. Tagoe",
+      "company": "Dronetec Consults Limited",
+      "email": "droneteclimited@gmail.com",
       "phone": "",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-12 01:25:21",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=3877&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-12 10:33:37",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3970&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Mashaarea Projects & Solutions Co. Ltd. - Emlid Reach RX2 quote request",
+      "contact": "DAVID DEVASSY",
+      "company": "Mashaarea Projects & Solutions Co. Ltd.",
+      "email": "drones@mashaarea.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-12 09:53:06",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3965&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Cabinet de radiologie - Fujifilm Amulet S detector inquiry",
+      "contact": "Philippe Goldstein",
+      "company": "Cabinet de radiologie",
+      "email": "philippe.goldstein@gmail.com",
+      "phone": "+33 6 82 38 15 31",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-12 07:47:59",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3947&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Purchase offer for used surveying equipment",
+      "contact": "Claude Nakhle",
+      "company": "Topotrade",
+      "email": "claude.nakhle@topotrade.com",
+      "phone": "+961 3192575",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-12 07:31:00",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3937&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "AllTerra Gulf - Trimble SPS930 with machine control",
+      "contact": "Zein Rachidi",
+      "company": "AllTerra Gulf",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-12 06:08:06",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3901&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Trimble SPS930 with machine control",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-12 06:05:22",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3899&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - additional used instruments inquiry",
+      "contact": "Zein Rachidi",
+      "company": "Topotrade",
+      "email": "zein.rachidi@topotrade.com",
+      "phone": "+33 6 76 30 73 56",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-12 05:05:13",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=3891&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 26
+  "nonLeadCount": 138
 }
