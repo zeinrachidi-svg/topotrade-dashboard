@@ -31,6 +31,9 @@ function render(P){
     pw.appendChild(el('p','note',pc.pct+'% of target reached; the dark marker is where you should be today ('+pc.expected+'% of the month elapsed).'));
     anchor.insertBefore(pw,$('#kpis'));}
   if(P.attn){var ch=el('div','chips'); P.attn.forEach(function(x){var c=el('div','chip '+(x.n?'bad':'ok'),x.label+'<b>'+x.n+'</b>'+(x.detail?'<span class="why" style="font-size:11px">'+x.detail+'</span>':'')); ch.appendChild(c);}); anchor.insertBefore(ch,$('#kpis'));}
+  if(P.team){var yy=P.tables.filter(function(t){return /last year/i.test(t.title)&&t.cols.indexOf('YoY%')>=0&&t.cols.indexOf('RevRec YTD 2025')>=0;})[0];
+    if(yy&&P.team.cols.indexOf('RevRec YTD 2025')<0){var iP=yy.cols.indexOf('RevRec YTD 2025'),iY=yy.cols.indexOf('YoY%'),M={}; yy.rows.forEach(function(r){M[String(r[0]).trim()]=[r[iP],r[iY]];});
+      P.team.cols=P.team.cols.concat(['RevRec YTD 2025','YoY%']); P.team.rows=P.team.rows.map(function(r){var m=M[String(r[0]).trim()]||['',''];return r.concat(m);});}}
   if(P.team){var tm=el('section','teamblk'); tm.appendChild(el('h2',null,P.team.title+' (YTD and MTD)'));
     tm.appendChild(tableEl(P.team.cols,P.team.rows,P.team.hl));
     tm.appendChild(el('p','note','USD, split-credit view from the Cockpit sheet. Tx = transaction count.'));
