@@ -143,21 +143,50 @@ def billings_table(path,asof):
     return dict(title="Billings by billing company: YTD and MTD vs last year",
         cols=["Billing company",f"YTD {asof.year}",f"YTD {asof.year-1}","YoY",f"MTD {mn} {asof.year}",f"MTD {mn} {asof.year-1}","YoY"],rows=out,
         note=f"Billings excl. tax in EUR from the Cockpit Sales tab, 1 Jan to {asof.day} {mn} each year. Entity = invoice prefix (CA = Canada, AE = UAE, numbers or blank = France, so not-yet-invoiced Topotrade sales are included). Live sheet, so it can differ slightly from the main dashboard snapshot.")
+
+def _prior_year(path,revcol,gpcol,asof):
+    """Same-method monthly RevRec/GPRec for the previous year from the workbook Sales tab (day-capped for the current month)."""
+    import openpyxl,re,datetime as _dt
+    ws=openpyxl.load_workbook(path,data_only=True)["Sales"]
+    hdr=[c.value for c in ws[1]]; ix={}
+    for i,h in enumerate(hdr):
+        if h and h not in ix: ix[h]=i
+    def num(v):
+        if v is None: return 0.0
+        if isinstance(v,(int,float)): return float(v)
+        t=re.sub(r"[^\d.\-]","",str(v)); return float(t) if t not in("","-",".") else 0.0
+    def pd(v):
+        if isinstance(v,_dt.datetime): return v
+        for f in("%d/%m/%Y","%d %B %Y","%Y-%m-%d"):
+            try: return _dt.datetime.strptime(str(v).strip(),f)
+            except Exception: pass
+    out={m:[0.0,0.0] for m in range(1,13)}; y=asof.year-1
+    for r in ws.iter_rows(min_row=2,values_only=True):
+        d=pd(r[ix["Date"]])
+        if not d or d.year!=y: continue
+        if d.month==asof.month and d.day>asof.day: continue
+        a=out.setdefault(d.month,[0.0,0.0]); a[0]+=num(r[ix[revcol]]); a[1]+=num(r[ix[gpcol]])
+    return out
+def _yoy(cur,prev):
+    if not prev: return "n/a"
+    v=(cur/prev-1)*100
+    return ">+999%" if v>999 else f"{v:+.0f}%"
 def pl_canada(path):
     import openpyxl
     ws=openpyxl.load_workbook(path,data_only=True)["P&L Canada"]
     rows=[list(r) for r in ws.iter_rows(values_only=True)]
     st=next(i for i,r in enumerate(rows) if r[1] and "Revenue & GP recognition" in str(r[1]))
-    out=[];T=dict(rev=0,gp=0,fc=0,np=0,tr=0,tg=0)
+    out=[];T=dict(rev=0,gp=0,fc=0,np=0,tr=0,tg=0); PY=_prior_year(path,"RevRec GL","GPRec GL",_asof_d); P25=[0,0]
     for r in rows[st+2:]:
         if r[1]=="Total" or not hasattr(r[1],"year"): break
         if r[2] is None: continue
-        out.append([r[1].strftime("%b %Y"),_money(r[2]),_money(r[6]),_money(r[7]),_money(r[8]),_money(r[9]),_money(r[10]),_money(r[11])])
+        out.append([r[1].strftime("%b %Y"),_money(r[2]),_money(r[6]),_money(r[7]),_money(r[8]),_money(r[9]),_money(r[10]),_money(r[11])]+([_money(PY[r[1].month][0]),_money(PY[r[1].month][1]),_yoy(r[2],PY[r[1].month][0])] if r[1].month in PY else ["","",""]))
+        if r[1].month in PY: P25[0]+=PY[r[1].month][0]; P25[1]+=PY[r[1].month][1]
         T["rev"]+=r[2];T["gp"]+=r[6];T["fc"]+=r[7];T["np"]+=r[8];T["tr"]+=r[10] or 0;T["tg"]+=r[11] or 0
-    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"]),_money(T["gp"]),_money(T["fc"]),_money(T["np"]),"",_money(T["tr"]),_money(T["tg"])]])
-    out.append(["<b>% of YTD target</b>",f"<b>{T['rev']/T['tr']*100:.0f}%</b>" if T["tr"] else "",f"<b>{T['gp']/T['tg']*100:.0f}%</b>" if T["tg"] else "","","","","",""])
-    return dict(title="Topotrade Canada: YTD P&L (USD, revenue and GP recognition)",cols=["Month","RevRec","GPRec","Fixed cost","Net profit","Cumulated profit","RevRec target","GPRec target"],rows=out,
-        note="From the 'Cockpit Report Canada' workbook, P&L Canada tab. YTD = months with actuals; later months only carry budgeted fixed costs.")
+    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"]),_money(T["gp"]),_money(T["fc"]),_money(T["np"]),"",_money(T["tr"]),_money(T["tg"]),_money(P25[0]),_money(P25[1]),_yoy(T["rev"],P25[0])]])
+    out.append(["<b>% of YTD target</b>",f"<b>{T['rev']/T['tr']*100:.0f}%</b>" if T["tr"] else "",f"<b>{T['gp']/T['tg']*100:.0f}%</b>" if T["tg"] else "","","","","","","","",""])
+    return dict(title="Topotrade Canada: YTD P&L (USD, revenue and GP recognition)",cols=["Month","RevRec","GPRec","Fixed cost","Net profit","Cumulated profit","RevRec target","GPRec target","RevRec 2025","GPRec 2025","RevRec YoY"],rows=out,
+        note="From the 'Cockpit Report Canada' workbook, P&L Canada tab. YTD = months with actuals; later months only carry budgeted fixed costs. 2025 columns: same RevRec and GPRec method from the Sales tab, same months (current month to the same day). Net profit is not compared because 2025 fixed costs are held in a different currency basis.")
 def pl_france(path):
     import openpyxl
     ws=openpyxl.load_workbook(path,data_only=True)["P&L"]
@@ -165,17 +194,18 @@ def pl_france(path):
     g=[];cur=None
     for c in rows[2]:
         cur=c or cur; g.append(cur)
-    names=rows[3]; out=[];T=dict(rev=0,gp=0,fr=0,pl=0); grp={}
+    names=rows[3]; out=[];T=dict(rev=0,gp=0,fr=0,pl=0); grp={}; PY=_prior_year(path,"RevRec DL EUR","GPRec DL EUR",_asof_d); P25=[0,0]
     for r in rows[4:]:
         if not hasattr(r[1],"year") : break
         if r[2] is None or r[1].month>_asof_d.month: continue
-        out.append([r[1].strftime("%b %Y")+(" (month to date)" if False else ""),_money(r[2],"EUR "),_money(r[3],"EUR "),_money(r[5],"EUR "),_money(r[4],"EUR ")])
+        out.append([r[1].strftime("%b %Y")+(" (month to date)" if False else ""),_money(r[2],"EUR "),_money(r[3],"EUR "),_money(r[5],"EUR "),_money(r[4],"EUR ")]+([_money(PY[r[1].month][0],"EUR "),_money(PY[r[1].month][1],"EUR "),_yoy(r[2],PY[r[1].month][0])] if r[1].month in PY else ["","",""]))
+        if r[1].month in PY: P25[0]+=PY[r[1].month][0]; P25[1]+=PY[r[1].month][1]
         T["rev"]+=r[2];T["gp"]+=r[3];T["fr"]+=r[5] or 0;T["pl"]+=r[4] or 0
         for i in range(6,len(r)):
             if isinstance(r[i],(int,float)) and g[i]: grp[g[i]]=grp.get(g[i],0)+r[i]
-    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"],"EUR "),_money(T["gp"],"EUR "),_money(T["fr"],"EUR "),_money(T["pl"],"EUR ")]])
-    t1=dict(title="Digital Realities France: YTD P&L (EUR)",cols=["Month","RevRec","GPRec","Total costs","P&L"],rows=out,
-        note="From the 'Cockpit Report France DR' workbook, P&L tab. The latest month is month-to-date. Nov and Dec only hold budgeted costs and are not in YTD.")
+    out.append(["<b>YTD</b>"]+[f"<b>{x}</b>" for x in [_money(T["rev"],"EUR "),_money(T["gp"],"EUR "),_money(T["fr"],"EUR "),_money(T["pl"],"EUR "),_money(P25[0],"EUR "),_money(P25[1],"EUR "),_yoy(T["rev"],P25[0])]])
+    t1=dict(title="Digital Realities France: YTD P&L (EUR)",cols=["Month","RevRec","GPRec","Total costs","P&L","RevRec 2025","GPRec 2025","RevRec YoY"],rows=out,
+        note="From the 'Cockpit Report France DR' workbook, P&L tab. The latest month is month-to-date. Nov and Dec only hold budgeted costs and are not in YTD. 2025 columns: same RevRec and GPRec method from the Sales tab, same months (current month to the same day). Costs and P&L are not compared because the workbook holds no 2025 cost data.")
     t2=dict(title="Costs YTD by category (EUR)",cols=["Category","YTD"],rows=[[k,_money(v,"EUR ")] for k,v in sorted(grp.items(),key=lambda x:-x[1])])
     return [t1,t2]
 _asof_d=datetime.date.today()
