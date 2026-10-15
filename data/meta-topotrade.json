@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-14",
-  "updatedAt": "2026-10-14T04:16:14.733185Z",
+  "date": "2026-10-15",
+  "updatedAt": "2026-10-15T04:16:31.396618Z",
   "page": {
     "name": "Topotrade.com",
     "fan_count": 5872,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-10-11T07:00:00+0000"
+            "end_time": "2026-10-12T07:00:00+0000"
           },
           {
-            "value": 0,
-            "end_time": "2026-10-12T07:00:00+0000"
+            "value": 21,
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -36,12 +36,12 @@
         "period": "day",
         "values": [
           {
-            "value": 1,
-            "end_time": "2026-10-11T07:00:00+0000"
+            "value": 0,
+            "end_time": "2026-10-12T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-12T07:00:00+0000"
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 6,
-            "end_time": "2026-10-11T07:00:00+0000"
-          },
-          {
             "value": 0,
             "end_time": "2026-10-12T07:00:00+0000"
+          },
+          {
+            "value": 14,
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "Struggling to sell your used surveying equipment?\n\nYour equipment still has value. Finding the right buyer shouldn't be complicated!\n\nWith topotrade, you can connect with potential buyers worldwide and benefit from a secure process that includes equipment inspection.\n\nWhether it's Leica, Trimble, Topcon, FARO, or other professional equipment, give it the opportunity for a second life!\n\nReady to sell? Let's make it happen!\n\n\ud83d\udce9 contact@topotrade.com\n\ud83c\udf10 www.topotrade.com\n\n#topotrade  #Geospatial #LeicaGeosystems #Trimble #Topcon",
+      "created_time": "2026-10-14T07:15:59+0000",
+      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1738922328237373",
+      "id": "534109496935441_1738922328237373"
+    },
     {
       "message": "Geomax Zoom90 1'' with Tablet (Xpad) and Zenith35\nYear of manufacture: 2019\nCheck it out https://bit.ly/3W3UqSS\nContacts us now:\nContact@topotrade.com\nWhatsApp: +33 6 24 17 40 87\nwww.topotrade.com\n\n#topo #surveying #Geomax #tablet",
       "created_time": "2026-10-12T08:22:47+0000",
@@ -153,12 +159,6 @@
         }
       },
       "id": "534109496935441_1652366286892978"
-    },
-    {
-      "message": "We're actively looking to purchase Leica TM50/TM60 and Topcon MS Series total stations.\n\nIf you have equipment available for sale, we'd like to hear from you.\nAt Topotrade, we make the selling process simple:\n \u2714 Competitive market offers\n \u2714 Fast and transparent transactions\n \u2714 Trusted experts with worldwide reach\n\nWhether you're upgrading your fleet or selling surplus equipment, our team is ready to help.\n\n\ud83d\udce9 Contact us today:\n\ud83c\udf10 www.topotrade.com\n\ud83d\udce7 contact@topotrade.com\n\n#Topotrade #Surveying #Geomatics #Leica #Topcon #TotalStation #SurveyEquipment",
-      "created_time": "2026-07-13T10:46:51+0000",
-      "permalink_url": "https://www.facebook.com/1692051812924425/posts/1646081457521461",
-      "id": "534109496935441_1646081457521461"
     }
   ],
   "messengerConversations": [
@@ -588,8 +588,8 @@
   "recentLeads": [],
   "instagram": {
     "id": "17841416108569441",
-    "followers_count": 759,
-    "media_count": 622,
+    "followers_count": 758,
+    "media_count": 623,
     "username": "topotrade_"
   },
   "_knownGaps": [
