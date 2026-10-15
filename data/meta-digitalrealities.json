@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-14",
-  "updatedAt": "2026-10-14T04:16:31.835407Z",
+  "date": "2026-10-15",
+  "updatedAt": "2026-10-15T04:16:46.518816Z",
   "page": {
     "name": "Digital Realities",
     "fan_count": 30,
@@ -18,11 +18,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-10-11T07:00:00+0000"
+            "end_time": "2026-10-12T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-12T07:00:00+0000"
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Post Engagements",
@@ -37,11 +37,11 @@
         "values": [
           {
             "value": 0,
-            "end_time": "2026-10-11T07:00:00+0000"
+            "end_time": "2026-10-12T07:00:00+0000"
           },
           {
             "value": 0,
-            "end_time": "2026-10-12T07:00:00+0000"
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Total Video Views",
@@ -55,12 +55,12 @@
         "period": "day",
         "values": [
           {
-            "value": 0,
-            "end_time": "2026-10-11T07:00:00+0000"
-          },
-          {
             "value": 1,
             "end_time": "2026-10-12T07:00:00+0000"
+          },
+          {
+            "value": 3,
+            "end_time": "2026-10-13T07:00:00+0000"
           }
         ],
         "title": "Daily Total views count per Page",
@@ -70,6 +70,12 @@
     ]
   },
   "recentPosts": [
+    {
+      "message": "\ud83d\udca1 Le saviez-vous ?\n\nGr\u00e2ce \u00e0 la capture 3D, il est possible de prendre des mesures directement dans un mod\u00e8le num\u00e9rique, sans avoir \u00e0 retourner syst\u00e9matiquement sur site !\n\nUne solution pratique pour gagner du temps, faciliter la planification et am\u00e9liorer la collaboration entre les \u00e9quipes.\nD\u00e9couvrez comment la capture 3D peut simplifier vos projets avec Digital Realities.\n\n\ud83c\udf10 www.digitalrealities.fr\n\n#DigitalRealities #Matterport #Capture3D #Scan3D #JumeauNumerique #DigitalTwin",
+      "created_time": "2026-10-14T07:50:56+0000",
+      "permalink_url": "https://www.facebook.com/1113606917670894/posts/1153378120360440",
+      "id": "105165231847100_1153378120360440"
+    },
     {
       "message": "Un scan 3D, bien plus qu\u2019une simple image\n\nTransformez vos espaces r\u00e9els en jumeaux num\u00e9riques exploitables pour mieux visualiser, mesurer et collaborer, o\u00f9 que vous soyez.\n\nAvec Digital Realities, donnez une nouvelle dimension \u00e0 vos b\u00e2timents et \u00e0 vos projets gr\u00e2ce aux technologies 3D.\n \nwww.digitalrealities.fr\nContact@digitalrealties.fr\n\n#DigitalRealities #Scan3D #JumeauNumerique #Matterport #BIM",
       "created_time": "2026-10-05T08:07:40+0000",
@@ -138,12 +144,6 @@
       "created_time": "2024-04-05T10:55:12+0000",
       "permalink_url": "https://www.facebook.com/1113606917670894/posts/461443159553943",
       "id": "105165231847100_461443159553943"
-    },
-    {
-      "message": "D\u00e9couvrez les meilleures offres Matterport avec notre promotion exclusive ainsi que les offres de financement valables jusqu'au 31/03/2024.\nVotre acc\u00e8s aux offres exceptionnelles vous attend !\n\nContactez-nous maintenant: \n\u2709contact@digitalrealities.fr\n\ud83d\udcde+33 4 87 76 78 71 \n\n#Digital #realities #camera #3D #realitevirtuelle #location #scanner  #tour #service #3d #cartographie #Innovation #Immobilier #360Tour #concurrence #matterport #promo #PRO3 #PRO2",
-      "created_time": "2024-03-08T11:53:38+0000",
-      "permalink_url": "https://www.facebook.com/1113606917670894/posts/445530097811916",
-      "id": "105165231847100_445530097811916"
     }
   ],
   "messengerConversations": [
@@ -369,7 +369,7 @@
   "instagram": {
     "id": "17841448326726715",
     "followers_count": 72,
-    "media_count": 129,
+    "media_count": 130,
     "username": "digitalrealities.fr"
   },
   "_knownGaps": [
