@@ -1,83 +1,28 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-10-13 04:57:28",
-  "generatedAt": "2026-10-14T04:57:26.018Z",
+  "since": "2026-10-14 04:57:27",
+  "generatedAt": "2026-10-15T04:57:27.752Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
     "scriptNonLead": 53,
     "scriptErrors": 0,
     "scriptTotal": 53,
-    "odooTotal": 142,
+    "odooTotal": 131,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "GMCC Ltd - S150 or 200 Premium inquiry",
-      "contact": "Mark Walde",
-      "company": "GMCC Ltd",
-      "email": "markw@gmccltd.com",
-      "phone": "1-630-715-2371",
-      "rep": "Georges Labaky",
-      "createdAt": "2026-10-14 04:33:05",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4173&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Zein Rachidi - 15 Leica total stations for monitoring",
-      "contact": "Zein Rachidi",
-      "company": "",
-      "email": "zeinrachidi@gmail.com",
-      "phone": "",
-      "rep": "Contact",
-      "createdAt": "2026-10-14 04:15:45",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4171&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Khatu Global Sourcing - Trimble R10 and SPS930 purchase offer",
-      "contact": "Rustam Khatu",
-      "company": "Khatu Global Sourcing",
-      "email": "rustamkhatujev@gmail.com",
-      "phone": "+47 400 55 471",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-13 22:08:07",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4163&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Moi m?me - Topcon GT-1003 Robotic Total Station",
-      "contact": "Khaldi Riad",
-      "company": "Moi m?me",
-      "email": "riadkhaldi2018@gmail.com",
-      "phone": "+213 791 62 94 93",
+      "name": "AZIMUTE CONSULTORES LDA - Topcon GPT-7501 purchase inquiry",
+      "contact": "Emilio Alferes",
+      "company": "AZIMUTE CONSULTORES LDA",
+      "email": "emiliofranz87@gmail.com",
+      "phone": "+258 86 568 3220",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-13 09:28:02",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4067&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Opportunity",
-      "name": "Kenanah - CSI2140 Machinery Health Analyzer purchase",
-      "contact": "Mohammad Farghaly",
-      "company": "Kenanah",
-      "email": "mohammadfarghali@gmail.com",
-      "phone": "+966 50 931 3079",
-      "rep": "Claude Nakhle",
-      "createdAt": "2026-10-13 06:58:02",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4042&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "Digital Realities SASU - ATH9010Z-4-25 UAV hyperspectral quotation",
-      "contact": "Zein Rachidi",
-      "company": "Digital Realities SASU",
-      "email": "zein.rachidi@topotrade.com",
-      "phone": "",
-      "rep": "Mireille Baho",
-      "createdAt": "2026-10-13 05:25:25",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4034&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-14 19:38:00",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4293&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 136
+  "nonLeadCount": 130
 }
