@@ -442,3 +442,59 @@ def ensure_team_tab():
     api("PUT","index.html",{"message":"Restore Team Dashboards tab","content":base64.b64encode(html.encode()).decode(),"sha":h["sha"],"branch":"main"}); print("team tab restored")
 
 ensure_team_tab()
+
+def ensure_kpis():
+    """Add Net profit YTD/MTD and Transactions MTD cards to the main dashboard Top KPIs (daily run rebuilds index.html, so this re-applies)."""
+    import openpyxl,re as _re,datetime as _dt
+    path=os.environ.get("MASTER_XLSX","")
+    if not os.path.exists(path): print("kpis skipped: no MASTER_XLSX"); return
+    asof=_asof_d; wb=openpyxl.load_workbook(path,data_only=True)
+    P=wb["P&L"]; r0=None
+    for r in range(1,P.max_row+1):
+        if str(P.cell(r,3).value).strip()==f"P&L {asof.year}": r0=r; break
+    if not r0: print("kpis skipped: P&L block not found"); return
+    net_ytd=0.0; cur=None
+    for r in range(r0+1,r0+14):
+        lab=P.cell(r,3).value
+        if not hasattr(lab,"month") and not (isinstance(lab,str) and lab[:3].isalpha() and lab.strip()[-4:]==str(asof.year)): continue
+        m=lab.month if hasattr(lab,"month") else _dt.datetime.strptime(lab.strip(),"%b %Y").month
+        if m>asof.month: continue
+        n=P.cell(r,11).value
+        if isinstance(n,(int,float)) and P.cell(r,4).value is not None: net_ytd+=n
+        if m==asof.month: cur=dict(net=n,gp2=P.cell(r,8).value,fix=P.cell(r,10).value)
+    S=wb["Sales"]; hdr=[c.value for c in S[1]]; ix={}
+    for i,h in enumerate(hdr):
+        if h and h not in ix: ix[h]=i
+    def pd(v):
+        if isinstance(v,_dt.datetime): return v
+        for f in("%d/%m/%Y","%d %B %Y"):
+            try: return _dt.datetime.strptime(str(v).strip(),f)
+            except Exception: pass
+    ty=tm=0
+    for r in S.iter_rows(min_row=2,values_only=True):
+        d=pd(r[ix["Date"]])
+        if not d or d.date()>asof or d.year!=asof.year: continue
+        if not (r[ix["Product"]] or r[ix["Invoice  number"]]): continue
+        ty+=1
+        if d.month==asof.month: tm+=1
+    eur=lambda v: ("-" if v<0 else "")+"&euro;"+f"{abs(v):,.0f}"
+    def card(label,val,sub,neg=False):
+        st=" style='color:#c0392b'" if neg else ""
+        return f"<div class='kpi' data-kpi='plx'><div class='label'>{label}</div><div class='value'{st}>{val}</div><div class='sub'>{sub}</div></div>"
+    mon=asof.strftime("%b")
+    c_net=card("Net Profit YTD",eur(net_ytd),f"P&amp;L tab, EUR · Jan to {mon} {asof.year} · as of {asof.strftime('%d %b')}",net_ytd<0)
+    c_mtd=card("Net Profit MTD",eur(cur["net"]) if cur and isinstance(cur["net"],(int,float)) else "n/a",
+        (f"GP2 {eur(cur['gp2'])} less fixed costs {eur(cur['fix'])} (full month of costs against GP so far)" if cur and isinstance(cur.get('gp2'),(int,float)) else ""),bool(cur and isinstance(cur["net"],(int,float)) and cur["net"]<0))
+    c_tx=card("Transactions MTD",str(tm),f"Cockpit rows dated {mon} {asof.year} · {ty} YTD")
+    h=api("GET","index.html"); html=base64.b64decode(h["content"]).decode()
+    html=_re.sub(r"<div class='kpi' data-kpi='plx'>.*?</div></div>","",html,flags=_re.S)
+    a=_re.search(r"<div class='kpi'><div class='label'>Gross Profit YTD</div>.*?</div></div>",html,_re.S)
+    b=_re.search(r"<div class='kpi'><div class='label'>Transactions YTD</div>.*?</div></div>",html,_re.S)
+    if not a or not b: print("kpis NOT added: anchors missing"); return
+    # insert later anchor first so offsets stay valid
+    first,second=(a,b) if a.end()<b.end() else (b,a)
+    ins={a.end():c_net+c_mtd, b.end():c_tx}
+    for pos in sorted(ins,reverse=True): html=html[:pos]+ins[pos]+html[pos:]
+    api("PUT","index.html",{"message":"Top KPIs: net profit YTD/MTD, transactions MTD","content":base64.b64encode(html.encode()).decode(),"sha":h["sha"],"branch":"main"}); print("kpis added",eur(net_ytd),tm,ty)
+
+ensure_kpis()
