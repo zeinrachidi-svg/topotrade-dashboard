@@ -1,50 +1,61 @@
 {
   "mailbox": "contact@digitalrealities.fr",
-  "since": "2026-10-14 03:25:14",
-  "generatedAt": "2026-10-15T03:25:07.437Z",
+  "since": "2026-10-15 03:25:08",
+  "generatedAt": "2026-10-16T03:25:09.061Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 2,
+    "scriptNonLead": 6,
     "scriptErrors": 0,
-    "scriptTotal": 2,
-    "odooTotal": 135,
+    "scriptTotal": 6,
+    "odooTotal": 90,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "AZIMUTE CONSULTORES LDA - Topcon GPT-7501 purchase inquiry",
-      "contact": "Emilio Alferes",
-      "company": "AZIMUTE CONSULTORES LDA",
-      "email": "emiliofranz87@gmail.com",
-      "phone": "+258 86 568 3220",
-      "rep": "Claude Nakhle",
-      "createdAt": "2026-10-14 19:38:00",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4293&model=crm.lead&view_type=form"
-    },
-    {
-      "type": "Lead",
-      "name": "GMCC Ltd - S150 or 200 Premium inquiry",
-      "contact": "Mark Walde",
-      "company": "GMCC Ltd",
-      "email": "markw@gmccltd.com",
-      "phone": "1-630-715-2371",
+      "name": "Gbi - MAL? WideRange Ground Penetrating Radar System",
+      "contact": "Alexis Camacho",
+      "company": "Gbi",
+      "email": "alcabe76@hotmail.com",
+      "phone": "+57 312 2652965",
       "rep": "Georges Labaky",
-      "createdAt": "2026-10-14 04:33:05",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4173&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-15 20:28:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4400&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Zein Rachidi - 15 Leica total stations for monitoring",
-      "contact": "Zein Rachidi",
-      "company": "",
-      "email": "zeinrachidi@gmail.com",
+      "name": "Midana Exploration Company - 2x Emlid RS2 antenna quote",
+      "contact": "Mohamad Dahab",
+      "company": "Midana Exploration Company",
+      "email": "mohamad.dahab@midanaexploration.com",
       "phone": "",
-      "rep": "Contact",
-      "createdAt": "2026-10-14 04:15:45",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4171&model=crm.lead&view_type=form"
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-15 10:43:03",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4355&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Toping - Leica TCRP 1203 R300 inquiry",
+      "contact": "Ahmed Assani",
+      "company": "Toping",
+      "email": "toping976@gmail.com",
+      "phone": "+262 693 84 61 08",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-15 09:58:05",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4348&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Opportunity",
+      "name": "Strydom & Associates - GPR instruments and multibeam system inquiry",
+      "contact": "Herman Strydom",
+      "company": "Strydom & Associates",
+      "email": "herman@sasurv.com",
+      "phone": "",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-15 09:50:13",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4346&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 132
+  "nonLeadCount": 86
 }
