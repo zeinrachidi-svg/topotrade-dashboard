@@ -6434,5 +6434,120 @@
     "assignee": "Zeinab Fawaz"
    }
   }
+ },
+ {
+  "date": "2026-10-16",
+  "sprint": "New Topo-sprint 12",
+  "sprintId": 2064,
+  "source": "live",
+  "counts": {
+   "Done": 26
+  },
+  "issues": {
+   "LCB-2818": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3068": {
+    "status": "Done",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3069": {
+    "status": "Done",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3168": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3169": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3170": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3171": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3172": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3173": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3681": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3687": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3706": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3725": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3726": {
+    "status": "Done",
+    "assignee": "Rawan Mortada"
+   },
+   "LCB-3728": {
+    "status": "Done",
+    "assignee": "fatima hbeish"
+   },
+   "LCB-3730": {
+    "status": "Done",
+    "assignee": "Ray Aouad"
+   },
+   "LCB-3773": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3775": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3793": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3795": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3797": {
+    "status": "Done",
+    "assignee": "Hussein Atiah"
+   },
+   "LCB-3798": {
+    "status": "Done",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3799": {
+    "status": "Done",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3800": {
+    "status": "Done",
+    "assignee": "Zeinab Fawaz"
+   },
+   "LCB-3804": {
+    "status": "Done",
+    "assignee": "Rawan Mortada"
+   },
+   "LCB-3805": {
+    "status": "Done",
+    "assignee": "Zeinab Fawaz"
+   }
+  }
  }
 ]
