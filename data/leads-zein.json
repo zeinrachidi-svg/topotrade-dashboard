@@ -1,28 +1,61 @@
 {
   "mailbox": "zein.rachidi@topotrade.com",
-  "since": "2026-10-14 04:57:27",
-  "generatedAt": "2026-10-15T04:57:27.752Z",
+  "since": "2026-10-15 04:57:29",
+  "generatedAt": "2026-10-16T04:57:26.727Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 53,
+    "scriptNonLead": 40,
     "scriptErrors": 0,
-    "scriptTotal": 53,
-    "odooTotal": 131,
+    "scriptTotal": 40,
+    "odooTotal": 91,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "AZIMUTE CONSULTORES LDA - Topcon GPT-7501 purchase inquiry",
-      "contact": "Emilio Alferes",
-      "company": "AZIMUTE CONSULTORES LDA",
-      "email": "emiliofranz87@gmail.com",
-      "phone": "+258 86 568 3220",
+      "name": "Gbi - MAL? WideRange Ground Penetrating Radar System",
+      "contact": "Alexis Camacho",
+      "company": "Gbi",
+      "email": "alcabe76@hotmail.com",
+      "phone": "+57 312 2652965",
+      "rep": "Georges Labaky",
+      "createdAt": "2026-10-15 20:28:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4400&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Midana Exploration Company - 2x Emlid RS2 antenna quote",
+      "contact": "Mohamad Dahab",
+      "company": "Midana Exploration Company",
+      "email": "mohamad.dahab@midanaexploration.com",
+      "phone": "",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-15 10:43:03",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4355&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Toping - Leica TCRP 1203 R300 inquiry",
+      "contact": "Ahmed Assani",
+      "company": "Toping",
+      "email": "toping976@gmail.com",
+      "phone": "+262 693 84 61 08",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-14 19:38:00",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4293&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-15 09:58:05",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4348&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Opportunity",
+      "name": "Strydom & Associates - GPR instruments and multibeam system inquiry",
+      "contact": "Herman Strydom",
+      "company": "Strydom & Associates",
+      "email": "herman@sasurv.com",
+      "phone": "",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-15 09:50:13",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4346&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 130
+  "nonLeadCount": 87
 }
