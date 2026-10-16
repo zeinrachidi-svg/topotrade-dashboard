@@ -1,116 +1,114 @@
 {
- "date": "2026-10-15",
+ "date": "2026-10-16",
  "sprint": "New Topo-sprint 12",
  "sprintId": 2064,
  "source": "live",
  "counts": {
-  "Ready for QA": 11,
-  "under testing": 9,
-  "Ready for Release": 6
+  "Done": 26
  },
  "issues": {
   "LCB-2818": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3068": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Ray Aouad"
   },
   "LCB-3069": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Ray Aouad"
   },
   "LCB-3168": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3169": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3170": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3171": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3172": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3173": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3681": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3687": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3706": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3725": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3726": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "Rawan Mortada"
   },
   "LCB-3728": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "fatima hbeish"
   },
   "LCB-3730": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Ray Aouad"
   },
   "LCB-3773": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3775": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3793": {
-   "status": "under testing",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3795": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3797": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Hussein Atiah"
   },
   "LCB-3798": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3799": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3800": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Zeinab Fawaz"
   },
   "LCB-3804": {
-   "status": "Ready for Release",
+   "status": "Done",
    "assignee": "Rawan Mortada"
   },
   "LCB-3805": {
-   "status": "Ready for QA",
+   "status": "Done",
    "assignee": "Zeinab Fawaz"
   }
  }
