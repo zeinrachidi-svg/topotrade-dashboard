@@ -1,61 +1,83 @@
 {
   "mailbox": "contact@digitalrealities.fr",
-  "since": "2026-10-15 03:25:08",
-  "generatedAt": "2026-10-16T03:25:09.061Z",
+  "since": "2026-10-16 03:25:10",
+  "generatedAt": "2026-10-17T03:25:07.980Z",
   "stats": {
     "scriptCreated": 0,
     "scriptUpdated": 0,
-    "scriptNonLead": 6,
+    "scriptNonLead": 10,
     "scriptErrors": 0,
-    "scriptTotal": 6,
-    "odooTotal": 90,
+    "scriptTotal": 10,
+    "odooTotal": 118,
     "mismatch": true
   },
   "leads": [
     {
       "type": "Lead",
-      "name": "Gbi - MAL? WideRange Ground Penetrating Radar System",
-      "contact": "Alexis Camacho",
-      "company": "Gbi",
-      "email": "alcabe76@hotmail.com",
-      "phone": "+57 312 2652965",
+      "name": "Nigel Khalif Ali - Emerson CSi 2130 Health Analyzer",
+      "contact": "Nigel Khalif Ali",
+      "company": "",
+      "email": "khalifali1@yahoo.com",
+      "phone": "+1 868-724-5753",
       "rep": "Georges Labaky",
-      "createdAt": "2026-10-15 20:28:01",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4400&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-17 02:42:59",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4521&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Midana Exploration Company - 2x Emlid RS2 antenna quote",
-      "contact": "Mohamad Dahab",
-      "company": "Midana Exploration Company",
-      "email": "mohamad.dahab@midanaexploration.com",
-      "phone": "",
+      "name": "Aptella - Leica RTC360 trade-in program partnership",
+      "contact": "Adam Burke",
+      "company": "Aptella",
+      "email": "aburke@aptella.com",
+      "phone": "+61 421 614 354",
       "rep": "Mireille Baho",
-      "createdAt": "2026-10-15 10:43:03",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4355&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-16 17:22:51",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4501&model=crm.lead&view_type=form"
     },
     {
       "type": "Lead",
-      "name": "Toping - Leica TCRP 1203 R300 inquiry",
+      "name": "QR INTERNATIONAL CONSULTING ET MANAGEMENT - FARO Focus S150 inquiry and proforma",
+      "contact": "Kouassi Albert Kouadio",
+      "company": "QR INTERNATIONAL CONSULTING ET MANAGEMENT",
+      "email": "albert.kouadio@qrconsulting-ci.com",
+      "phone": "+225 07 07 04 5073",
+      "rep": "Claude Nakhle",
+      "createdAt": "2026-10-16 16:28:04",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4497&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Toping - Sokkia SET2030 R3 inquiry",
       "contact": "Ahmed Assani",
       "company": "Toping",
       "email": "toping976@gmail.com",
       "phone": "+262 693 84 61 08",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-15 09:58:05",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4348&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-16 08:18:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4440&model=crm.lead&view_type=form"
     },
     {
-      "type": "Opportunity",
-      "name": "Strydom & Associates - GPR instruments and multibeam system inquiry",
-      "contact": "Herman Strydom",
-      "company": "Strydom & Associates",
-      "email": "herman@sasurv.com",
-      "phone": "",
+      "type": "Lead",
+      "name": "Filipe Martins - DJI Zenmuse H20T SP payload inquiry",
+      "contact": "Filipe Fernandes Martins",
+      "company": "Filipe Martins",
+      "email": "filipemartins3d@gmail.com",
+      "phone": "+4915150789896",
+      "rep": "Mireille Baho",
+      "createdAt": "2026-10-16 07:58:01",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4429&model=crm.lead&view_type=form"
+    },
+    {
+      "type": "Lead",
+      "name": "Topotrade - Sokkia DS201i pictures and prices",
+      "contact": "Claude Nakhle",
+      "company": "Topotrade",
+      "email": "claude.nakhle@topotrade.com",
+      "phone": "+961 3192575",
       "rep": "Claude Nakhle",
-      "createdAt": "2026-10-15 09:50:13",
-      "link": "https://digital-realities-sasu.odoo.com/web#id=4346&model=crm.lead&view_type=form"
+      "createdAt": "2026-10-16 07:54:41",
+      "link": "https://digital-realities-sasu.odoo.com/web#id=4428&model=crm.lead&view_type=form"
     }
   ],
-  "nonLeadCount": 86
+  "nonLeadCount": 112
 }
